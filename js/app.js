@@ -2,25 +2,29 @@
 'use strict';
 
 const PROG_KEY = 'revest:progress';
+const LAST_KEY = 'revest:last';
+const GROUPS_KEY = 'revest:groups';
+const NAV_KEY = 'revest:nav';
 const DATA_DIR = 'revisoes/';
 
 const icon = (body) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
 // Each subject is matched against the normalized "disciplina" of a review; the first match wins.
+// "name" is the standard title shown everywhere, whatever spelling the JSON used.
 const SUBJECTS = [
-  { keys: ['matematica'], color: '#0071e3', icon: icon('<path d="M5 7.5h5M7.5 5v5M14.5 7.5h5M5.7 15.2l3.6 3.6M9.3 15.2l-3.6 3.6M14.5 17h5M17 14.3v.01M17 19.7v.01"/>') },
-  { keys: ['fisica'], color: '#f56300', icon: icon('<circle cx="12" cy="12" r="1.3" fill="currentColor"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/>') },
-  { keys: ['quimica'], color: '#ae3ec9', icon: icon('<path d="M9 3h6M10 3v6.2L4.9 18.1A1.9 1.9 0 0 0 6.6 21h10.8a1.9 1.9 0 0 0 1.7-2.9L14 9.2V3M7.6 14.5h8.8"/>') },
-  { keys: ['biologia'], color: '#248a3d', icon: icon('<path d="M20 4C10.5 4 5 9 5 16.5c0 1 .2 2.3 .2 2.3s1.3 .2 2.3 .2C15 19 20 13.5 20 4zM4 20l9-9"/>') },
-  { keys: ['historia'], color: '#a2632a', icon: icon('<path d="M3 9l9-5 9 5M4.5 9h15M6.5 9v8M10.3 9v8M13.7 9v8M17.5 9v8M4.5 17h15M3 20h18"/>') },
-  { keys: ['geografia'], color: '#0c8599', icon: icon('<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>') },
-  { keys: ['literatura'], color: '#c92a2a', icon: icon('<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/>') },
-  { keys: ['redacao'], color: '#b08900', icon: icon('<path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5 4 20zM14.5 6l3.5 3.5"/>') },
-  { keys: ['ingles'], color: '#3b5bdb', icon: icon('<path d="M4 5h16v11.5h-8.5L7 20v-3.5H4zM8 9.3h8M8 12.5h5"/>') },
-  { keys: ['portugues', 'gramatica', 'linguagens'], color: '#d6336c', icon: icon('<path d="M3.5 18L8.5 6h1l5 12M5.4 14h7.2M20.5 18v-5.5a2.5 2.5 0 0 0-5 0v3a2.5 2.5 0 0 0 5 0"/>') },
-  { keys: ['filosofia'], color: '#6741d9', icon: icon('<path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-3.6 10.8c.6 .5 1 1.3 1.1 2.2h5c.1-.9 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>') },
-  { keys: ['sociologia'], color: '#5c940d', icon: icon('<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.2" cy="9" r="2.3"/><path d="M16.5 14.2c2.6 .4 4.5 2.7 4.5 5.8"/>') },
+  { key: 'matematica', name: 'Matemática', keys: ['matematica'], color: '#0071e3', icon: icon('<path d="M5 7.5h5M7.5 5v5M14.5 7.5h5M5.7 15.2l3.6 3.6M9.3 15.2l-3.6 3.6M14.5 17h5M17 14.3v.01M17 19.7v.01"/>') },
+  { key: 'fisica', name: 'Física', keys: ['fisica'], color: '#f56300', icon: icon('<circle cx="12" cy="12" r="1.3" fill="currentColor"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/>') },
+  { key: 'quimica', name: 'Química', keys: ['quimica'], color: '#ae3ec9', icon: icon('<path d="M9 3h6M10 3v6.2L4.9 18.1A1.9 1.9 0 0 0 6.6 21h10.8a1.9 1.9 0 0 0 1.7-2.9L14 9.2V3M7.6 14.5h8.8"/>') },
+  { key: 'biologia', name: 'Biologia', keys: ['biologia'], color: '#248a3d', icon: icon('<path d="M20 4C10.5 4 5 9 5 16.5c0 1 .2 2.3 .2 2.3s1.3 .2 2.3 .2C15 19 20 13.5 20 4zM4 20l9-9"/>') },
+  { key: 'historia', name: 'História', keys: ['historia'], color: '#a2632a', icon: icon('<path d="M3 9l9-5 9 5M4.5 9h15M6.5 9v8M10.3 9v8M13.7 9v8M17.5 9v8M4.5 17h15M3 20h18"/>') },
+  { key: 'geografia', name: 'Geografia', keys: ['geografia'], color: '#0c8599', icon: icon('<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>') },
+  { key: 'literatura', name: 'Literatura', keys: ['literatura'], color: '#c92a2a', icon: icon('<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/>') },
+  { key: 'redacao', name: 'Redação', keys: ['redacao'], color: '#b08900', icon: icon('<path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5 4 20zM14.5 6l3.5 3.5"/>') },
+  { key: 'ingles', name: 'Inglês', keys: ['ingles'], color: '#3b5bdb', icon: icon('<path d="M4 5h16v11.5h-8.5L7 20v-3.5H4zM8 9.3h8M8 12.5h5"/>') },
+  { key: 'portugues', name: 'Português', keys: ['portugues', 'gramatica', 'linguagens'], color: '#d6336c', icon: icon('<path d="M3.5 18L8.5 6h1l5 12M5.4 14h7.2M20.5 18v-5.5a2.5 2.5 0 0 0-5 0v3a2.5 2.5 0 0 0 5 0"/>') },
+  { key: 'filosofia', name: 'Filosofia', keys: ['filosofia'], color: '#6741d9', icon: icon('<path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-3.6 10.8c.6 .5 1 1.3 1.1 2.2h5c.1-.9 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>') },
+  { key: 'sociologia', name: 'Sociologia', keys: ['sociologia'], color: '#5c940d', icon: icon('<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.2" cy="9" r="2.3"/><path d="M16.5 14.2c2.6 .4 4.5 2.7 4.5 5.8"/>') },
 ];
-const OTHER = { color: '#6e6e73', icon: icon('<rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/>') };
+const OTHER = { key: 'outras', name: 'Outras', color: '#6e6e73', icon: icon('<rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/>') };
 const DIFF = { facil: 'Fácil', media: 'Média', dificil: 'Difícil' };
 const TABS = [['resumo', 'Resumo'], ['conceitos', 'Conceitos'], ['questoes', 'Questões'], ['referencias', 'Provas']];
 const X_ICON = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 2l8 8M10 2l-8 8"/></svg>';
@@ -35,6 +39,9 @@ const store = {
 const state = {
   lib: [],          // index entries: { id, arquivo, titulo, disciplina, gerado_em, questoes }
   current: null,    // { id, data } of the open review
+  openGroups: [],   // subject keys expanded in the sidebar
+  subject: null,    // subject whose screen is open, when no theme is
+  pendingQ: null,   // practice question to scroll to once its review opens
   error: null,      // [title, text] shown in place of a review
   progress: {},     // { [reviewId]: { [questionId]: { choice?, revealed?, self? } } }
   currentId: null,
@@ -103,11 +110,18 @@ function select(id) {
 // The URL hash names the open review, so every theme has a shareable link
 async function route() {
   const wanted = routeId();
-  const entry = state.lib.find((e) => e.id === wanted) || state.lib[0] || null;
+  const entry = state.lib.find((e) => e.id === wanted) || null; // none means the home or a subject screen
+  state.subject = (wanted.startsWith('@') && state.lib.find((e) => e.materia.key === wanted.slice(1))?.materia) || null;
   state.currentId = entry?.id || null;
   state.error = null;
   renderSidebar();
-  if (!entry) { state.current = null; renderMain(); return; }
+  if (!entry) {
+    state.current = null;
+    state.pendingQ = null;
+    renderMain();
+    window.scrollTo(0, 0);
+    return;
+  }
   try {
     if (!cache.has(entry.id)) {
       const data = await getJson(DATA_DIR + entry.arquivo.split('/').map(encodeURIComponent).join('/'));
@@ -125,8 +139,15 @@ async function route() {
   state.current = { id: entry.id, data: cache.get(entry.id) };
   state.tab = 'resumo';
   state.filter = 'todas';
+  store.set(LAST_KEY, entry.id);
   renderMain();
   window.scrollTo(0, 0);
+  if (state.pendingQ) {
+    const q = state.pendingQ;
+    state.pendingQ = null;
+    setTab('questoes');
+    document.getElementById(`q-${q}`)?.scrollIntoView({ block: 'start' });
+  }
 }
 
 /* ---------- Progress ---------- */
@@ -147,35 +168,81 @@ const isMC = (q) => q.tipo === 'multipla_escolha' && arr(q.alternativas).length 
 
 /* ---------- Render: sidebar ---------- */
 const doneCount = (id) => Object.values(state.progress[id] || {}).filter((a) => a.choice || a.self).length;
+const byTitle = (a, b) => a.titulo.localeCompare(b.titulo, 'pt-BR');
+const SIDEBAR_ICON = '<svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="1.5" width="15" height="13" rx="3"/><path d="M6.5 1.5v13"/></svg>';
+
+// Subjects are collapsible groups; the one holding the open theme, and any the reader opened, stay expanded
 function renderSidebar() {
   const q = norm(state.query);
-  const shown = state.lib.filter((e) => !q || norm(`${e.titulo} ${e.disciplina}`).includes(q));
+  const shown = state.lib.filter((e) => !q || norm(`${e.titulo} ${e.materia.name} ${e.disciplina}`).includes(q));
   const groups = new Map();
   for (const e of shown) {
-    const d = e.disciplina || 'Outras';
-    if (!groups.has(d)) groups.set(d, []);
-    groups.get(d).push(e);
+    if (!groups.has(e.materia)) groups.set(e.materia, []);
+    groups.get(e.materia).push(e);
   }
-  const names = [...groups.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  const subjects = [...groups.keys()].sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+  const currentKey = state.lib.find((e) => e.id === state.currentId)?.materia.key;
   $('lib-count').textContent = state.lib.length ? plural(state.lib.length, 'tema de revisão', 'temas de revisão') : 'Revisões de vestibular';
   $('search').hidden = state.lib.length < 2;
-  $('lib').innerHTML = names.map((name) => {
-    const subj = subject(name);
+  const home = state.lib.length ? `
+    <button class="item item-home" data-action="home" aria-current="${!state.currentId && !state.subject}">
+      <span class="glyph">${HOME_ICON}</span>
+      <span class="item-text"><span class="item-title">Início</span></span>
+    </button>
+    <div class="group-label">Matérias</div>` : '';
+  $('lib').innerHTML = home + (subjects.map((subj) => {
+    const open = !!q || state.openGroups.includes(subj.key) || subj.key === currentKey || subj === state.subject;
+    const list = groups.get(subj).sort(byTitle);
     return `
-    <div class="group-label">${esc(name)}</div>
-    ${groups.get(name).sort((a, b) => a.titulo.localeCompare(b.titulo, 'pt-BR')).map((e) => {
-      const done = Math.min(doneCount(e.id), e.questoes || 0);
-      const sub = e.questoes ? (done ? `${done} de ${e.questoes} questões feitas` : plural(e.questoes, 'questão', 'questões')) : fmtDate(e.gerado_em);
-      return `
-      <button class="item" style="--tint:${subj.color}" data-action="open" data-id="${esc(e.id)}" aria-current="${e.id === state.currentId}">
+    <div class="group" style="--tint:${subj.color}">
+      <button class="group-head" data-action="group" data-key="${subj.key}" aria-expanded="${open}" aria-current="${subj === state.subject}">
         <span class="glyph">${subj.icon}</span>
-        <span class="item-text">
-          <span class="item-title">${esc(e.titulo)}</span>
-          <span class="item-sub">${esc(sub)}</span>
-        </span>
-      </button>`;
-    }).join('')}`;
-  }).join('') || (state.lib.length ? '<div class="group-label">Nada encontrado</div>' : '');
+        <span class="group-name">${esc(subj.name)}</span>
+        <span class="group-count">${list.length}</span>
+        ${CHEVRON}
+      </button>
+      <div class="group-items"><div>
+        ${list.map((e) => {
+          const done = Math.min(doneCount(e.id), e.questoes || 0);
+          const sub = e.questoes ? (done ? `${done} de ${e.questoes} questões feitas` : plural(e.questoes, 'questão', 'questões')) : fmtDate(e.gerado_em);
+          return `
+          <button class="item" data-action="open" data-id="${esc(e.id)}" aria-current="${e.id === state.currentId}">
+            <span class="item-text">
+              <span class="item-title">${esc(e.titulo)}</span>
+              <span class="item-sub">${esc(sub)}</span>
+            </span>
+          </button>`;
+        }).join('')}
+      </div></div>
+    </div>`;
+  }).join('') || (state.lib.length ? '<div class="group-label">Nada encontrado</div>' : ''));
+}
+
+/* ---------- Render: top bar ---------- */
+// Present on every screen: the sidebar toggle plus a trail showing where the reader is
+function topRow(subj, title) {
+  const here = (text) => `<span aria-current="page">${esc(text)}</span>`;
+  const trail = !subj ? [here('Início')] : [
+    '<button data-action="home">Início</button>',
+    title ? `<button data-action="subject" data-key="${subj.key}">${esc(subj.name)}</button>` : here(subj.name),
+    ...(title ? [here(title)] : []),
+  ];
+  return `
+    <div class="top-row">
+      <button class="menu-btn" data-action="menu" aria-label="Mostrar ou ocultar a lista de matérias" title="Mostrar ou ocultar matérias">${SIDEBAR_ICON}</button>
+      <nav class="crumbs" aria-label="Você está em">${trail.join(CHEVRON)}</nav>
+    </div>`;
+}
+function pagerHtml(entry) {
+  const list = state.lib.filter((e) => e.materia === entry.materia).sort(byTitle);
+  const i = list.indexOf(entry);
+  const link = (e, label, cls) => (e ? `
+    <button class="card pager-link ${cls}" data-action="open" data-id="${esc(e.id)}">
+      <span class="pager-label">${label}</span>
+      <span class="pager-title">${esc(e.titulo)}</span>
+    </button>` : '<span></span>');
+  if (list.length < 2) return '';
+  return `<nav class="pager" aria-label="Outros temas de ${esc(entry.materia.name)}">${link(list[i - 1], 'Tema anterior', 'prev')}${link(list[i + 1], 'Próximo tema', 'next')}</nav>`;
 }
 
 /* ---------- Render: main ---------- */
@@ -191,31 +258,31 @@ function renderMain() {
   const entry = current();
   const main = $('main');
   if (!entry) {
-    main.innerHTML = message(...(state.error || ['Nenhuma revisão publicada ainda', 'Assim que um tema for adicionado à pasta de revisões, ele aparece aqui.']));
+    main.innerHTML = state.error || !state.lib.length
+      ? message(...(state.error || ['Nenhuma revisão publicada ainda', 'Assim que um tema for adicionado à pasta de revisões, ele aparece aqui.']))
+      : state.subject ? renderSubject(state.subject) : renderHome();
     return;
   }
   const { tema } = entry.data;
   const meta = [entry.data.gerado_em && `Gerado em ${fmtDate(entry.data.gerado_em)}`].filter(Boolean).join(' · ');
-  const subj = subject(tema.disciplina);
+  const item = state.lib.find((e) => e.id === entry.id);
+  const subj = item.materia;
   main.style.setProperty('--tint', subj.color);
   main.innerHTML = `
-    <div class="wrap hero">
-      <div class="eyebrow">${subj.icon}${esc(tema.disciplina || 'Revisão')}</div>
-      <h2>${esc(tema.titulo)}</h2>
-      ${meta ? `<div class="meta">${esc(meta)}</div>` : ''}
-      ${arr(tema.subtopicos).length ? `<div class="chips">${tema.subtopicos.map((s) => `<span class="chip">${rich(s)}</span>`).join('')}</div>` : ''}
-    </div>
-    <div id="bar-anchor"></div>
-    <div class="bar"><div class="wrap bar-in">
-      <button class="menu-btn" data-action="menu" aria-label="Abrir biblioteca">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg>
-      </button>
+    <div class="bar"><div class="wrap">
+      ${topRow(subj, item.titulo)}
       <div class="seg" id="seg" role="tablist" style="--n:${TABS.length};--i:${TABS.findIndex((t) => t[0] === state.tab)}">
         <span class="seg-thumb" aria-hidden="true"></span>
         ${TABS.map(([key, label]) => `<button role="tab" data-action="tab" data-tab="${key}" aria-selected="${key === state.tab}">${label}</button>`).join('')}
       </div>
     </div></div>
-    <div class="wrap"><div class="view" id="view" role="tabpanel"></div></div>`;
+    <div class="wrap hero">
+      <div class="eyebrow">${subj.icon}${esc(subj.name)}</div>
+      <h2>${esc(tema.titulo)}</h2>
+      ${meta ? `<div class="meta">${esc(meta)}</div>` : ''}
+      ${arr(tema.subtopicos).length ? `<div class="chips">${tema.subtopicos.map((s) => `<span class="chip">${rich(s)}</span>`).join('')}</div>` : ''}
+    </div>
+    <div class="wrap"><div class="view" id="view" role="tabpanel"></div>${pagerHtml(item)}</div>`;
   renderView();
 }
 
@@ -447,6 +514,163 @@ function refreshQuestion(card) {
   renderSidebar();
 }
 
+/* ---------- Render: home ---------- */
+// Everything here comes from the index plus saved answers, so no review file needs to be fetched
+function themeStats(e) {
+  const p = state.progress[e.id] || {};
+  const s = { total: arr(e.itens).length, done: 0, right: 0, wrong: [], diff: {} };
+  arr(e.itens).forEach((it, i) => {
+    const a = p[it.id] || {};
+    const d = s.diff[it.dificuldade] || (s.diff[it.dificuldade] = { total: 0, done: 0, right: 0 });
+    d.total++;
+    const ok = it.gabarito ? (a.choice ? a.choice === it.gabarito : null) : (a.self ? a.self === 'ok' : null);
+    if (ok === null) return;
+    s.done++; d.done++;
+    if (ok) { s.right++; d.right++; } else s.wrong.push({ id: it.id, n: i + 1 });
+  });
+  return s;
+}
+const sum = (list, key) => list.reduce((n, x) => n + x[key], 0);
+const pct = (part, whole) => (whole ? Math.round((part / whole) * 100) : 0);
+const stackBar = (right, wrong, total) => `<span class="stack" aria-hidden="true"><i class="ok" style="width:${total ? (right / total) * 100 : 0}%"></i><i class="no" style="width:${total ? (wrong / total) * 100 : 0}%"></i></span>`;
+const CHEVRON = '<svg class="chev" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 1.5l5.5 5.5-5.5 5.5"/></svg>';
+const HOME_ICON = icon('<path d="M4 11l8-7 8 7M6 9.5V20h4.5v-5.5h3V20H18V9.5"/>');
+
+const tile = (value, label, sub, extra = '') => `<div class="card tile"><div class="tile-label">${label}</div><div class="tile-value">${value}</div><div class="tile-sub">${sub}</div>${extra}</div>`;
+const totals = (themes) => ({ total: sum(themes.map((t) => t.s), 'total'), done: sum(themes.map((t) => t.s), 'done'), right: sum(themes.map((t) => t.s), 'right') });
+
+// Every subject gets the same tile, whatever the number or the length of its themes
+function subjectTile(subj, themes) {
+  const { total, done, right } = totals(themes);
+  return `
+    <button class="card subject" style="--tint:${subj.color}" data-action="subject" data-key="${subj.key}">
+      <span class="subject-top"><span class="glyph">${subj.icon}</span>${CHEVRON}</span>
+      <span class="subject-name">${esc(subj.name)}</span>
+      <span class="subject-sub">${plural(themes.length, 'tema', 'temas')} · ${plural(total, 'questão', 'questões')}</span>
+      ${stackBar(right, done - right, total)}
+      <span class="subject-sub">${done ? `${done} de ${total} feitas · ${pct(right, done)}% de acerto` : 'Nenhuma questão feita'}</span>
+    </button>`;
+}
+function reviewHtml(themes) {
+  const review = themes.filter((t) => t.s.wrong.length);
+  return `
+    <h3 class="section-title">Para rever</h3>
+    <div class="card">
+      ${review.length ? `<ul class="list">${review.map(({ e, s }) => `
+        <li><div>
+          <div class="review-title">${esc(e.titulo)}</div>
+          <div class="q-foot" style="margin-top:0.45rem">${s.wrong.map((w) => `<button class="chip chip-dificil" data-action="review-q" data-id="${esc(e.id)}" data-q="${esc(w.id)}">Questão ${w.n}</button>`).join('')}</div>
+        </div></li>`).join('')}</ul>` : '<div style="color:var(--text-2)">Nenhuma questão errada ou marcada para rever. Bom trabalho.</div>'}
+    </div>`;
+}
+
+function renderSubject(subj) {
+  const themes = state.lib.filter((e) => e.materia === subj).sort(byTitle).map((e) => ({ e, s: themeStats(e) }));
+  const { total, done, right } = totals(themes);
+  const finished = themes.filter((t) => t.s.total && t.s.done === t.s.total).length;
+  return `
+    <div class="bar"><div class="wrap">${topRow(subj)}</div></div>
+    <div class="wrap home" style="--tint:${subj.color}">
+      <div class="hero">
+        <div class="eyebrow">Matéria</div>
+        <h2 class="subject-title"><span class="glyph">${subj.icon}</span>${esc(subj.name)}</h2>
+        <div class="meta">${plural(themes.length, 'tema', 'temas')} · ${plural(total, 'questão de reforço', 'questões de reforço')}</div>
+      </div>
+      <div class="tiles tiles-3">
+        ${tile(done, 'Questões respondidas', `de ${total}`, stackBar(right, done - right, total))}
+        ${tile(done ? `${pct(right, done)}%` : '–', 'Aproveitamento', done ? `${plural(right, 'acerto', 'acertos')} em ${done}` : 'Responda questões para medir')}
+        ${tile(finished, 'Temas concluídos', `de ${themes.length}`)}
+      </div>
+      <h3 class="section-title">Temas</h3>
+      <div class="theme-cards">
+        ${themes.map(({ e, s }) => `
+          <button class="card theme-card" data-action="open" data-id="${esc(e.id)}">
+            <span class="theme-text">
+              <span class="theme-title">${esc(e.titulo)}</span>
+              <span class="theme-sub">${s.done ? `${s.done} de ${s.total} feitas · ${pct(s.right, s.done)}% de acerto` : plural(s.total, 'questão', 'questões')}</span>
+              ${stackBar(s.right, s.done - s.right, s.total)}
+            </span>
+            ${s.total && s.done === s.total ? '<span class="chip chip-facil">Concluído</span>' : ''}
+            ${CHEVRON}
+          </button>`).join('')}
+      </div>
+      ${done ? reviewHtml(themes) : ''}
+    </div>`;
+}
+
+function renderHome() {
+  const themes = state.lib.map((e) => ({ e, s: themeStats(e) }));
+  const total = sum(themes.map((t) => t.s), 'total');
+  const done = sum(themes.map((t) => t.s), 'done');
+  const right = sum(themes.map((t) => t.s), 'right');
+  const started = themes.filter((t) => t.s.done).length;
+  const finished = themes.filter((t) => t.s.total && t.s.done === t.s.total).length;
+
+  const subjects = new Map();
+  for (const t of themes) {
+    const name = t.e.materia.name;
+    if (!subjects.has(name)) subjects.set(name, []);
+    subjects.get(name).push(t);
+  }
+  const names = [...subjects.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  const last = themes.find((t) => t.e.id === store.get(LAST_KEY, null));
+  const next = last && last.s.done < last.s.total ? last : themes.find((t) => t.s.done && t.s.done < t.s.total);
+
+  const diff = {};
+  for (const t of themes) for (const [k, d] of Object.entries(t.s.diff)) {
+    const acc = diff[k] || (diff[k] = { total: 0, done: 0, right: 0 });
+    acc.total += d.total; acc.done += d.done; acc.right += d.right;
+  }
+
+
+  return `
+    <div class="bar"><div class="wrap">${topRow()}</div></div>
+    <div class="wrap home">
+      <div class="hero">
+        <div class="eyebrow">ReVest</div>
+        <h2>Sua revisão</h2>
+        <div class="meta">${plural(themes.length, 'tema', 'temas')} em ${plural(names.length, 'matéria', 'matérias')} · ${plural(total, 'questão de reforço', 'questões de reforço')}</div>
+      </div>
+
+      <div class="tiles">
+        ${tile(done, 'Questões respondidas', `de ${total}`, stackBar(right, done - right, total))}
+        ${tile(done ? `${pct(right, done)}%` : '–', 'Aproveitamento', done ? `${plural(right, 'acerto', 'acertos')} em ${done}` : 'Responda questões para medir')}
+        ${tile(started, 'Temas iniciados', `de ${themes.length}`)}
+        ${tile(finished, 'Temas concluídos', `de ${themes.length}`)}
+      </div>
+
+      ${next ? `
+        <h3 class="section-title">Continue de onde parou</h3>
+        <button class="card resume" style="--tint:${next.e.materia.color}" data-action="open" data-id="${esc(next.e.id)}">
+          <span class="glyph">${next.e.materia.icon}</span>
+          <span class="resume-text">
+            <span class="resume-title">${esc(next.e.titulo)}</span>
+            <span class="resume-sub">${esc(next.e.materia.name)} · ${next.s.done} de ${next.s.total} questões feitas</span>
+          </span>
+          ${CHEVRON}
+        </button>` : ''}
+
+      <h3 class="section-title">Matérias</h3>
+      <div class="subjects">
+        ${names.map((name) => subjectTile(subject(name), subjects.get(name))).join('')}
+      </div>
+
+      ${done ? `
+        <h3 class="section-title">Desempenho por dificuldade</h3>
+        <div class="card">
+          ${Object.keys(DIFF).filter((k) => diff[k]).map((k) => `
+            <div class="diff-row">
+              <span class="chip chip-${k}">${DIFF[k]}</span>
+              ${stackBar(diff[k].right, diff[k].done - diff[k].right, diff[k].total)}
+              <span class="diff-num">${diff[k].done ? `${pct(diff[k].right, diff[k].done)}% de acerto` : 'Nenhuma feita'}<small>${diff[k].done} de ${diff[k].total}</small></span>
+            </div>`).join('')}
+        </div>
+
+        ${reviewHtml(themes)}` : ''}
+    </div>`;
+}
+
 function render() { renderSidebar(); renderMain(); }
 
 /* ---------- Sheet, sidebar drawer, toast ---------- */
@@ -467,7 +691,16 @@ function closeSheet() {
   if (!$('sidebar').classList.contains('on')) $('scrim').classList.remove('on');
   sheetReturn?.isConnected && sheetReturn.focus({ preventScroll: true });
 }
-function openSidebar() { $('sidebar').classList.add('on'); $('scrim').classList.add('on'); }
+const isNarrow = () => window.matchMedia('(max-width: 56rem)').matches;
+// Narrow screens get a drawer over the page; wide ones push the page and remember the choice
+function toggleSidebar() {
+  if (isNarrow()) {
+    if ($('sidebar').classList.contains('on')) closeSidebar();
+    else { $('sidebar').classList.add('on'); $('scrim').classList.add('on'); }
+  } else {
+    store.set(NAV_KEY, !document.body.classList.toggle('nav-collapsed'));
+  }
+}
 function closeSidebar() {
   $('sidebar').classList.remove('on');
   if (!$('sheet').classList.contains('on')) $('scrim').classList.remove('on');
@@ -486,12 +719,22 @@ function toast(message, actionLabel, action) {
 /* ---------- Events ---------- */
 const ACTIONS = {
   open: (el) => select(el.dataset.id),
-  menu: openSidebar,
+  home: () => { closeSidebar(); if (routeId()) location.hash = '#/'; },
+  'review-q'(el) { state.pendingQ = el.dataset.q; select(el.dataset.id); },
+  menu: toggleSidebar,
+  group(el) {
+    const key = el.dataset.key;
+    const open = el.getAttribute('aria-expanded') !== 'true';
+    el.setAttribute('aria-expanded', open);
+    state.openGroups = state.openGroups.filter((k) => k !== key).concat(open ? [key] : []);
+    store.set(GROUPS_KEY, state.openGroups);
+  },
+  subject(el) { closeSidebar(); location.hash = `#/@${el.dataset.key}`; },
   dismiss: () => { closeSheet(); closeSidebar(); },
   'toast-action': () => { toastAction?.(); toastAction = null; $('toast').classList.remove('on'); },
   tab(el) {
     setTab(el.dataset.tab);
-    const top = $('bar-anchor').getBoundingClientRect().top + window.scrollY;
+    const top = $('view').getBoundingClientRect().top + window.scrollY - document.querySelector('.bar').offsetHeight;
     if (window.scrollY > top) window.scrollTo(0, top);
   },
   filter(el) { state.filter = el.dataset.filter; renderView(); },
@@ -575,9 +818,11 @@ window.addEventListener('hashchange', route);
 /* ---------- Boot ---------- */
 async function boot() {
   state.progress = store.get(PROG_KEY, {});
+  state.openGroups = arr(store.get(GROUPS_KEY, []));
+  document.body.classList.toggle('nav-collapsed', store.get(NAV_KEY, true) === false);
   try {
     const index = await getJson(`${DATA_DIR}index.json`);
-    state.lib = arr(index.revisoes).filter((e) => e && e.arquivo && e.titulo).map((e) => ({ ...e, id: e.arquivo.replace(/\.json$/i, '') }));
+    state.lib = arr(index.revisoes).filter((e) => e && e.arquivo && e.titulo).map((e) => ({ ...e, id: e.arquivo.replace(/\.json$/i, ''), materia: subject(e.disciplina) }));
   } catch {
     state.error = location.protocol === 'file:'
       ? ['Abra o ReVest por um servidor', 'Aberta direto do disco, a página não consegue ler a pasta de revisões. Rode "node scripts/servir.mjs" na pasta do projeto e acesse o endereço indicado.']

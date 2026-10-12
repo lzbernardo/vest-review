@@ -1,0 +1,773 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Termodinâmica e Calorimetria",
+    "disciplina": "Física",
+    "subtopicos": [
+      "Calor sensível e calor específico",
+      "Calor latente e mudanças de fase",
+      "Equilíbrio térmico e calorímetro",
+      "Propagação de calor (Fourier)",
+      "Gás ideal e trabalho em diagramas p×V",
+      "1ª lei da termodinâmica",
+      "2ª lei, máquinas térmicas e ciclo de Carnot"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "Calor é energia em trânsito por diferença de temperatura: a calorimetria contabiliza quanta energia esquenta (Q = mcΔθ) ou muda a fase (Q = mL) e a termodinâmica fecha o balanço ΔU = Q − τ, com o rendimento limitado pela 2ª lei.",
+    "pontos_chave": [
+      "Calor sensível muda a temperatura (Q = mcΔθ); calor latente muda a fase com temperatura constante (Q = mL). Em gráfico T×Q ou T×t: trecho inclinado = sensível, patamar = latente.",
+      "Água: c = 1 cal/(g·°C) = 4,2 J/(g·°C) = 4,2 kJ/(kg·°C); 1 L de água tem 1 kg. A banca costuma dar 1 cal = 4 J ou 4,2 J no enunciado: use o que vier.",
+      "Sistema isolado em equilíbrio térmico: ΣQ = 0. O que perde calor tem Q < 0, o que ganha tem Q > 0.",
+      "Potência é energia por tempo (P = Q/Δt): quase toda questão contextualizada pede o tempo ou a potência a partir de um Q calculado. 1 kWh = 3,6×10⁶ J.",
+      "Condução (Fourier): Φ = kAΔθ/e. O fluxo cresce com área e diferença de temperatura e cai com a espessura.",
+      "Gás ideal: pV = nRT com T em kelvin (T = θ + 273). Trabalho do gás = área sob a curva p×V; expansão: τ > 0; compressão: τ < 0; isocórica: τ = 0.",
+      "1ª lei: ΔU = Q − τ (τ é o trabalho realizado PELO gás). Gás ideal monoatômico: ΔU = (3/2)nRΔT, que depende só de ΔT; isoterma: ΔU = 0.",
+      "Máquina térmica: Q_q = τ + Q_f e η = τ/Q_q. O rendimento máximo é o de Carnot, η = 1 − T_f/T_q (kelvin); nenhuma máquina real o atinge."
+    ],
+    "formulas": [
+      {
+        "nome": "Calor sensível",
+        "expressao": "$Q = m\\,c\\,\\Delta\\theta = C\\,\\Delta\\theta$",
+        "quando_usar": "Quando só a temperatura varia. Confira se a massa está em g ou kg compatível com c."
+      },
+      {
+        "nome": "Calor latente",
+        "expressao": "$Q = m\\,L$",
+        "quando_usar": "Durante fusão, solidificação, vaporização ou condensação (temperatura constante)."
+      },
+      {
+        "nome": "Equilíbrio térmico",
+        "expressao": "$\\sum Q = 0 \\;\\Rightarrow\\; Q_{cedido} = -Q_{recebido}$",
+        "quando_usar": "Misturas e calorímetro ideal, sem perdas para o ambiente."
+      },
+      {
+        "nome": "Potência térmica",
+        "expressao": "$P = \\dfrac{Q}{\\Delta t}$",
+        "quando_usar": "Para ligar a energia calculada ao tempo de aquecimento, fusão ou à potência de uma usina."
+      },
+      {
+        "nome": "Condução (Fourier)",
+        "expressao": "$\\Phi = \\dfrac{k\\,A\\,\\Delta\\theta}{e}$",
+        "quando_usar": "Fluxo de calor por parede, camada de gelo ou isolante; e é a espessura em metros."
+      },
+      {
+        "nome": "Equação de Clapeyron",
+        "expressao": "$pV = nRT$",
+        "quando_usar": "Estados de gás ideal; use T em kelvin, p em Pa e V em m³ (1 L = 10⁻³ m³)."
+      },
+      {
+        "nome": "Trabalho do gás",
+        "expressao": "$\\tau = p\\,\\Delta V$ (isobárica); $\\tau = $ área sob $p\\times V$ (geral)",
+        "quando_usar": "Transformações lidas em diagrama p×V; em ciclo, a área do laço é o trabalho líquido."
+      },
+      {
+        "nome": "Energia interna (monoatômico)",
+        "expressao": "$\\Delta U = \\tfrac{3}{2}\\,nR\\,\\Delta T$",
+        "quando_usar": "Gás ideal monoatômico em qualquer transformação."
+      },
+      {
+        "nome": "1ª lei da termodinâmica",
+        "expressao": "$\\Delta U = Q - \\tau$",
+        "quando_usar": "Balanço de energia do gás. Em livros que usam W sobre o gás, ΔU = Q + W."
+      },
+      {
+        "nome": "Calores molares",
+        "expressao": "$Q_V = nC_V\\Delta T,\\; Q_p = nC_p\\Delta T,\\; C_p = C_V + R$",
+        "quando_usar": "Calor trocado a volume ou pressão constante; monoatômico: C_V = 3R/2 e C_p = 5R/2."
+      },
+      {
+        "nome": "Rendimento",
+        "expressao": "$\\eta = \\dfrac{\\tau}{Q_q} = 1 - \\dfrac{Q_f}{Q_q}$",
+        "quando_usar": "Máquinas térmicas e usinas; Q_f é o calor rejeitado para a fonte fria."
+      },
+      {
+        "nome": "Rendimento de Carnot",
+        "expressao": "$\\eta_{m\\acute{a}x} = 1 - \\dfrac{T_f}{T_q}$",
+        "quando_usar": "Limite teórico entre duas temperaturas absolutas; 'metade do máximo' significa η = η_Carnot/2."
+      }
+    ],
+    "erros_comuns": [
+      "Misturar unidades: g com J/(kg·°C), cal com J, L com m³, kWh com J. Padronize antes de substituir.",
+      "Usar °C na equação de Clapeyron ou no rendimento de Carnot; é sempre kelvin.",
+      "Aplicar Q = mcΔθ durante uma mudança de fase (ali a temperatura é constante, vale Q = mL) ou esquecer uma etapa na curva de aquecimento (gelo → 0 °C → fusão → água).",
+      "Sinal errado em ΣQ = 0 ou no trabalho (compressão é negativa). Na 1ª lei, confirmar se o enunciado trata τ como trabalho do gás ou sobre o gás.",
+      "Esquecer que ΔU de gás ideal depende só de ΔT: na isoterma ΔU = 0 e na isocórica Q = ΔU.",
+      "Dividir pela potência errada: a potência 'líquida' ou 'útil' do enunciado já desconta perdas; não aplique rendimento duas vezes.",
+      "Confundir rendimento com calor rejeitado: o que não vira trabalho vai para a fonte fria e aquece o rio, o ar etc.",
+      "Em Fourier, usar a espessura em cm ou esquecer a área; o fluxo sai fora por fatores de 100 ou de A."
+    ],
+    "como_a_unicamp_cobra": "Nas provas de 2ª fase indexadas (2001 a 2026), termologia vem quase sempre como uma questão de dois itens em contexto real: usina termossolar (2022), lago subglacial na Antártida (2023), vento Föhn em diagrama P×V (2025), parafina como material de mudança de fase (2026), motor de automóvel (2004), usina e rio (2001), tanque com camada de gelo (2007). O padrão é um cálculo direto de energia (Q = mcΔθ, Q = mL, trabalho como área) seguido de uma conversão para potência, tempo ou outra grandeza (kWh, cal→J, elevação da temperatura do rio), com dados em unidades mistas e, não raro, leitura de números em gráfico ou diagrama. A única questão de 1ª fase indexada (2018, objetiva e com fase não confirmada) segue a mesma linha: estimar energia em kWh a partir de massa, c e Δθ."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Calor, temperatura e energia interna",
+      "explicacao": "Temperatura mede a agitação média das partículas; energia interna é a soma das energias microscópicas; calor é a energia que flui de um corpo a outro apenas por diferença de temperatura. Calor e trabalho são formas de transferir energia (experimento de Joule), por isso se medem em joules (1 cal ≈ 4,2 J).",
+      "exemplo": "Dois corpos em contato trocam calor até igualar as temperaturas; corpo 'quente' não 'contém calor', tem mais energia interna.",
+      "dica_de_prova": "Frases do tipo 'a água tem muito calor' são pegadinha de alternativa: calor só existe em trânsito.",
+      "imagens": [
+        "i2"
+      ]
+    },
+    {
+      "id": "c2",
+      "nome": "Calor sensível, calor específico e capacidade térmica",
+      "explicacao": "Calor sensível altera a temperatura: Q = mcΔθ = CΔθ, com C = mc a capacidade térmica do corpo. O calor específico c é propriedade do material; a água tem c alto (4,2 kJ/kg·°C), por isso esquenta e esfria devagar e funciona como reservatório térmico e fluido de refrigeração.",
+      "exemplo": "Aquecer 500 L (500 kg) de água de 20 °C a 47 °C exige Q = 500 · 4,0 · 27 = 5,4×10⁴ kJ, o que dá 15 kWh.",
+      "dica_de_prova": "Se o enunciado dá a vazão (L/s), calcule a massa por segundo e o resultado já sai como potência (caso do motor de automóvel de 2004).",
+      "imagens": []
+    },
+    {
+      "id": "c3",
+      "nome": "Calor latente e mudanças de fase",
+      "explicacao": "Durante a fusão ou vaporização a energia recebida rompe ligações e a temperatura permanece constante: Q = mL. Calor latente de fusão da água ≈ 80 cal/g (≈ 3,3×10⁵ J/kg); de vaporização ≈ 540 cal/g. Na curva de aquecimento, alternam-se trechos inclinados (sensível) e patamares (latente). Materiais de mudança de fase (parafina, sais fundidos) armazenam muita energia a temperatura quase constante.",
+      "exemplo": "Fundir 20 g de parafina já em 60 cal/g exige 1200 cal; com 1 cal = 4 J e potência de 30 W, o tempo é 4800/30 = 160 s.",
+      "dica_de_prova": "Em gráfico T×t com potência constante, o comprimento do patamar é proporcional a mL, e a inclinação dos trechos é inversamente proporcional a mc.",
+      "imagens": [
+        "i1"
+      ]
+    },
+    {
+      "id": "c4",
+      "nome": "Equilíbrio térmico e calorímetro",
+      "explicacao": "Num calorímetro ideal (sem perdas, capacidade térmica desprezível ou dada), a soma algébrica dos calores trocados é zero. Escreva Q = mcΔθ para cada corpo com Δθ = final − inicial, some e iguale a zero. Se houver mudança de fase possível, teste primeiro se o corpo chega à temperatura de transição antes de supor a temperatura final.",
+      "exemplo": "300 g de água a 80 °C com 200 g a 20 °C: θ = (300·80 + 200·20)/500 = 56 °C.",
+      "dica_de_prova": "A temperatura final fica mais perto da do corpo com maior mc; resultados fora do intervalo entre as temperaturas iniciais indicam erro de sinal.",
+      "imagens": [
+        "i3"
+      ]
+    },
+    {
+      "id": "c5",
+      "nome": "Propagação do calor: condução, convecção e radiação",
+      "explicacao": "Condução: transferência por agitação e contato, Φ = kAΔθ/e (Fourier); metais têm k alto, isolantes têm k baixo. Convecção: movimento de fluido por diferença de densidade (brisas, correntes no líquido aquecido). Radiação: ondas eletromagnéticas, não precisa de meio; a intensidade cresce com T⁴ e o comprimento de onda de máxima emissão diminui com T.",
+      "exemplo": "Camada de gelo sobre água a 0 °C com ar abaixo de 0 °C: o gelo conduz calor da água para o ar e a camada cresce, congelando mais água.",
+      "dica_de_prova": "Fluxo (W) × tempo = energia (J): é a ponte entre Fourier e calor latente em questões de congelamento de lagos e tanques (2007 e 2023).",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Gás ideal e transformações",
+      "explicacao": "Modelo em que pV = nRT. Isotérmica: pV constante (T constante). Isobárica: V/T constante. Isocórica: p/T constante. Adiabática: sem troca de calor (Q = 0), então ΔU = −τ e o gás esfria ao expandir. Em diagramas p×V, compare temperaturas pelo produto pV: maior pV, maior T.",
+      "exemplo": "Ar a 10⁵ Pa, 27 °C numa sala de 240 m³: n = pV/RT ≈ 1×10⁴ mol (questão de 2005).",
+      "dica_de_prova": "Leia p e V no gráfico, converta para SI e só então use Clapeyron; o item seguinte quase sempre pede o trabalho como área.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Trabalho e 1ª lei da termodinâmica",
+      "explicacao": "O trabalho do gás é a área sob a curva no diagrama p×V (τ = pΔV a pressão constante). A 1ª lei é a conservação de energia: ΔU = Q − τ. Para monoatômico, ΔU = (3/2)nRΔT; isobárica: Q = (5/2)nRΔT; isocórica: Q = (3/2)nRΔT; isotérmica: Q = τ; adiabática: Q = 0. Em ciclo, ΔU = 0 e Q_líquido = τ_líquido.",
+      "exemplo": "Isobárica de 300 K a 400 K com 2 mol: ΔU = 2490 J, τ = 1660 J e Q = 4150 J (R = 8,3).",
+      "dica_de_prova": "Confira o sentido do ciclo: horário dá τ líquido positivo (máquina); anti-horário, negativo (refrigerador).",
+      "imagens": [
+        "i4"
+      ]
+    },
+    {
+      "id": "c8",
+      "nome": "2ª lei, máquinas térmicas e rendimento",
+      "explicacao": "Uma máquina térmica retira Q_q da fonte quente, converte parte em trabalho τ e rejeita Q_f à fonte fria: Q_q = τ + Q_f e η = τ/Q_q < 1. Pela 2ª lei, o calor não flui espontaneamente do frio para o quente e nenhuma máquina converte calor integralmente em trabalho em ciclo. O calor rejeitado aquece o ambiente (rio, ar), o que liga a questão à calorimetria.",
+      "exemplo": "Usina com Q_q = 2,0×10⁸ W e η = 25%: potência útil de 5,0×10⁷ W e 1,5×10⁸ W de calor rejeitado.",
+      "dica_de_prova": "Quando a questão pede a elevação da temperatura da água do rio, use o calor rejeitado por segundo e a vazão em kg/s: ΔT = P_f/(ṁc).",
+      "imagens": [
+        "i5"
+      ]
+    },
+    {
+      "id": "c9",
+      "nome": "Ciclo de Carnot e rendimento máximo",
+      "explicacao": "O ciclo de Carnot é reversível e tem duas isotermas e duas adiabáticas. Entre fontes a T_q e T_f (em kelvin), nenhuma máquina supera η = 1 − T_f/T_q, que só depende das temperaturas. Aumentar T_q ou diminuir T_f eleva o limite.",
+      "exemplo": "Fontes a 600 K e 300 K: η_máx = 50%; uma usina que opere com metade do rendimento máximo tem η = 25%.",
+      "dica_de_prova": "Se o enunciado dá as temperaturas em °C, converta para kelvin antes; 'metade do máximo teórico' pede η = η_Carnot/2.",
+      "imagens": [
+        "i6"
+      ]
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2026,
+      "fase": "2ª fase (2º dia, Ciências Exatas)",
+      "numero": "Q11",
+      "tipo": "dissertativa",
+      "assunto": "Calor latente e calor sensível: parafina como material de mudança de fase; aquecimento de Al e Cu",
+      "o_que_cobra": "Item a: tempo para fundir uma amostra de parafina de 20 g, já na temperatura de fusão, dada a potência líquida de 30 W, o calor latente em cal/g e a conversão cal→J. Item b: com o gráfico T×t do aquecimento a laser, calcular o calor armazenado na amostra de alumínio.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2026_2fase/2dia/unicamp2026_2fase_2dia_prova-2.pdf",
+      "link_gabarito": null,
+      "conceitos": [
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2025,
+      "fase": "2ª fase (2º dia, Ciências Exatas)",
+      "numero": "Q9",
+      "tipo": "dissertativa",
+      "assunto": "Gases ideais e trabalho: vento Föhn em diagrama P×V",
+      "o_que_cobra": "Item a: temperatura final, em °C, do ar no ponto f do diagrama P×V, dada a temperatura inicial. Item b: trabalho realizado pelo gás na expansão entre os pontos i e f.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2025_2fase/2dia/unicamp2025_2fase_2dia_prova-2.pdf",
+      "link_gabarito": null,
+      "conceitos": [
+        "c6",
+        "c7"
+      ]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2023,
+      "fase": "2ª fase (2º dia, Ciências Exatas)",
+      "numero": "Q12",
+      "tipo": "dissertativa",
+      "assunto": "Calorimetria e condução: lago subglacial na Antártida",
+      "o_que_cobra": "Item a: calor a retirar da água do lago para congelá-lo inteiro a 0 °C. Item b: potência térmica conduzida do lago ao ar por toda a área, através da camada de gelo de espessura e condutividade dadas.",
+      "gabarito_oficial": "(a) cerca de 1,92×10¹⁷ J; (b) cerca de 3,3×10⁸ W (conforme resolução comentada do Curso Objetivo; não é gabarito oficial da banca)",
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2023_2fase/2dia/unicamp2023_2fase_2dia_resolucao-2.pdf",
+      "link_gabarito": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2023_2fase/2dia/unicamp2023_2fase_2dia_resolucao-2.pdf",
+      "conceitos": [
+        "c3",
+        "c5"
+      ]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2022,
+      "fase": "2ª fase (2º dia, Ciências Exatas)",
+      "numero": "Q15",
+      "tipo": "dissertativa",
+      "assunto": "Potência e calor latente: usina termossolar",
+      "o_que_cobra": "Item a: potência média de uma usina a partir da insolação diária sobre os helióstatos e da fração convertida em eletricidade. Item b: tempo para fundir uma massa de sal, dados o calor latente e a potência luminosa usada.",
+      "gabarito_oficial": "(a) 100 MW; (b) cerca de 2,77 h (10 000 s), conforme o comentário oficial da Comvest",
+      "link_questao": "https://www.comvest.unicamp.br/wp-content/uploads/2022/09/CQ_F2_2022_DIA-2_CE_T.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/wp-content/uploads/2022/09/CQ_F2_2022_DIA-2_CE_T.pdf",
+      "conceitos": [
+        "c3",
+        "c8"
+      ]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "não confirmada (questão objetiva, provavelmente 1ª fase)",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Calor sensível: energia elétrica equivalente ao aquecimento solar de água",
+      "o_que_cobra": "Estimar a energia elétrica, em kWh, que um aquecedor elétrico gastaria para dar o mesmo aquecimento de 500 L de água, de 20 °C a 47 °C, obtido com placas solares, usando densidade, calor específico e a relação kWh→J.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.blogdovestibular.com/questoes/questao-resolvida-envolvendo-transferencia-de-calor-da-unicamp.html",
+      "link_gabarito": null,
+      "conceitos": [
+        "c2"
+      ]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2009,
+      "fase": "2ª fase (3º dia, Física)",
+      "numero": "Q6",
+      "tipo": "dissertativa",
+      "assunto": "Gás ideal e trabalho: máquina a vapor",
+      "o_que_cobra": "Item a: temperatura do vapor no ponto 5, tratado como gás ideal, a partir de p e V lidos no diagrama. Item b: trabalho realizado pelo vapor na transformação isobárica do trecho 4→5.",
+      "gabarito_oficial": "(a) T = 5,0×10² K; (b) τ = 7,5×10² J (conforme resolução comentada do Curso Objetivo; não é gabarito oficial da banca)",
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2009_2fase/3dia/unicamp2009_2fase_3dia.pdf",
+      "link_gabarito": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2009_2fase/3dia/unicamp2009_2fase_3dia.pdf",
+      "conceitos": [
+        "c6",
+        "c7"
+      ]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2007,
+      "fase": "2ª fase (3º dia, Física)",
+      "numero": "Q8",
+      "tipo": "dissertativa",
+      "assunto": "Condução e calor latente: tanque com camada de gelo",
+      "o_que_cobra": "Item a: fluxo de calor por condução através de uma camada de gelo de 5,0 cm, dados a condutividade, a área e as temperaturas da água e do ar. Item b: calor trocado entre a água e o ar para que a espessura passe de 5,0 cm para 15 cm.",
+      "gabarito_oficial": "(a) Φ ≅ 1,6×10² cal/s; (b) Q ≅ 1,4×10⁷ cal (conforme resolução comentada do Curso Objetivo; não é gabarito oficial da banca)",
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2007_2fase/3dia/unicamp2007_2fase_3dia.pdf",
+      "link_gabarito": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2007_2fase/3dia/unicamp2007_2fase_3dia.pdf",
+      "conceitos": [
+        "c3",
+        "c5"
+      ]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2006,
+      "fase": "2ª fase (3º dia, Física)",
+      "numero": "Q7",
+      "tipo": "dissertativa",
+      "assunto": "Calorimetria: teste de um anel para saber se é de ouro",
+      "o_que_cobra": "Três itens: temperatura de equilíbrio caso o anel fosse de ouro puro, calor específico do anel a partir da temperatura medida (22 °C) e, com gráfico e tabela, a porcentagem de ouro e os quilates.",
+      "gabarito_oficial": null,
+      "link_questao": "https://curso-objetivo.br/vestibular/resolucao_comentada/unicamp/2006_2fase/3dia/unicamp2006_2fase_3dia_prova.pdf",
+      "link_gabarito": null,
+      "conceitos": [
+        "c2",
+        "c4"
+      ]
+    },
+    {
+      "id": "x9",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2004,
+      "fase": "2ª fase (3º dia, Física)",
+      "numero": "Q8",
+      "tipo": "dissertativa",
+      "assunto": "Calor sensível e potência: resfriamento do motor de automóvel",
+      "o_que_cobra": "Item a: potência térmica absorvida pela água de refrigeração ao passar pelo motor, dadas a vazão e as temperaturas de entrada e saída. Item b: temperatura de saída quando um aditivo eleva o calor específico, mantida a mesma potência.",
+      "gabarito_oficial": "(a) 25,2 kW; (b) 92 °C (conforme resolução comentada do Curso Objetivo; não é gabarito oficial da banca)",
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2004_2fase/3dia/unicamp2004_2fase_3dia.pdf",
+      "link_gabarito": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2004_2fase/3dia/unicamp2004_2fase_3dia.pdf",
+      "conceitos": [
+        "c2"
+      ]
+    },
+    {
+      "id": "x10",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2001,
+      "fase": "2ª fase (3º dia, Física)",
+      "numero": "Q8",
+      "tipo": "dissertativa",
+      "assunto": "Máquina térmica e Carnot: usina junto a um rio",
+      "o_que_cobra": "Item a: potência de saída de uma usina que opera com metade do rendimento máximo teórico de uma máquina térmica, dada a taxa de queima de combustível. Item b: elevação da temperatura da água do rio ao receber o calor não convertido em trabalho, dada a vazão.",
+      "gabarito_oficial": "(a) 4,0×10⁷ W; (b) 3,0 °C (conforme resolução comentada do Curso Objetivo; não é gabarito oficial da banca)",
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2001_2fase/3dia/unicamp2001_2fase_3dia.pdf",
+      "link_gabarito": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2001_2fase/3dia/unicamp2001_2fase_3dia.pdf",
+      "conceitos": [
+        "c8",
+        "c9"
+      ]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c2"
+      ],
+      "enunciado": "Quanta energia é necessária para aquecer 2,0 kg de água de 20 °C a 70 °C? Dado: $c_{\\text{água}} = 4{,}2\\,\\text{kJ/(kg·°C)}$.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "42 kJ"
+        },
+        {
+          "letra": "B",
+          "texto": "210 kJ"
+        },
+        {
+          "letra": "C",
+          "texto": "420 kJ"
+        },
+        {
+          "letra": "D",
+          "texto": "840 kJ"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "$Q = mc\\Delta\\theta = 2{,}0 \\cdot 4{,}2 \\cdot (70-20) = 420\\,\\text{kJ}$. A alternativa B sai de esquecer a massa de 2 kg (m = 1 kg); a D, de usar Δθ = 100 °C; a A, de errar uma casa decimal.",
+      "imagens": []
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x5",
+      "dificuldade": "facil",
+      "conceitos": [
+        "c1",
+        "c2"
+      ],
+      "enunciado": "Um coletor solar aquece 200 L de água de 25 °C a 45 °C. Qual é, aproximadamente, a energia elétrica que um aquecedor elétrico consumiria para produzir o mesmo aquecimento? Dados: densidade da água 1,0 kg/L; $c = 4{,}2\\,\\text{kJ/(kg·°C)}$; $1\\,\\text{kWh} = 3{,}6\\times 10^{6}\\,\\text{J}$.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "0,47 kWh"
+        },
+        {
+          "letra": "B",
+          "texto": "4,7 kWh"
+        },
+        {
+          "letra": "C",
+          "texto": "16,8 kWh"
+        },
+        {
+          "letra": "D",
+          "texto": "60 kWh"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "$m = 200\\,\\text{kg}$ e $Q = 200 \\cdot 4200 \\cdot 20 = 1{,}68\\times 10^{7}\\,\\text{J}$. Em kWh: $1{,}68\\times10^{7}/3{,}6\\times10^{6} \\approx 4{,}7\\,\\text{kWh}$. A alternativa C é o valor em MJ, sem converter para kWh; a D vem de multiplicar por 3,6 em vez de dividir; a A, de errar a potência de dez.",
+      "imagens": []
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c3"
+      ],
+      "enunciado": "Qual a energia necessária para fundir 500 g de gelo que já está a 0 °C? Dados: calor latente de fusão do gelo $L = 80\\,\\text{cal/g}$ e $1\\,\\text{cal} = 4{,}2\\,\\text{J}$.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "$4{,}0\\times 10^{4}\\,\\text{J}$"
+        },
+        {
+          "letra": "B",
+          "texto": "$1{,}68\\times 10^{5}\\,\\text{J}$"
+        },
+        {
+          "letra": "C",
+          "texto": "$3{,}36\\times 10^{5}\\,\\text{J}$"
+        },
+        {
+          "letra": "D",
+          "texto": "$1{,}68\\times 10^{8}\\,\\text{J}$"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "$Q = mL = 500 \\cdot 80 = 4{,}0\\times10^{4}\\,\\text{cal}$, e em joules $4{,}0\\times10^{4}\\cdot 4{,}2 = 1{,}68\\times10^{5}\\,\\text{J}$. A alternativa A esquece a conversão cal→J; a C dobra o valor; a D usa 500 como se fosse kg.",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x1",
+      "dificuldade": "media",
+      "conceitos": [
+        "c3"
+      ],
+      "enunciado": "Uma amostra de 50 g de parafina, já na temperatura de fusão, recebe uma potência líquida de 25 W. Sabendo que o calor latente de fusão da parafina é 60 cal/g e que $1\\,\\text{cal} = 4\\,\\text{J}$, quanto tempo leva para fundir toda a amostra?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "120 s"
+        },
+        {
+          "letra": "B",
+          "texto": "480 s"
+        },
+        {
+          "letra": "C",
+          "texto": "1920 s"
+        },
+        {
+          "letra": "D",
+          "texto": "$1{,}2\\times 10^{4}\\,\\text{s}$"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "$Q = mL = 50\\cdot 60 = 3000\\,\\text{cal} = 1{,}2\\times10^{4}\\,\\text{J}$. Como $P = Q/\\Delta t$, $\\Delta t = 12000/25 = 480\\,\\text{s}$ (8 min). A alternativa A esquece cal→J; a C converte duas vezes; a D é o valor de Q em joules, sem dividir pela potência.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c4"
+      ],
+      "enunciado": "Em um calorímetro ideal misturam-se 300 g de água a 80 °C e 200 g de água a 20 °C. Qual é a temperatura final de equilíbrio?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "44 °C"
+        },
+        {
+          "letra": "B",
+          "texto": "50 °C"
+        },
+        {
+          "letra": "C",
+          "texto": "56 °C"
+        },
+        {
+          "letra": "D",
+          "texto": "60 °C"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "$300\\,c\\,(\\theta - 80) + 200\\,c\\,(\\theta - 20) = 0 \\Rightarrow 500\\theta = 24000 + 4000 \\Rightarrow \\theta = 56\\,\\text{°C}$. A alternativa B é a média simples, que só vale para massas iguais; a A troca os pesos das massas.",
+      "imagens": [
+        "i3"
+      ]
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x7",
+      "dificuldade": "media",
+      "conceitos": [
+        "c5"
+      ],
+      "enunciado": "Uma camada de gelo de 4,0 cm de espessura cobre um tanque de área 2,0 m². A face inferior do gelo está a 0 °C e a superior, a −10 °C. Com $k_{\\text{gelo}} = 2{,}2\\,\\text{W/(m·°C)}$, qual é o fluxo de calor conduzido através do gelo?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "11 W"
+        },
+        {
+          "letra": "B",
+          "texto": "550 W"
+        },
+        {
+          "letra": "C",
+          "texto": "1100 W"
+        },
+        {
+          "letra": "D",
+          "texto": "4400 W"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "$\\Phi = kA\\Delta\\theta/e = 2{,}2 \\cdot 2{,}0 \\cdot 10 / 0{,}04 = 1100\\,\\text{W}$. A alternativa A usa a espessura em cm (4,0); a B esquece a área; a D usa 1 cm de espessura.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c6",
+        "c7"
+      ],
+      "enunciado": "Um gás ideal monoatômico, com 2,0 mol, sofre uma expansão isobárica em que a temperatura passa de 300 K para 400 K. Adote $R = 8{,}3\\,\\text{J/(mol·K)}$. Qual é o calor recebido pelo gás?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "1660 J"
+        },
+        {
+          "letra": "B",
+          "texto": "2490 J"
+        },
+        {
+          "letra": "C",
+          "texto": "4150 J"
+        },
+        {
+          "letra": "D",
+          "texto": "4980 J"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "$\\Delta U = \\tfrac{3}{2}nR\\Delta T = 1{,}5\\cdot 2\\cdot 8{,}3 \\cdot 100 = 2490\\,\\text{J}$ e $\\tau = p\\Delta V = nR\\Delta T = 1660\\,\\text{J}$. Logo $Q = \\Delta U + \\tau = 4150\\,\\text{J}$ (equivale a $nC_p\\Delta T$ com $C_p = 5R/2$). A alternativa A é só o trabalho; a B, só ΔU; a D usa $C_p = 3R$.",
+      "imagens": [
+        "i4"
+      ]
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c6",
+        "c7"
+      ],
+      "enunciado": "Um mol de gás ideal monoatômico percorre, de forma quase estática, o ciclo ABCDA de um diagrama $p\\times V$ com estes estados: A ($2{,}0\\times10^{5}\\,\\text{Pa}$; 10 L), B ($2{,}0\\times10^{5}\\,\\text{Pa}$; 30 L), C ($1{,}0\\times10^{5}\\,\\text{Pa}$; 30 L) e D ($1{,}0\\times10^{5}\\,\\text{Pa}$; 10 L). A→B e C→D são isobáricas; B→C e D→A, isocóricas. Adote $R = 8\\,\\text{J/(mol·K)}$ e $1\\,\\text{L} = 10^{-3}\\,\\text{m}^3$. (a) Calcule as temperaturas em A e em B. (b) Calcule o trabalho líquido realizado pelo gás no ciclo. (c) Calcule a variação de energia interna e o calor recebido na etapa A→B.",
+      "alternativas": null,
+      "gabarito": "(a) T_A = 250 K e T_B = 750 K; (b) 2000 J; (c) ΔU = 6000 J e Q = 10 000 J.",
+      "resolucao": "(a) $T = pV/(nR)$: $T_A = 2\\times10^{5}\\cdot 10^{-2}/8 = 250\\,\\text{K}$ e $T_B = 2\\times10^{5}\\cdot 3\\times10^{-2}/8 = 750\\,\\text{K}$. (b) Só as isobáricas realizam trabalho: $\\tau_{AB} = 2\\times10^{5}\\cdot 2\\times10^{-2} = +4000\\,\\text{J}$ e $\\tau_{CD} = 10^{5}\\cdot(-2\\times10^{-2}) = -2000\\,\\text{J}$, então $\\tau_{\\text{líq}} = 2000\\,\\text{J}$, que é a área do retângulo (ciclo horário, positivo). (c) $\\Delta U_{AB} = \\tfrac{3}{2}nR\\Delta T = 1{,}5\\cdot 8\\cdot 500 = 6000\\,\\text{J}$ e, pela 1ª lei, $Q_{AB} = \\Delta U + \\tau = 6000 + 4000 = 10\\,000\\,\\text{J}$. Erro típico: usar °C em Clapeyron ou esquecer a conversão de litros para m³.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x7",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c3",
+        "c5"
+      ],
+      "enunciado": "Um tanque de área 20 m² contém água a 0 °C coberta por uma camada de gelo de 10 cm. O ar acima está a −10 °C e a superfície inferior do gelo permanece a 0 °C. Dados: $k_{\\text{gelo}} = 2{,}2\\,\\text{W/(m·°C)}$, densidade do gelo $9{,}0\\times10^{2}\\,\\text{kg/m}^3$ e calor latente de solidificação $3{,}3\\times10^{5}\\,\\text{J/kg}$. (a) Qual é a potência térmica conduzida através do gelo? (b) Que calor precisa ser retirado da água para que a espessura do gelo aumente 1,0 cm? (c) Supondo o fluxo constante nesse intervalo, quanto tempo leva esse crescimento?",
+      "alternativas": null,
+      "gabarito": "(a) 4,4×10³ W; (b) cerca de 5,9×10⁷ J (massa de gelo formada de 180 kg); (c) cerca de 1,35×10⁴ s, ou seja, ≈ 3,8 h.",
+      "resolucao": "(a) $\\Phi = kA\\Delta\\theta/e = 2{,}2\\cdot 20\\cdot 10/0{,}10 = 4{,}4\\times10^{3}\\,\\text{W}$. (b) Volume formado: $20\\cdot 0{,}010 = 0{,}20\\,\\text{m}^3$; massa: $900 \\cdot 0{,}20 = 180\\,\\text{kg}$; $Q = mL = 180\\cdot 3{,}3\\times10^{5} = 5{,}94\\times10^{7}\\,\\text{J}$. (c) $\\Delta t = Q/\\Phi = 5{,}94\\times10^{7}/4{,}4\\times10^{3} = 1{,}35\\times10^{4}\\,\\text{s} \\approx 3{,}75\\,\\text{h}$. O raciocínio liga condução (potência) e calor latente (energia), como nas questões de 2007 e 2023; na prática o fluxo cai à medida que o gelo engrossa, por isso o tempo real é maior.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x10",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c8",
+        "c9",
+        "c2"
+      ],
+      "enunciado": "Uma usina térmica recebe da queima de combustível $2{,}0\\times10^{8}\\,\\text{W}$ de potência térmica a uma temperatura de 600 K e descarta o calor residual em um rio a 300 K. A usina opera com metade do rendimento máximo teórico (de Carnot). Dados: vazão do rio de $100\\,\\text{m}^3/\\text{s}$, densidade da água 1000 kg/m³ e $c = 4200\\,\\text{J/(kg·°C)}$. (a) Qual é o rendimento da usina? (b) Qual é a potência elétrica gerada? (c) Em quantos graus a temperatura da água do rio aumenta ao receber todo o calor rejeitado?",
+      "alternativas": null,
+      "gabarito": "(a) 25%; (b) 5,0×10⁷ W; (c) cerca de 0,36 °C.",
+      "resolucao": "(a) $\\eta_{m\\acute{a}x} = 1 - 300/600 = 0{,}50$, então $\\eta = 0{,}25$. (b) $P_u = \\eta P_q = 0{,}25 \\cdot 2{,}0\\times10^{8} = 5{,}0\\times10^{7}\\,\\text{W}$. (c) O calor rejeitado é $P_f = P_q - P_u = 1{,}5\\times10^{8}\\,\\text{W}$. A massa de água por segundo é $\\dot m = 100 \\cdot 1000 = 10^{5}\\,\\text{kg/s}$, e $P_f = \\dot m c\\,\\Delta T$ resulta em $\\Delta T = 1{,}5\\times10^{8}/(10^{5}\\cdot 4200) \\approx 0{,}36\\,\\text{°C}$. Temperaturas em kelvin no Carnot; potência em watts = energia por segundo, o que permite usar vazão em vez de massa.",
+      "imagens": [
+        "i5",
+        "i6"
+      ]
+    }
+  ],
+  "imagens": [
+    {
+      "id": "i1",
+      "tipo": "grafico",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/30a4474a953a1c0aba667f301d05a4844c88cea8",
+      "alt": "Gráfico da temperatura da água em função do calor adicionado por unidade de massa, com trechos inclinados (gelo, água líquida, vapor) e dois patamares (fusão e vaporização).",
+      "legenda": "Nos trechos inclinados o calor é sensível (Q = mcΔθ; quanto mais inclinada a reta em T×Q, menor o calor específico). Nos patamares a temperatura não muda e o calor é latente (Q = mL). Aparece com frequência em gráficos T×tempo com potência constante.",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 1.15",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/1-5-phase-changes",
+      "verificada": false
+    },
+    {
+      "id": "i2",
+      "tipo": "esquema",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/aa45352115b3f47b6e30e07fd823b728b14224f9",
+      "alt": "Esquema do experimento de Joule: massas em queda fazem girar pás dentro de um recipiente com água, que se aquece.",
+      "legenda": "Trabalho mecânico dissipado vira aumento de temperatura: calor e trabalho são formas de transferir energia, o que justifica 1 cal ≈ 4,2 J e o balanço da 1ª lei.",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 1.10",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry",
+      "verificada": false
+    },
+    {
+      "id": "i3",
+      "tipo": "esquema",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/20481cb6eddc555307b8ac3b37ad52b8a0c7dafc",
+      "alt": "Dois painéis: um refrigerante quente em contato com gelo e, depois, os dois na mesma temperatura de equilíbrio.",
+      "legenda": "Em sistema isolado, o calor cedido pelo corpo quente é igual ao absorvido pelo frio (ΣQ = 0). A temperatura final fica entre as iniciais e mais perto da do corpo de maior capacidade térmica.",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 1.9",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry",
+      "verificada": false
+    },
+    {
+      "id": "i4",
+      "tipo": "grafico",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/964a2fd9492237be2a29f6713a856042fab074eb",
+      "alt": "Diagrama p×V de uma expansão isotérmica de um gás ideal do estado A ao estado B, com a curva decrescente.",
+      "legenda": "A área sob a curva p×V é o trabalho do gás (positivo na expansão). Na isoterma de gás ideal ΔU = 0, então todo o calor recebido vira trabalho (Q = τ).",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 3.10",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/3-4-thermodynamic-processes",
+      "verificada": false
+    },
+    {
+      "id": "i5",
+      "tipo": "esquema",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b252c90db4cfa3e18ed6a8fd30613efac1dfb21e",
+      "alt": "Esquema de uma máquina térmica: energia flui do reservatório quente para o frio enquanto a máquina realiza trabalho.",
+      "legenda": "Balanço da máquina: Q_quente = τ + Q_frio. O rendimento é η = τ/Q_quente; o calor rejeitado Q_frio não some, aquece o ambiente (rio, ar), tema comum nas questões de usina.",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 4.4",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/4-2-heat-engines",
+      "verificada": false
+    },
+    {
+      "id": "i6",
+      "tipo": "grafico",
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/5256c262741b3231ef322e36fa22b0d4a64150b5",
+      "alt": "Diagrama p×V do ciclo de Carnot, um laço fechado formado por duas isotermas e duas adiabáticas, com a área interna destacada.",
+      "legenda": "A área do laço é o trabalho líquido por ciclo. Em qualquer ciclo p×V percorrido no sentido horário o trabalho líquido é positivo (máquina); no anti-horário é negativo (refrigerador).",
+      "credito": "OpenStax, University Physics Volume 2 (Ling, Moebs, Sanny), Fig. 4.12",
+      "licenca": "CC BY-NC-SA",
+      "fonte_url": "https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle",
+      "verificada": false
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Curso Objetivo: Unicamp 2026, 2ª fase, 2º dia, Ciências Exatas (prova)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2026_2fase/2dia/unicamp2026_2fase_2dia_prova-2.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2025, 2ª fase, 2º dia, Ciências Exatas (prova)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2025_2fase/2dia/unicamp2025_2fase_2dia_prova-2.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2023, 2ª fase, 2º dia, Ciências Exatas (resolução comentada)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2023_2fase/2dia/unicamp2023_2fase_2dia_resolucao-2.pdf"
+    },
+    {
+      "titulo": "Comvest: prova comentada, Unicamp 2022, 2ª fase, dia 2, Ciências Exatas",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2022/09/CQ_F2_2022_DIA-2_CE_T.pdf"
+    },
+    {
+      "titulo": "Blog do Vestibular: questão resolvida de transferência de calor, Unicamp 2018",
+      "url": "https://www.blogdovestibular.com/questoes/questao-resolvida-envolvendo-transferencia-de-calor-da-unicamp.html"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2009, 2ª fase, 3º dia (resolução comentada)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2009_2fase/3dia/unicamp2009_2fase_3dia.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2007, 2ª fase, 3º dia (resolução comentada)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2007_2fase/3dia/unicamp2007_2fase_3dia.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2006, 2ª fase, 3º dia (prova)",
+      "url": "https://curso-objetivo.br/vestibular/resolucao_comentada/unicamp/2006_2fase/3dia/unicamp2006_2fase_3dia_prova.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2004, 2ª fase, 3º dia (resolução comentada)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2004_2fase/3dia/unicamp2004_2fase_3dia.pdf"
+    },
+    {
+      "titulo": "Curso Objetivo: Unicamp 2001, 2ª fase, 3º dia (resolução comentada)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/unicamp/2001_2fase/3dia/unicamp2001_2fase_3dia.pdf"
+    },
+    {
+      "titulo": "OpenStax University Physics Vol. 2: 1.4 Transferência de calor, calor específico e calorimetria",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry"
+    },
+    {
+      "titulo": "OpenStax University Physics Vol. 2: 1.5 Mudanças de fase",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/1-5-phase-changes"
+    },
+    {
+      "titulo": "OpenStax University Physics Vol. 2: 3.4 Processos termodinâmicos",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/3-4-thermodynamic-processes"
+    },
+    {
+      "titulo": "OpenStax University Physics Vol. 2: 4.2 Máquinas térmicas",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/4-2-heat-engines"
+    },
+    {
+      "titulo": "OpenStax University Physics Vol. 2: 4.5 O ciclo de Carnot",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle"
+    }
+  ]
+}
