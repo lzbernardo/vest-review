@@ -18,14 +18,21 @@ export async function gerarIndice() {
   for (const caminho of arquivos) {
     const arquivo = relative(RAIZ, caminho).split(sep).join('/');
     try {
-      const dados = JSON.parse((await readFile(caminho, 'utf8')).replace(/^﻿/, ''));
+      const dados = JSON.parse((await readFile(caminho, 'utf8')).replace(/^\uFEFF/, ''));
       if (typeof dados?.tema?.titulo !== 'string' || !dados.tema.titulo.trim()) throw new Error('falta "tema.titulo"');
+      const questoes = Array.isArray(dados.questoes_reforco) ? dados.questoes_reforco : [];
       revisoes.push({
         arquivo,
         titulo: dados.tema.titulo,
         disciplina: dados.tema.disciplina || 'Outras',
         gerado_em: dados.gerado_em || null,
-        questoes: Array.isArray(dados.questoes_reforco) ? dados.questoes_reforco.length : 0,
+        questoes: questoes.length,
+        // O mínimo de cada questão para a página inicial calcular o desempenho sem abrir o arquivo
+        itens: questoes.map((q) => ({
+          id: q.id,
+          dificuldade: q.dificuldade || null,
+          gabarito: q.tipo === 'multipla_escolha' && Array.isArray(q.alternativas) && q.alternativas.length ? q.gabarito : null,
+        })),
       });
     } catch (erro) {
       erros.push(`${arquivo}: ${erro.message}`);
