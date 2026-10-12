@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Brasil Colonial (1500–1808)",
+    "disciplina": "História",
+    "subtopicos": [
+      "Ocupação inicial, pau-brasil e Tordesilhas",
+      "Capitanias hereditárias e Governo-Geral",
+      "Antigo Sistema Colonial e o debate sobre o “pacto colonial”",
+      "Economia açucareira e sociedade do engenho",
+      "Escravidão indígena e africana, tráfico atlântico e resistência (Palmares)",
+      "Bandeirismo, pecuária e fronteiras (Tordesilhas → Madri)",
+      "Mineração no século XVIII",
+      "Revoltas coloniais",
+      "Reformas pombalinas",
+      "Igreja, Inquisição e barroco"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "O Brasil colonial foi uma sociedade escravista voltada à exportação e integrada ao Atlântico Sul, em que a Coroa tributava e regulava, mas as elites locais negociavam, lucravam e tinham poder próprio.",
+    "pontos_chave": [
+      "Cronologia-base: Tordesilhas (1494) → chegada portuguesa (1500) → capitanias (1534) → Governo-Geral e jesuítas (1548–49) → União Ibérica (1580–1640) → holandeses no Nordeste (1630–54) → ouro (década de 1690) → Tratado de Madri (1750) → reformas pombalinas (1750–77) → Inconfidência (1789).",
+      "Ciclos econômicos organizam a matéria, mas se sobrepõem: açúcar nunca desapareceu, pecuária, fumo, algodão e drogas do sertão coexistiram, e a mineração dinamizou o mercado interno.",
+      "Trabalho compulsório estruturou tudo: escravização indígena (bandeirismo, aldeamentos) deu lugar, nas áreas de grande lavoura e mineração, à escravidão africana, com tráfico que ligava diretamente Brasil e Angola.",
+      "Estado e Igreja andavam juntos: padroado régio, jesuítas como agentes de catequese e de organização do trabalho indígena, Inquisição por visitações.",
+      "Resistência foi constante: fugas, quilombos, rebeliões nativistas (conflito de interesses locais) e conjurações emancipacionistas (projeto de ruptura, final do século XVIII).",
+      "Fronteiras: a expansão para o interior (bandeiras, gado, minas) desrespeitou Tordesilhas e foi reconhecida no Tratado de Madri (1750), com base no uti possidetis."
+    ],
+    "formulas": [
+      {
+        "nome": "Tríade do engenho",
+        "expressao": "latifúndio + monocultura de exportação + trabalho escravo = plantation",
+        "quando_usar": "Para caracterizar a economia açucareira e comparar com outras formas de produção (policultura de subsistência, pecuária, mineração)."
+      },
+      {
+        "nome": "Tributos da mineração",
+        "expressao": "quinto (20% do ouro) + capitação (por escravo) + derrama (cobrança complementar se a meta de 100 arrobas, cerca de 1.500 kg, não fosse atingida)",
+        "quando_usar": "Em questões sobre fiscalidade, contrabando, Casas de Fundição, Vila Rica (1720) e Inconfidência (1789)."
+      },
+      {
+        "nome": "Roteiro para ler fonte primária",
+        "expressao": "quem escreve → para quem → quando → o que a fonte quer convencer/registrar → que agente histórico aparece (indígena, africano, colono, Coroa)",
+        "quando_usar": "Na Unicamp, a maioria das questões parte de documento, gravura ou crônica; responda ao que o texto mostra antes de lembrar o conteúdo."
+      }
+    ],
+    "erros_comuns": [
+      "Tratar o “pacto colonial” como verdade absoluta: a historiografia recente mostra elites coloniais ativas, mercado interno e comércio direto Brasil–África; a Unicamp já cobrou esse debate.",
+      "Confundir capitanias hereditárias (1534, particulares) com Governo-Geral (1548, centralização); o Governo-Geral não extinguiu as capitanias de imediato.",
+      "Dizer que o Brasil colonial teve só um produto por vez: açúcar, gado, fumo, algodão e drogas do sertão conviveram.",
+      "Reduzir Palmares a “fuga de africanos”: era uma sociedade complexa, com economia própria, lideranças, relações com vizinhos e população diversa; foi destruída por expedições que incluíam bandeirantes contratados.",
+      "Misturar revoltas nativistas (Beckman, Emboabas, Mascates, Vila Rica 1720) com conjurações emancipacionistas (Inconfidência Mineira 1789, Conjuração Baiana 1798).",
+      "Esquecer o Atlântico Sul: ventos, correntes e rotas diretas Brasil–Angola explicam por que o tráfico tinha comerciantes coloniais poderosos.",
+      "Atribuir a expulsão dos jesuítas (1759) a decisão religiosa; foi política de Pombal para reforçar o poder do Estado."
+    ],
+    "como_a_unicamp_cobra": "Nas questões indexadas aparecem fontes primárias (crônica de 1678 sobre Palmares, carta de 1694, relato de Gandavo, gravuras), agentes subalternos (indígenas, africanos, quilombolas), relações Brasil–África e Atlântico Sul (inclusive com Geografia, como os ventos alísios), historiografia (pacto colonial), cultura (retórica de Vieira, arte barroca mineira à luz do Concílio de Trento) e identidade/mestiçagem. Raramente pede decoreba de datas: pede interpretar o documento e conectá-lo a um processo."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Ocupação inicial: Tordesilhas, pau-brasil e escambo",
+      "explicacao": "O Tratado de Tordesilhas (1494) dividiu entre Portugal e Espanha as terras descobertas e por descobrir, por um meridiano a 370 léguas a oeste de Cabo Verde. Nas primeiras décadas após 1500, Portugal explorou o pau-brasil (corante e madeira) por meio do escambo com indígenas, em feitorias no litoral, sem povoamento sistemático. A ameaça de corsários franceses levou às expedições guarda-costas (1530) e, depois, à colonização efetiva.",
+      "exemplo": "Os indígenas cortavam e carregavam a madeira em troca de machados, facas e espelhos; a Coroa mantinha o monopólio régio do pau-brasil.",
+      "dica_de_prova": "Tordesilhas aparece como “linha que não foi respeitada”: bandeirantes, gado e minas ultrapassaram o meridiano, e o Tratado de Madri (1750) legitimou o que Portugal já ocupava.",
+      "imagens": ["i2"]
+    },
+    {
+      "id": "c2",
+      "nome": "Capitanias hereditárias e Governo-Geral",
+      "explicacao": "Em 1534, D. João III dividiu o litoral em faixas (15 lotes) e as entregou a donatários, pequenos nobres e servidores da Coroa, por meio de cartas de doação (posse e hereditariedade) e forais (direitos e tributos). O objetivo era ocupar, defender e produzir sem gastos diretos da Coroa. Poucas prosperaram (Pernambuco, São Vicente). Em 1548 criou-se o Governo-Geral, com sede em Salvador e primeiro governador Tomé de Sousa, para centralizar defesa e administração, e em 1549 chegaram os primeiros jesuítas.",
+      "exemplo": "Pernambuco prosperou com o açúcar e por alianças com povos locais; São Vicente, com o açúcar e o comércio de indígenas escravizados.",
+      "dica_de_prova": "O Governo-Geral coexistiu com as capitanias: ele centralizou, não as aboliu. O sistema deixa de ser protagonista no século XVII, mas a divisão em capitanias persistiu até 1821.",
+      "imagens": ["i1"]
+    },
+    {
+      "id": "c3",
+      "nome": "Antigo Sistema Colonial e o debate sobre o “pacto colonial”",
+      "explicacao": "Mercantilismo: a colônia existe para gerar excedentes e metais para a metrópole, via exclusivo comercial (monopólio), tributação e produção complementar à economia europeia. Fernando Novais consolidou a ideia de Antigo Sistema Colonial, em que a colonização é mecanismo de acumulação primitiva de capital na Europa. A historiografia recente (Fragoso, Florentino, Gouvêa, Bicalho, Alencastro) matiza: o Antigo Regime nos trópicos tinha hierarquias, redes de poder e negociação entre Coroa e elites locais; havia mercado interno relevante; e o tráfico de africanos tinha dinâmica “bilateral” entre Brasil e Angola, controlada por comerciantes coloniais.",
+      "exemplo": "Comerciantes do Rio e da Bahia financiavam diretamente a compra de escravizados em Angola com produtos da colônia (fumo, cachaça), sem passar por Lisboa.",
+      "dica_de_prova": "Se a questão menciona “por muito tempo se explicou por meio de…”, ela quer a visão revisada: metrópole e colônia como relação de mão dupla, sem tornar a colônia livre nem autônoma.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "Economia açucareira, engenho e sociedade",
+      "explicacao": "O engenho unia lavoura de cana, moagem e fabrico em grandes propriedades monocultoras (plantation), com trabalho escravo (primeiro indígena, cada vez mais africano) e produção para o mercado europeu. Concentrou-se em Pernambuco e na Bahia. A sociedade era patriarcal e hierarquizada: senhor de engenho, lavradores (livres, mas dependentes), artesãos e trabalhadores livres pobres, e escravizados. Entre 1630 e 1654 os holandeses ocuparam o Nordeste (auge com Nassau, 1637–44); após a expulsão, a produção antilhana holandesa e inglesa competiu com o açúcar brasileiro e provocou crise de preços.",
+      "exemplo": "A casa-grande (poder), a senzala (trabalho compulsório e controle) e a capela (Igreja) compõem a paisagem do engenho.",
+      "dica_de_prova": "Distinga engenho (unidade produtora) de plantation (modelo geral). Quando a questão trouxer agricultura indígena (mandioca) versus lavoura comercial, a diferença é a lógica: subsistência e policultura versus monocultura para exportação.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Trabalho compulsório, tráfico atlântico, jesuítas e resistência",
+      "explicacao": "A escravização de indígenas (bandeirismo de apresamento, “guerras justas”) coexistiu com aldeamentos jesuíticos, em que o trabalho indígena era organizado por missionários e a Coroa; na Amazônia, a língua geral (nheengatu) serviu à catequese e ao controle do trabalho. A escravidão africana tornou-se dominante nas grandes lavouras e minas, sustentada por um tráfico que ligava diretamente portos brasileiros e angolanos, com apoio de ventos e correntes do Atlântico Sul. A resistência assumiu fugas, quilombos e revoltas; Palmares (Serra da Barriga, atual Alagoas) foi o maior, destruído em 1694–95 por expedições que incluíam o bandeirante Domingos Jorge Velho.",
+      "exemplo": "Fumo baiano e cachaça fluminense serviam de moeda na compra de cativos em Angola; Palmares combinava agricultura, comércio com vizinhos e liderança política (Ganga Zumba, depois Zumbi).",
+      "dica_de_prova": "A Unicamp gosta de ângulo “de baixo”: o que a fonte revela sobre a ação de indígenas e africanos, e não só sobre a Coroa. Em Palmares, valorize a diversidade da população e a organização política.",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Interiorização: bandeirismo, pecuária e fronteiras",
+      "explicacao": "A pecuária extensiva abriu o sertão nordestino (rio São Francisco, “civilização do couro”) e abasteceu engenhos e, depois, as minas. As bandeiras paulistas combinavam apresamento de indígenas, busca por metais e, no sertanismo de contrato, serviço à Coroa (Palmares, povos indígenas hostis). A produção extrativista na Amazônia (drogas do sertão) dependia de aldeias missionárias. Esse avanço desrespeitou Tordesilhas; o Tratado de Madri (1750) adotou o uti possidetis (quem ocupa, possui) e redesenhou fronteiras com a Espanha.",
+      "exemplo": "Tropeiros ligavam o Sul (gado e muares) às Minas, criando rotas de abastecimento que integraram regiões.",
+      "dica_de_prova": "Palavras-chave: uti possidetis, Alexandre de Gusmão, Tratado de Madri (1750), Santo Ildefonso (1777) e a ideia de que ocupação real, não o papel, definiu o território.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Mineração no século XVIII",
+      "explicacao": "O ouro foi descoberto por bandeirantes nos anos 1690 em Minas Gerais, seguido de Mato Grosso e Goiás. A Coroa organizou fiscalização rígida: Intendência das Minas (1702), quinto (20%), Casas de Fundição, capitação e derrama. O contrabando era frequente. A sociedade mineradora era mais urbana e diversificada que a açucareira, com mineradores, comerciantes, funcionários, artesãos e muitos escravizados (inclusive de ganho, que pagavam parte do que ganhavam ao senhor). O ouro estimulou o mercado interno (tropeiros, pecuária do Sul, abastecimento), levou o eixo econômico ao Centro-Sul e justificou a transferência da capital para o Rio de Janeiro (1763). O barroco mineiro (Aleijadinho, Ataíde) floresceu em irmandades leigas.",
+      "exemplo": "Ouro Preto (Vila Rica) concentrava riqueza, igrejas barrocas financiadas por irmandades e forte fiscalização.",
+      "dica_de_prova": "Mineração não foi só “riqueza do ouro”: cobre urbanização, tributação, contrabando, escravidão urbana, cultura barroca e deslocamento do eixo econômico. Em questão de arte, relacione o barroco mineiro à Contrarreforma e ao Concílio de Trento, mas com irmandades leigas (não só Igreja institucional) como mecenas.",
+      "imagens": []
+    },
+    {
+      "id": "c8",
+      "nome": "Revoltas coloniais: nativistas e emancipacionistas",
+      "explicacao": "Nativistas: contestam medidas ou grupos específicos sem questionar o domínio português, como a Revolta de Beckman (Maranhão, 1684, contra o monopólio de companhia comercial e a política sobre índios), a Guerra dos Emboabas (Minas, 1707–09, paulistas contra forasteiros pelo controle das minas), a Guerra dos Mascates (Pernambuco, 1710–11) e a Revolta de Vila Rica ou de Filipe dos Santos (1720, contra casas de fundição). Emancipacionistas (fim do século XVIII, sob influência iluminista e da independência dos EUA): Inconfidência Mineira (1789, motivada também pela ameaça de derrama) e Conjuração Baiana (1798, com forte participação popular e pautas sociais).",
+      "exemplo": "Tiradentes foi o único conspirador executado da Inconfidência; na Conjuração Baiana, os condenados eram sobretudo pobres e negros.",
+      "dica_de_prova": "Classifique sempre: contra quem, por quê, qual projeto (manter ou romper o vínculo colonial) e quem participava. “Nativista” não significa “contra Portugal”.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Reformas pombalinas",
+      "explicacao": "Sob o ministro Marquês de Pombal (1750–77), Portugal buscou reforçar o Estado, a fiscalização econômica e a integração da Amazônia. No Brasil: Diretório dos Índios (1757), que tirou das ordens religiosas a gestão das aldeias, impôs o português e proibiu a língua geral; expulsão dos jesuítas (1759); companhias de comércio (Grão-Pará e Maranhão; Pernambuco e Paraíba); mudança da capital para o Rio de Janeiro (1763); ampliação do controle fiscal no ouro.",
+      "exemplo": "Aldeias viraram vilas, com nomes portugueses e administração civil.",
+      "dica_de_prova": "Fio condutor: centralização estatal e secularização. Se a questão tratar de língua geral, aldeamentos ou jesuítas, pense Pombal.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Igreja, padroado, Inquisição e barroco",
+      "explicacao": "Pelo padroado régio, a Coroa controlava nomeações e rendimentos da Igreja, que servia como instrumento de legitimação e catequese. A Inquisição atuou por visitações (Bahia e Pernambuco, 1591–95 e 1618) e perseguiu cristãos-novos e comportamentos considerados heréticos. O barroco, ligado à Contrarreforma e ao Concílio de Trento, produziu arte religiosa, retórica (Padre Antônio Vieira) e arquitetura. Na prática, o catolicismo colonial combinou práticas populares, sincretismo e irmandades de negros e pardos.",
+      "exemplo": "Os Sermões de Vieira mostram a retórica barroca a serviço da persuasão do auditório; as irmandades financiaram igrejas em Minas.",
+      "dica_de_prova": "Aparece como análise de fonte (sermão, arte): identifique o público, o objetivo persuasivo e a relação com Trento e a Contrarreforma.",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2023,
+      "fase": "1ª fase",
+      "numero": "Q2 (caderno T/W)",
+      "tipo": "multipla_escolha",
+      "assunto": "Quilombo de Palmares no século XVII",
+      "o_que_cobra": "A partir de uma crônica de 1678, pede a afirmação correta sobre a organização de Palmares: povoações fortificadas, estrutura política e origem da população.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.vestibulandoweb.com.br/wp-content/uploads/2022/11/prova-unicamp-2023-1a-fase-T_W.pdf",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/noticias/unicamp-2023-gabarito-oficial-da-1a-fase/",
+      "conceitos": ["c5"]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2020,
+      "fase": "2ª fase",
+      "numero": "Q1",
+      "tipo": "dissertativa",
+      "assunto": "Tráfico atlântico e relações entre Brasil e África",
+      "o_que_cobra": "Interdisciplinar com Geografia: explicar a direção dos ventos alísios no Atlântico Sul e sua utilidade para as rotas África–Brasil; citar e explicar uma relação entre Brasil e África durante a colonização.",
+      "gabarito_oficial": null,
+      "link_questao": "https://vestibulares.estrategia.com/portal/materias/historia/prova-historia-2-fase-unicamp-2020/",
+      "link_gabarito": null,
+      "conceitos": ["c3", "c5"]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2020,
+      "fase": "2ª fase",
+      "numero": "Q12",
+      "tipo": "dissertativa",
+      "assunto": "Críticas ao Império português e resistência nativa",
+      "o_que_cobra": "Pede explicar críticas de autores do século XVI (Gil Vicente e Camões) à expansão portuguesa e citar uma forma de resistência de povos nativos à presença lusa.",
+      "gabarito_oficial": null,
+      "link_questao": "https://vestibulares.estrategia.com/portal/materias/historia/prova-historia-2-fase-unicamp-2020/",
+      "link_gabarito": null,
+      "conceitos": ["c1", "c5"]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2016,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Pacto colonial / exclusivo comercial e relações entre Portugal e Brasil",
+      "o_que_cobra": "Parte do uso historiográfico do “pacto colonial” e pede a afirmação correta sobre o conceito: sistema com centro decisório metropolitano e colônia subordinada por mecanismos político-institucionais.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://projetoagathaedu.com.br/resolucao-vestibular/unicamp-historia/moderna/05-unicamp-2016-os-estudos-historicos-por-muito-tempo-explicaram-as-relacoes-entre-portugal-e-brasil-por-meio-da.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/resolucao-vestibular/unicamp-historia/moderna/05-unicamp-2016-os-estudos-historicos-por-muito-tempo-explicaram-as-relacoes-entre-portugal-e-brasil-por-meio-da.php",
+      "conceitos": ["c3"]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2017,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Quilombo de Palmares e a tomada da Serra da Barriga (carta de 1694)",
+      "o_que_cobra": "Interpreta documento de 1694 sobre a tomada da Serra da Barriga: pede o significado do episódio para os poderes coloniais e para a memória atual de Palmares.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c5", "c6"]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2012,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Guerra dos Emboabas",
+      "o_que_cobra": "Pede caracterizar o conflito entre paulistas e forasteiros (emboabas) pelo controle das minas.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c7", "c8"]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Mandioca, formigas saúvas e agricultura comercial colonial",
+      "o_que_cobra": "Compara a lavoura indígena (mandioca, manejo diante das saúvas) com a agricultura comercial colonial e pede o que as diferencia.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c4", "c5"]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2019,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Nheengatu (língua geral amazônica) e controle da mão de obra indígena",
+      "o_que_cobra": "Pede o sentido do ensino da língua geral na Amazônia pela Coroa e pelas ordens religiosas, ligado ao controle do trabalho indígena.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c5", "c9"]
+    },
+    {
+      "id": "x9",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2013,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Relato de Pero de Magalhães Gândavo (c. 1570): aldeias de paz e esvaziamento do litoral",
+      "o_que_cobra": "A partir do relato de Gândavo, pede o que o texto indica sobre as aldeias de paz e o esvaziamento do litoral.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c2", "c5"]
+    },
+    {
+      "id": "x10",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2011,
+      "fase": "1ª fase",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Arte colonial mineira e Concílio de Trento",
+      "o_que_cobra": "Pede classificar a arte colonial mineira à luz do Concílio de Trento e da Contrarreforma.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php",
+      "conceitos": ["c7", "c10"]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c2"],
+      "enunciado": "Em 1534, o rei D. João III dividiu o litoral do Brasil em capitanias hereditárias. Esse sistema tinha como objetivo principal:",
+      "alternativas": [
+        { "letra": "A", "texto": "centralizar a administração em Salvador, sob o comando de um governador-geral nomeado pela Coroa." },
+        { "letra": "B", "texto": "transferir a donatários a tarefa e os custos de ocupar, defender e explorar a terra, mantendo a soberania da Coroa." },
+        { "letra": "C", "texto": "entregar a terra a colonos pobres sem vínculo com a Coroa, dispensando a cobrança de tributos." },
+        { "letra": "D", "texto": "garantir a autonomia política da colônia em relação a Portugal." }
+      ],
+      "gabarito": "B",
+      "resolucao": "As capitanias, entregues a donatários por cartas de doação e forais, buscavam ocupar e defender o território sem gastos diretos da Coroa, que mantinha a soberania e cobrava tributos. A alternativa A descreve o Governo-Geral (1548), que veio depois. C e D contrariam a lógica do sistema: havia tributos, e o donatário respondia ao rei.",
+      "imagens": ["i1"]
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c1"],
+      "enunciado": "Sobre o Tratado de Tordesilhas (1494), é correto afirmar que:",
+      "alternativas": [
+        { "letra": "A", "texto": "dividiu o Atlântico entre Portugal e Inglaterra, que disputavam o comércio de açúcar." },
+        { "letra": "B", "texto": "repartiu as terras descobertas e por descobrir entre Portugal e Espanha, por meio de um meridiano a 370 léguas a oeste de Cabo Verde." },
+        { "letra": "C", "texto": "foi assinado durante a União Ibérica (1580–1640), unificando as colônias americanas." },
+        { "letra": "D", "texto": "foi firmado depois do Tratado de Madri (1750) e o substituiu." }
+      ],
+      "gabarito": "B",
+      "resolucao": "Tordesilhas (1494) é anterior à chegada ao Brasil e dividiu o mundo extraeuropeu entre as duas coroas ibéricas. A é falsa porque a Inglaterra não participou; C erra a cronologia; D inverte a ordem, pois foi o Tratado de Madri (1750) que revisou na prática a linha, reconhecendo a ocupação portuguesa (uti possidetis).",
+      "imagens": ["i2"]
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "media",
+      "conceitos": ["c3"],
+      "enunciado": "Durante muito tempo, as relações entre Portugal e Brasil foram explicadas pelo conceito de “pacto colonial”. Estudos mais recentes sobre o Antigo Regime nos trópicos propõem uma revisão dessa leitura. Qual das alternativas expressa essa revisão?",
+      "alternativas": [
+        { "letra": "A", "texto": "A colônia era espaço passivo, sem agentes locais capazes de intervir nas decisões, e todo o lucro ficava concentrado na metrópole." },
+        { "letra": "B", "texto": "As elites coloniais negociavam com a Coroa, formavam redes de poder próprias e controlavam circuitos mercantis, como o tráfico de escravizados, com dinâmica relativamente autônoma." },
+        { "letra": "C", "texto": "O comércio colonial funcionava em livre concorrência, sem monopólios nem tributos." },
+        { "letra": "D", "texto": "A metrópole exercia apenas poder militar e não cobrava impostos da colônia." }
+      ],
+      "gabarito": "B",
+      "resolucao": "A revisão não nega o monopólio nem a tributação (C e D estão erradas), mas mostra que a colônia não era apenas passiva (A): as elites locais participavam das decisões, tinham poder de negociação e controlavam circuitos próprios, como o tráfico Brasil–Angola e o mercado interno.",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c4"],
+      "enunciado": "Sobre a economia açucareira do Nordeste nos séculos XVI e XVII, é correto afirmar que:",
+      "alternativas": [
+        { "letra": "A", "texto": "predominava a pequena propriedade policultora, com trabalho assalariado e produção voltada ao consumo local." },
+        { "letra": "B", "texto": "o engenho combinava plantio, moagem e fabrico do açúcar em grandes propriedades monocultoras, com trabalho escravo e venda ao mercado europeu." },
+        { "letra": "C", "texto": "a ocupação holandesa de Pernambuco (1630–1654) arruinou os canaviais, substituídos pelo cultivo de café." },
+        { "letra": "D", "texto": "a mão de obra era formada sobretudo por imigrantes europeus assalariados." }
+      ],
+      "gabarito": "B",
+      "resolucao": "A descrição correta é a do modelo de plantation: latifúndio, monocultura de exportação e escravidão. A confunde com policultura de subsistência; C é falsa, pois os holandeses expandiram e comercializaram o açúcar (a crise veio depois, com a concorrência antilhana); D é anacrônica para o período.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x5",
+      "dificuldade": "media",
+      "conceitos": ["c5", "c6"],
+      "enunciado": "O Quilombo dos Palmares, na Serra da Barriga, resistiu por quase todo o século XVII. Sobre sua destruição e seu significado, é correto afirmar que:",
+      "alternativas": [
+        { "letra": "A", "texto": "foi destruído pelos holandeses em 1630, durante a ocupação do Nordeste." },
+        { "letra": "B", "texto": "era uma comunidade composta exclusivamente por indígenas, sem africanos." },
+        { "letra": "C", "texto": "foi reconhecido pela Coroa como capitania autônoma ainda no século XVII." },
+        { "letra": "D", "texto": "foi derrotado em 1694–95 por expedições que incluíam bandeirantes contratados pela Coroa, e sua memória foi retomada no movimento negro, que valoriza Zumbi." }
+      ],
+      "gabarito": "D",
+      "resolucao": "Palmares foi atacado por várias expedições, e a decisiva (1694) teve liderança de Domingos Jorge Velho, bandeirante contratado (sertanismo de contrato); Zumbi foi morto em 1695. A população era majoritariamente africana, com presença de outros grupos; A, B e C são falsas. A memória de Zumbi (20 de novembro) é central no movimento negro.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c7"],
+      "enunciado": "Entre as consequências econômicas e sociais da mineração no século XVIII, destaca-se:",
+      "alternativas": [
+        { "letra": "A", "texto": "a concentração da população no litoral nordestino, que reforçou o ciclo do açúcar." },
+        { "letra": "B", "texto": "o estímulo ao mercado interno (tropeiros, pecuária sulina, abastecimento) e a urbanização do interior, com deslocamento do eixo econômico para o Centro-Sul e transferência da capital para o Rio de Janeiro, em 1763." },
+        { "letra": "C", "texto": "o fim da necessidade de mão de obra escrava, substituída por trabalhadores assalariados." },
+        { "letra": "D", "texto": "a isenção de tributos na região mineradora em troca do monopólio sobre a venda de escravizados." }
+      ],
+      "gabarito": "B",
+      "resolucao": "A mineração atraiu população ao interior, criou cidades e demandas de alimentos, gado e muares, integrando regiões, e consolidou o Centro-Sul, o que contribuiu para a mudança da capital em 1763. A, C e D contradizem os fatos: a escravidão continuou central e a tributação foi rigorosa (quinto, capitação, derrama).",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x6",
+      "dificuldade": "dificil",
+      "conceitos": ["c7", "c8"],
+      "enunciado": "A Guerra dos Emboabas (1707–1709) e a Inconfidência Mineira (1789) ocorreram em Minas Gerais, mas têm natureza distinta. Assinale a alternativa que as compara corretamente.",
+      "alternativas": [
+        { "letra": "A", "texto": "Ambas foram revoltas contra a escravidão que reuniram quilombolas e mineradores." },
+        { "letra": "B", "texto": "A Guerra dos Emboabas opôs paulistas e forasteiros pelo controle das minas, sem questionar o domínio português; a Inconfidência articulou elites mineiras em torno de um projeto de rompimento com Portugal, motivado pela tributação e por ideias iluministas." },
+        { "letra": "C", "texto": "A Guerra dos Emboabas foi movimento separatista republicano; a Inconfidência foi disputa entre paulistas e forasteiros pelas minas." },
+        { "letra": "D", "texto": "Ambas ocorreram no litoral nordestino e contestavam o monopólio do açúcar." }
+      ],
+      "gabarito": "B",
+      "resolucao": "Os Emboabas representam conflito intracolonial (nativista) sobre o acesso às minas, vencido pelos forasteiros, com apoio das autoridades. A Inconfidência (1789) foi conspiração de elites contra o domínio português e a derrama, inspirada no Iluminismo e na independência dos EUA. C inverte as definições; A e D não têm base factual.",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x8",
+      "dificuldade": "dificil",
+      "conceitos": ["c5", "c9"],
+      "enunciado": "No século XVII e início do XVIII, a língua geral (nheengatu) foi amplamente usada na Amazônia por missionários e pela Coroa. Em 1757, o Diretório dos Índios determinou o uso obrigatório do português e proibiu a língua geral. (a) Explique por que a língua geral era útil à Coroa e às ordens religiosas. (b) Explique o objetivo político da medida de 1757 no contexto das reformas pombalinas.",
+      "alternativas": null,
+      "gabarito": "(a) A língua geral facilitava a catequese, a comunicação com povos indígenas diversos e a organização do trabalho nas aldeias missionárias, que supriam mão de obra para o extrativismo e para o Estado. (b) O Diretório, junto com a expulsão dos jesuítas (1759), retirou das ordens religiosas o poder temporal sobre as aldeias, impôs o português e integrou os indígenas como vassalos sob administração civil, reforçando o controle da Coroa sobre a Amazônia e a centralização do Estado português.",
+      "resolucao": "Boa resposta liga língua, trabalho e poder: (a) a língua geral servia à catequese e ao controle do trabalho; (b) Pombal buscava centralizar, secularizar a administração e consolidar a fronteira amazônica, e por isso a língua do Estado passou a ser o português. Pontos típicos de avaliação: mencionar trabalho indígena (não só religião) e o objetivo estatal (não só “perseguir jesuítas”).",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "dificil",
+      "conceitos": ["c3", "c5"],
+      "enunciado": "Historiadores destacam que o tráfico de escravizados entre a África e o Brasil tinha relações diretas entre portos brasileiros e angolanos. (a) Cite duas condições (naturais ou econômicas) que facilitavam essas rotas diretas no Atlântico Sul. (b) Explique de que modo essa dinâmica ajuda a relativizar a ideia de “pacto colonial”.",
+      "alternativas": null,
+      "gabarito": "(a) Ventos e correntes do Atlântico Sul tornavam a travessia Angola–Brasil mais rápida e previsível do que passar por Lisboa; produtos coloniais (fumo, cachaça) funcionavam como moeda de troca por cativos. (b) Comerciantes e elites coloniais financiavam e controlavam parte do tráfico e acumulavam capital e poder local, o que mostra que a colônia não era apenas um espaço passivo: havia circuitos de comércio com dinâmica própria dentro do sistema colonial.",
+      "resolucao": "Resposta completa deve trazer (i) uma condição natural (ventos/correntes) e uma econômica (moeda de troca, financiamento local); (ii) a conexão com a historiografia: elites coloniais com poder de negociação e circuitos próprios, sem negar o monopólio e a tributação da Coroa.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": ["c4", "c7"],
+      "enunciado": "Compare a economia açucareira (séculos XVI e XVII) e a mineração (século XVIII) quanto a (a) organização do espaço e da população; (b) forma de controle exercida pela Coroa; (c) um traço comum a ambas.",
+      "alternativas": null,
+      "gabarito": "(a) Açúcar: engenhos rurais no litoral Nordeste, sociedade patriarcal rural; mineração: núcleos urbanos no interior (Vila Rica, Sabará), população mais diversificada, com artesãos, funcionários e escravizados urbanos. (b) Açúcar: controle sobretudo por monopólio comercial e tributação sobre o comércio, e a Coroa dependia dos senhores de engenho; mineração: fiscalização direta e rígida (Intendência das Minas, Casas de Fundição, quinto, capitação, derrama). (c) Ambas dependiam de trabalho escravo e de exportação, e a Coroa buscava rendas e controle.",
+      "resolucao": "Boa resposta mostra contraste e continuidade: no açúcar, poder concentrado no senhor rural; na mineração, urbanização e fiscalização estatal mais direta, com contrabando e revoltas fiscais. O traço comum é a escravidão e a inserção da colônia numa economia atlântica de exportação.",
+      "imagens": []
+    }
+  ],
+  "imagens": [
+    {
+      "id": "i1",
+      "tipo": "mapa",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novo_mapa_Capitanias.jpg",
+      "alt": "Mapa das capitanias hereditárias do Brasil (arquivo do Wikimedia Commons)",
+      "legenda": "Mapa das capitanias hereditárias de 1534: observe as faixas de terra que partem do litoral para o interior, limitadas por Tordesilhas, e relacione com a ideia de ocupação e defesa por donatários. Confira a imagem antes de usar.",
+      "credito": "Wikimedia Commons (autoria indicada na página do arquivo)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Novo_mapa_Capitanias.jpg",
+      "verificada": false
+    },
+    {
+      "id": "i2",
+      "tipo": "mapa",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tratado_de_Tordesilhas.png",
+      "alt": "Mapa do Tratado de Tordesilhas, com a linha de divisão entre domínios português e espanhol (arquivo do Wikimedia Commons)",
+      "legenda": "Linha de Tordesilhas: compare com a ocupação real do território por bandeiras, gado e minas, e com o Tratado de Madri (1750). Confira a imagem antes de usar.",
+      "credito": "Wikimedia Commons (autoria indicada na página do arquivo)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Tratado_de_Tordesilhas.png",
+      "verificada": false
+    }
+  ],
+  "fontes": [
+    { "titulo": "Projeto Agatha – Questões da Unicamp sobre Brasil Colônia (índice com gabaritos)", "url": "https://projetoagathaedu.com.br/questoes-unicamp/resolucao-historia/colonia.php" },
+    { "titulo": "Projeto Agatha – Unicamp 2016, questão sobre pacto colonial", "url": "https://projetoagathaedu.com.br/resolucao-vestibular/unicamp-historia/moderna/05-unicamp-2016-os-estudos-historicos-por-muito-tempo-explicaram-as-relacoes-entre-portugal-e-brasil-por-meio-da.php" },
+    { "titulo": "InfoEscola – Prova Unicamp 2016 (questão sobre pacto colonial)", "url": "https://www.infoescola.com/exercicios/prova/unicamp-2016/6/" },
+    { "titulo": "Prova Unicamp 2023, 1ª fase, caderno T/W (PDF)", "url": "https://www.vestibulandoweb.com.br/wp-content/uploads/2022/11/prova-unicamp-2023-1a-fase-T_W.pdf" },
+    { "titulo": "Vestibulandoweb – Unicamp 2023: gabarito oficial da 1ª fase", "url": "https://www.vestibulandoweb.com.br/noticias/unicamp-2023-gabarito-oficial-da-1a-fase/" },
+    { "titulo": "Estratégia Vestibulares – Comentários da prova de História, 2ª fase Unicamp 2020", "url": "https://vestibulares.estrategia.com/portal/materias/historia/prova-historia-2-fase-unicamp-2020/" },
+    { "titulo": "Estratégia Vestibulares – Economia e sociedade no período do açúcar", "url": "https://vestibulares.estrategia.com/portal/materias/historia/economia-e-sociedade-no-periodo-do-acucar/" },
+    { "titulo": "Preparaenem – Ciclo do ouro", "url": "https://www.preparaenem.com/historia-do-brasil/ciclo-do-ouro.htm" },
+    { "titulo": "Politize – Capitanias hereditárias", "url": "https://www.politize.com.br/capitanias-hereditarias/" }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Ditadura civil-militar brasileira (1964–1985)",
+    "disciplina": "História",
+    "subtopicos": [
+      "Crise do governo Goulart e golpe de 1964",
+      "Atos Institucionais e governo Castelo Branco",
+      "Costa e Silva, 1968 e AI-5",
+      "Médici: anos de chumbo, milagre econômico e propaganda",
+      "Aparato repressivo, tortura e Comissão Nacional da Verdade",
+      "Resistência armada, política e cultural",
+      "Geisel: distensão lenta, gradual e segura",
+      "Figueiredo: anistia, greves do ABC, Diretas Já e transição",
+      "Memória, justiça de transição e ditaduras latino-americanas (Operação Condor)"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "O regime instalado em 1964 combinou Doutrina de Segurança Nacional, institucionalização do arbítrio por Atos Institucionais, repressão crescente até 1974, crescimento econômico concentrador (milagre) e uma abertura controlada que só se desfez pela soma de crise econômica, pressão da sociedade civil e rachas internos.",
+    "pontos_chave": [
+      "**Nomenclatura**: a Unicamp usa «ditadura civil-militar» porque empresários, imprensa, Igreja (setores), governadores e classes médias apoiaram o golpe e sustentaram o regime; mas **todos os presidentes foram generais** e o poder de fato era militar.",
+      "**Cronologia mínima**: golpe (31/3–1/4/1964) → AI-1 (1964) → AI-2 e bipartidarismo (1965) → Constituição de 1967 → AI-5 (13/12/1968) → Médici e milagre (1969–74) → Geisel e distensão (1974–79) → Anistia e fim do bipartidarismo (1979) → Diretas Já (1983–84) → Tancredo no Colégio Eleitoral (15/1/1985) → Constituição de 1988.",
+      "**Fases políticas**: Castelo (1964–67) = «linha dura x castelistas» e arcabouço legal; Costa e Silva (1967–69) = endurecimento até o AI-5; Médici (1969–74) = auge da repressão e do crescimento; Geisel/Figueiredo (1974–85) = abertura «lenta, gradual e segura» sob controle.",
+      "**AI-5** (13/12/1968) = «golpe dentro do golpe»: recesso do Congresso, cassações, suspensão do habeas corpus em crimes políticos, censura. Vigorou até 31/12/1978.",
+      "**Economia**: PAEG de Castelo (arrocho salarial, FGTS, combate à inflação) → milagre (1968–73, PIB perto de 10% ao ano, concentração de renda, dívida externa) → crise do petróleo (1973) e II PND de Geisel → recessão e crise da dívida (1981–83).",
+      "**Propaganda e cultura de massas**: AERP, Copa de 1970, slogans («Brasil: ame-o ou deixe-o», «Pra frente, Brasil»), grandes obras (Transamazônica, Ponte Rio–Niterói, Itaipu).",
+      "**Repressão**: SNI, DOPS, Cenimar, OBAN (1969) e DOI-CODI (1970). Casos-símbolo: Rubens Paiva (1971), Vladimir Herzog (1975) e Manoel Fiel Filho (1976).",
+      "**Resistência**: luta armada (ALN, VPR, MR-8, Araguaia), movimento estudantil (1968), novo sindicalismo (ABC), Igreja progressista, imprensa alternativa e produção cultural (Tropicália, teatro, música de protesto).",
+      "**Transição**: pelo alto e negociada. A Anistia de 1979 foi bilateral (beneficiou também agentes do Estado) e a eleição de Tancredo foi **indireta**, no Colégio Eleitoral.",
+      "**Memória**: Comissão Nacional da Verdade (2012–2014), debate sobre a Lei da Anistia, negacionismo e revisionismo — temas que a Unicamp conecta ao presente."
+    ],
+    "formulas": [],
+    "erros_comuns": [
+      "Dizer que o AI-5 foi o primeiro ato institucional ou que fechou o Congresso por todo o regime: o primeiro foi o AI-1 (1964) e o recesso do Congresso em 1968–69 foi temporário.",
+      "Atribuir o bipartidarismo (ARENA × MDB) ao AI-1; ele decorre do AI-2 (1965).",
+      "Confundir milagre econômico (1968–73, governo Costa e Silva/Médici) com o II PND (Geisel, pós-choque do petróleo).",
+      "Achar que a Anistia de 1979 foi só para opositores. Ela alcançou também agentes da repressão, e isso é central na discussão de memória e justiça.",
+      "Tratar as Diretas Já como vitoriosas: a emenda Dante de Oliveira foi **rejeitada** (25/4/1984) e Tancredo foi eleito indiretamente.",
+      "Falar em «ditadura militar» e ignorar a participação civil quando o enunciado pede a expressão «civil-militar» (apoio empresarial, midiático e de setores da Igreja).",
+      "Datas e presidentes: Castelo Branco, Costa e Silva, Médici, Geisel e Figueiredo (nessa ordem). Jânio e Jango são anteriores ao golpe; Sarney já é a Nova República."
+    ],
+    "como_a_unicamp_cobra": "A ditadura é tema recorrente na Comvest: em edições recentes aparecem de 7 a 9 questões de História por prova de 1ª fase, quase sempre com texto ou imagem como fonte e uma ou mais ligadas ao regime. Padrões observados nas questões indexadas: (1) **fonte + contexto**: o enunciado traz um documento (texto literário, peça de teatro, charge, imagem de arte) e a alternativa correta interpreta o contexto («Anos de Chumbo», censura, inimigo interno); (2) **interdisciplinaridade** (Português + História com Dias Gomes, 2018; Artes/Música com censura a Rita Lee, Elis e Chico, 2024); (3) **nomenclatura e participação civil** («ditadura civil-militar», 2015 e 2024); (4) **ligação passado–presente** (Herzog 1975 e Amarildo 2013, 2ª fase de 2015); (5) **América Latina** (ditaduras e memória, Argentina, 2018); (6) 2ª fase em duas partes (a e b), pedindo definição + explicação curta (greves do ABC e abertura, 2009)."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Crise de 1961–64 e golpe civil-militar",
+      "explicacao": "Renúncia de Jânio Quadros (1961), posse de Jango sob parlamentarismo (imposto como solução de compromisso) e restauração do presidencialismo pelo plebiscito de 1963. Jango defendeu as **Reformas de Base** (agrária, urbana, educacional, eleitoral), o que radicalizou a polarização: comício da Central do Brasil (13/3/1964), Marcha da Família com Deus pela Liberdade em São Paulo (19/3/1964) e revolta dos marinheiros (25/3). O golpe começou em 31/3/1964 com tropas de Minas Gerais; Jango deixou Brasília em 1/4 e o Congresso declarou vaga a presidência. Apoiaram o golpe IPES/IBAD, grande imprensa, empresariado, governadores (Lacerda, Magalhães Pinto, Ademar de Barros), setores da Igreja e das classes médias, além do governo dos EUA (Operação Brother Sam, apoio naval planejado).",
+      "exemplo": "A Marcha da Família com Deus pela Liberdade é o exemplo clássico do **apoio civil** que justifica o termo «civil-militar».",
+      "dica_de_prova": "Se o enunciado fala em «participação da sociedade civil», pense em Marcha da Família, IPES/IBAD, imprensa e empresários. A Unicamp cobrou isso em 2015 (Q57) e em 2024 (Q18, apoio de empresas à OBAN).",
+      "imagens": []
+    },
+    {
+      "id": "c2",
+      "nome": "Doutrina de Segurança Nacional e «inimigo interno»",
+      "explicacao": "Elaborada na Escola Superior de Guerra e inserida na lógica da Guerra Fria, definia o comunismo como ameaça interna permanente. O binômio **segurança e desenvolvimento** justificava a suspensão de direitos, a censura e a repressão como defesa da «ordem». O SNI (1964) e a Lei de Segurança Nacional operacionalizaram a doutrina: qualquer oposição podia ser tratada como «subversão».",
+      "exemplo": "Comunicados oficiais que chamam opositores de «subversivos» ou «terroristas» e a censura como proteção da «família brasileira».",
+      "dica_de_prova": "Alternativas corretas costumam falar em «construção de um inimigo interno» para justificar o arbítrio; foi o gabarito da Q16 da Unicamp 2018 (O Bem-Amado).",
+      "imagens": []
+    },
+    {
+      "id": "c3",
+      "nome": "Castelo Branco e a institucionalização do regime (1964–67)",
+      "explicacao": "**AI-1** (9/4/1964): cassações e suspensão de direitos políticos por 10 anos; eleição indireta do presidente (Castelo eleito em 11/4, empossado em 15/4). **AI-2** (27/10/1965): eleição presidencial indireta e extinção dos partidos, levando ao bipartidarismo **ARENA × MDB**. **AI-3** (1966): eleição indireta de governadores. **AI-4** (1966): Congresso convocado para votar a Constituição de 1967. Criação do SNI (1964), Lei de Imprensa e Lei de Segurança Nacional (1967). Política econômica do **PAEG** (Campos e Bulhões): combate à inflação, arrocho salarial, reformas fiscal e financeira (Banco Central, FGTS em 1966, substituindo a estabilidade).",
+      "exemplo": "A derrota governista nas eleições para governador de Guanabara e Minas (1965) foi o estopim do AI-2.",
+      "dica_de_prova": "Decore o «efeito» de cada AI: AI-1 cassa e elege indiretamente; AI-2 bipartidarismo; AI-3 governadores indiretos; AI-4 Constituição de 1967; AI-5 fecha o ciclo do arbítrio.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "1968 e o AI-5 (Costa e Silva)",
+      "explicacao": "1968 foi o ano da contestação: morte do estudante Edson Luís no restaurante Calabouço (28/3), Passeata dos Cem Mil (26/6), greves operárias em Contagem e Osasco, congresso clandestino da UNE em Ibiúna (outubro). A Câmara negou licença para processar o deputado Márcio Moreira Alves e o governo baixou o **AI-5 (13/12/1968)**: autorizou o presidente a decretar recesso do Congresso, intervir em estados e municípios, cassar mandatos e direitos políticos, demitir servidores, e suspendeu o habeas corpus em crimes políticos; ampliou a censura. Com a doença de Costa e Silva, uma Junta Militar governou em 1969 e outorgou a EC nº 1, que reorganizou a Constituição. O AI-5 foi revogado pela EC nº 11, com efeito a partir de 1/1/1979.",
+      "exemplo": "Herzog e outros jornalistas foram perseguidos num contexto de censura e tortura que o AI-5 institucionalizou (Unicamp 2024, Q18).",
+      "dica_de_prova": "«Golpe dentro do golpe», «Anos de Chumbo» e «institucionalização da tortura» apontam para o AI-5. Atenção: o AI-5 NÃO acabou com o bipartidarismo nem fechou o Congresso definitivamente.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Médici, milagre econômico e propaganda",
+      "explicacao": "Governo Médici (1969–74): auge da repressão e do crescimento. O **milagre econômico** (cerca de 1968–73, ministro Delfim Netto) combinou crédito farto, investimento estatal e capital externo, com PIB próximo de 10% ao ano, mas também **arrocho salarial, concentração de renda e dívida externa**. Obras de impacto: Transamazônica (PIN, aberta em 1972), Ponte Rio–Niterói, e o tratado de Itaipu (1973). A propaganda (AERP) usou a Copa de 1970 e slogans como «Brasil: ame-o ou deixe-o» e «Pra frente, Brasil» para legitimar o regime e estimular o otimismo.",
+      "exemplo": "A Transamazônica foi ao mesmo tempo projeto de «integração nacional», política de segurança (geopolítica) e peça de propaganda; questão Unesp 2018.",
+      "dica_de_prova": "Lógica «fazer o bolo crescer antes de dividir»: crescimento sem distribuição. Charges de Ziraldo e Henfil costumam ironizar o lema «ame-o ou deixe-o» (Unesp 2015).",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Aparato repressivo, tortura e Comissão Nacional da Verdade",
+      "explicacao": "Órgãos: SNI, DOPS, Cenimar, **OBAN** (1969, São Paulo, financiada também por empresas) e **DOI-CODI** (criado em 1970 e espalhado pelos estados), que atuavam à margem da legalidade com prisão sem mandado, tortura, mortes forjadas e desaparecimentos. Casos-símbolo: Rubens Paiva (1971), Vladimir Herzog (DOI-CODI/SP, 25/10/1975, versão oficial de suicídio) e Manoel Fiel Filho (1976). A **Comissão Nacional da Verdade** (criada em 2011, instalada em 2012; relatório em dezembro de 2014) reconheceu 434 mortos e desaparecidos e concluiu que a tortura foi prática sistemática de Estado.",
+      "exemplo": "A morte de Herzog gerou ato ecumênico na Sé e desgastou o governo Geisel.",
+      "dica_de_prova": "A alternativa que diz que presos tinham «direito à defesa garantido» ou que o DOI-CODI operava «dentro da legalidade» é sempre a errada (Unicamp 2024, Q18).",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Resistência: luta armada, estudantes, Igreja, imprensa e cultura",
+      "explicacao": "**Luta armada** após o AI-5: ALN (Marighella, morto em 1969), VPR (Lamarca), MR-8; sequestro do embaixador dos EUA (1969) e **Guerrilha do Araguaia** (PCdoB, 1972–74), destruída pelo Exército. **Resistência não armada**: movimento estudantil (UNE), novo sindicalismo no ABC, Igreja progressista (CNBB, d. Paulo Evaristo Arns, Comissão Justiça e Paz), imprensa alternativa (O Pasquim) e produção cultural (Tropicália, música de protesto, teatro de Dias Gomes, artes visuais como as Inserções em Circuitos Ideológicos, de Cildo Meireles). A censura prévia levou a **estratégias de driblar** o censor: metáforas, duplo sentido, pseudônimos e, em jornais, poemas ou receitas no lugar de matérias vetadas.",
+      "exemplo": "Zuzu Angel transformou desfiles de moda em denúncia do desaparecimento do filho Stuart Angel (Unicamp 2026 abordou esse tema na 1ª fase, segundo comentários dos cursinhos).",
+      "dica_de_prova": "Distinga luta armada (minoritária, reprimida) de resistência cultural/política (ampla). Ao comparar com o presente (Cildo Meireles, 2013), a diferença é censura × liberdade de expressão e meios de circulação.",
+      "imagens": []
+    },
+    {
+      "id": "c8",
+      "nome": "Geisel e a distensão «lenta, gradual e segura»",
+      "explicacao": "Geisel (1974–79) iniciou uma abertura **controlada**, sem abrir mão do poder: a vitória do MDB no Senado em 1974 levou ao endurecimento (**Lei Falcão**, 1976, restringindo propaganda eleitoral) e ao **Pacote de Abril** (1977: recesso do Congresso por cerca de duas semanas, senadores «biônicos» indiretos e mudanças para barrar a oposição). Ao mesmo tempo, enfrentou a «linha dura»: demitiu o ministro do Exército Sylvio Frota (1977) após os casos Herzog e Fiel Filho, e revogou o AI-5 (EC nº 11/1978). Economicamente, diante da crise do petróleo de 1973, apostou no **II PND** (substituição de importações, estatais, endividamento).",
+      "exemplo": "Pacote de Abril: um «passo atrás» autoritário dentro da própria distensão.",
+      "dica_de_prova": "Se a alternativa mostra a abertura como ruptura democrática súbita, é falsa: foi tutelada pelo regime. O fim do AI-5 e a Anistia ocorrem na saída de Geisel e entrada de Figueiredo.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Figueiredo, greves do ABC, anistia e Diretas Já",
+      "explicacao": "Figueiredo (1979–85). **Greves do ABC** (1978–80; sindicato de São Bernardo, Lula) mostraram o novo sindicalismo desafiando a política salarial. **Lei da Anistia** (28/8/1979): resultado de campanha por anistia «ampla, geral e irrestrita», mas limitada e **recíproca**, beneficiando também agentes do Estado. **Reforma partidária** (dez./1979): extinguiu ARENA e MDB e criou PDS, PMDB, PT, PDT, PTB. Contexto de recessão (1981–83), inflação e crise da dívida; atentado frustrado do Riocentro (1981). Eleições diretas para governadores em 1982. A campanha das **Diretas Já** (1983–84; comício da Candelária, 10/4/1984) pediu eleição direta, mas a emenda Dante de Oliveira foi rejeitada em 25/4/1984 (298 votos a favor, 112 ausências, faltaram 22 votos). Em 15/1/1985, o Colégio Eleitoral elegeu **Tancredo Neves**, que morreu antes de tomar posse; assumiu **Sarney**.",
+      "exemplo": "Pergunta clássica da Unicamp (2009): importância das greves do ABC e duas mudanças da abertura (anistia e reforma partidária, por exemplo).",
+      "dica_de_prova": "Anistia = 1979, Figueiredo. Diretas Já = frustrada; transição = indireta. Constituição = 1988; eleição direta presidencial só em 1989.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Memória, justiça de transição e ditaduras latino-americanas",
+      "explicacao": "A interpretação da Lei da Anistia segue em disputa: o STF (ADPF 153, 2010) manteve a lei, enquanto a Corte Interamericana de Direitos Humanos (caso Gomes Lund/Araguaia, 2010) condenou o Brasil por não investigar nem punir. Há também disputas de memória (negacionismo e revisionismo). No contexto regional, o Brasil (1964) inaugurou a onda de ditaduras do Cone Sul: Chile (1973–90, Pinochet), Uruguai (1973–85), Argentina (1976–83, «Guerra Suja», Mães da Praça de Maio) e o Paraguai de Stroessner (1954–89). A **Operação Condor** (formalizada em 1975) foi a coordenação repressiva entre esses regimes, com troca de informações, sequestros e assassinatos de opositores além das fronteiras.",
+      "exemplo": "Texto literário de Veríssimo sobre corpos que «brotam do chão» remete ao trauma coletivo dos crimes de Estado (Unicamp 2018, Q57).",
+      "dica_de_prova": "A Unicamp gosta de comparar processos (Brasil × Argentina × Chile) e de conectar a memória das ditaduras a debates atuais (direitos humanos, violência de Estado, democracia).",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2024,
+      "fase": "1ª fase",
+      "numero": "Q18",
+      "tipo": "multipla_escolha",
+      "assunto": "Censura, tortura e apoio civil à ditadura (caso Herzog)",
+      "o_que_cobra": "A partir de um trecho sobre a morte de Herzog no DOI-CODI e a censura a músicas de Elis, Rita Lee e outros, pede a alternativa que interpreta corretamente a repressão e o apoio de parte da sociedade civil em nome da segurança nacional.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=10240",
+      "link_gabarito": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=10240",
+      "conceitos": ["c1", "c2", "c4", "c6"]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2015,
+      "fase": "2ª fase",
+      "numero": "Q18",
+      "tipo": "dissertativa",
+      "assunto": "Arte, censura e violência de Estado (Cildo Meireles; Herzog e Amarildo)",
+      "o_que_cobra": "Com duas imagens de cédulas intervencionadas pelo artista, pede relacionar as inscrições aos contextos históricos (ditadura e período democrático) e explicar a principal diferença na divulgação das obras entre os anos 1970 e 2013 (censura × liberdade de expressão, circulação física × redes sociais).",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2015/download/comentadas/historia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2015/download/comentadas/historia.pdf",
+      "conceitos": ["c6", "c7", "c10"]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2015,
+      "fase": "1ª fase",
+      "numero": "Q57",
+      "tipo": "multipla_escolha",
+      "assunto": "Expressão «ditadura civil-militar» e atuação de civis no golpe de 1964",
+      "o_que_cobra": "Exige compreender o uso da expressão «ditadura civil-militar», com referência à participação da sociedade civil em processos que evidenciam a atuação de civis durante o golpe.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2015/download/comentadas/historia.pdf",
+      "link_gabarito": null,
+      "conceitos": ["c1"]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "1ª fase",
+      "numero": "Q16 (Português + História)",
+      "tipo": "multipla_escolha",
+      "assunto": "O Bem-Amado (Dias Gomes) e os Anos de Chumbo",
+      "o_que_cobra": "Interdisciplinar: a partir de trecho da peça de Dias Gomes, pede identificar o que o personagem Odorico simboliza como crítica à ditadura (atropelo da lei, relativização da liberdade de imprensa e construção de um inimigo interno).",
+      "gabarito_oficial": "B",
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_historia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_historia.pdf",
+      "conceitos": ["c2", "c4", "c7"]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "1ª fase",
+      "numero": "Q57",
+      "tipo": "multipla_escolha",
+      "assunto": "Memória dos crimes das ditaduras latino-americanas (texto de Veríssimo sobre a Argentina)",
+      "o_que_cobra": "A partir de uma crônica sobre corpos que não somem, pede identificar a que o texto se refere: o trauma coletivo das políticas repressivas e crimes de Estado dos regimes ditatoriais da América Latina.",
+      "gabarito_oficial": "A",
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_historia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_historia.pdf",
+      "conceitos": ["c6", "c10"]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2009,
+      "fase": "2ª fase",
+      "numero": "Q24",
+      "tipo": "dissertativa",
+      "assunto": "Greves do ABC e abertura política",
+      "o_que_cobra": "Partindo de uma música de Chico Buarque de 1980 sobre as greves do ABC, pede (a) a importância dessas greves nos últimos anos do regime e (b) duas mudanças políticas que caracterizaram a abertura.",
+      "gabarito_oficial": null,
+      "link_questao": "https://soexercicios.com.br/plataforma/questao-de-vestibular/4661/-processo-de-redemocratizacao-manifestacoes-e-movimentos-socio-culturais-g-",
+      "link_gabarito": null,
+      "conceitos": ["c7", "c9"]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Unesp",
+      "ano": 2015,
+      "fase": "2ª fase",
+      "numero": "Q4",
+      "tipo": "dissertativa",
+      "assunto": "Propaganda política e o lema «Brasil: ame-o ou deixe-o»",
+      "o_que_cobra": "Com uma peça de campanha governamental e uma charge dos anos 1970, pede avaliar se cada uma trata o lema de forma diferente e justificar associando as imagens ao regime político do período.",
+      "gabarito_oficial": null,
+      "link_questao": "https://soexercicios.com.br/plataforma/questao-de-vestibular/5825489/-estrategias-da-propaganda-politica-da-ditadura-civil-militar-brasileira-de-1964-f-interdisciplinar-brasil-b-questoes-com-imagens-hist-expressoes-artisticas-e-seus-sentidos-no-contexto-do-regime-civil-militar-brasileiro-de-1964-f-",
+      "link_gabarito": null,
+      "conceitos": ["c5", "c7"]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Unesp",
+      "ano": 2018,
+      "fase": "2ª fase",
+      "numero": "Q4",
+      "tipo": "dissertativa",
+      "assunto": "Transamazônica, Zona Franca de Manaus e Segurança Nacional",
+      "o_que_cobra": "A partir de texto sobre geopolítica e povoamento da Amazônia, pede situar o período da Transamazônica, a semelhança com a Zona Franca de Manaus, a justificativa oficial da estrada e o sentido de «Geopolítica-Segurança Nacional».",
+      "gabarito_oficial": null,
+      "link_questao": "https://soexercicios.com.br/plataforma/questao-de-vestibular/7002447/-significados-politicos-e-economicos-da-construcao-da-transamazonica-no-contexto-da-ditadura-civil-militar-brasileira-no-final-do-seculo-xx-g-significados-politicos-e-economicos-da-construcao-da-zona-franca-de-manaus-no-periodo-da-ditadura-civil-militar-brasileira-de-1964-",
+      "link_gabarito": null,
+      "conceitos": ["c2", "c5"]
+    },
+    {
+      "id": "x9",
+      "instituicao": "Fuvest",
+      "ano": 2019,
+      "fase": "1ª fase (inferida)",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Desempenho econômico e panorama político durante a ditadura",
+      "o_que_cobra": "Com uma tabela de crescimento do PIB em anos da ditadura, pede relacionar economia e política: fim do milagre, crise do petróleo, recessão de 1981–83 e eleições pluripartidárias de 1982.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://www.projetoagathaedu.com.br/questoes-fuvest/resolucao-historia/republica.php",
+      "link_gabarito": "https://www.projetoagathaedu.com.br/questoes-fuvest/resolucao-historia/republica.php",
+      "conceitos": ["c5", "c8", "c9"]
+    },
+    {
+      "id": "x10",
+      "instituicao": "Fuvest",
+      "ano": 2017,
+      "fase": "1ª fase (inferida)",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Anistia e impasses da abertura política (texto de Darcy Ribeiro)",
+      "o_que_cobra": "A partir de um texto de 1979 sobre anistia como esquecimento e defesa das instituições democráticas, pede a alternativa correta sobre a lei de anistia: beneficiou presos políticos e exilados e também agentes da repressão.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://www.projetoagathaedu.com.br/questoes-fuvest/resolucao-historia/republica.php",
+      "link_gabarito": "https://www.projetoagathaedu.com.br/questoes-fuvest/resolucao-historia/republica.php",
+      "conceitos": ["c9", "c10"]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c3"],
+      "enunciado": "Em outubro de 1965, depois de derrotas do governo em eleições estaduais, o regime militar baixou o Ato Institucional nº 2. Entre as consequências desse ato, destaca-se que ele",
+      "alternativas": [
+        { "letra": "A", "texto": "restabeleceu as eleições diretas para presidente e governadores." },
+        { "letra": "B", "texto": "suspendeu o habeas corpus em crimes políticos e autorizou o recesso do Congresso." },
+        { "letra": "C", "texto": "extinguiu os partidos existentes e manteve a eleição indireta para presidente, abrindo caminho ao bipartidarismo ARENA × MDB." },
+        { "letra": "D", "texto": "criou o Serviço Nacional de Informações (SNI) para vigiar opositores." },
+        { "letra": "E", "texto": "concedeu anistia aos cassados pelo AI-1 e devolveu seus direitos políticos." }
+      ],
+      "gabarito": "C",
+      "resolucao": "O AI-2 (27/10/1965) extinguiu os partidos criados após 1945 e manteve a eleição indireta para a presidência; na sequência nasceram ARENA (governista) e MDB (oposição consentida). **A** é falsa: o AI-3 (1966) tornou indiretas também as eleições para governador. **B** descreve o AI-5 (1968). **D** é falsa: o SNI foi criado em 1964, ainda no início do governo Castelo Branco. **E** é falsa: a anistia só veio em 1979."
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x3",
+      "dificuldade": "facil",
+      "conceitos": ["c1"],
+      "enunciado": "Muitos historiadores preferem a expressão «ditadura civil-militar» a «ditadura militar» para designar o regime iniciado em 1964. Essa escolha se justifica, principalmente, porque",
+      "alternativas": [
+        { "letra": "A", "texto": "civis comandaram o Poder Executivo federal durante todo o regime." },
+        { "letra": "B", "texto": "setores civis (empresários, imprensa, parte da Igreja e das classes médias, políticos) apoiaram o golpe e colaboraram com o regime, embora o poder central fosse militar." },
+        { "letra": "C", "texto": "o Congresso Nacional funcionou plenamente e votou todas as medidas do regime sem interferência dos militares." },
+        { "letra": "D", "texto": "os Atos Institucionais foram aprovados em plebiscitos populares." },
+        { "letra": "E", "texto": "o regime foi dirigido por uma junta de civis nomeada pelos governadores estaduais." }
+      ],
+      "gabarito": "B",
+      "resolucao": "A expressão destaca o apoio e a participação de setores civis: Marcha da Família, IPES/IBAD, imprensa, empresariado (que financiou, por exemplo, a OBAN), políticos de partidos como ARENA. Isso não elimina o fato de que os presidentes foram generais. **A** e **E** são falsas. **C** é falsa: o Congresso sofreu cassações e recessos. **D** é falsa: os AIs foram baixados pelo Executivo."
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c5"],
+      "enunciado": "Entre 1968 e 1973, a economia brasileira cresceu a taxas muito elevadas, período conhecido como «milagre econômico». Uma característica desse período foi",
+      "alternativas": [
+        { "letra": "A", "texto": "o crescimento acelerado, acompanhado de concentração de renda e aumento do endividamento externo." },
+        { "letra": "B", "texto": "a queda da inflação a zero, o aumento real do salário mínimo e a redução da desigualdade." },
+        { "letra": "C", "texto": "a retração do capital estrangeiro e a estatização de todo o setor industrial." },
+        { "letra": "D", "texto": "a realização de uma ampla reforma agrária, que reduziu a concentração de terras." },
+        { "letra": "E", "texto": "o fortalecimento dos sindicatos, que passaram a negociar reajustes livremente." }
+      ],
+      "gabarito": "A",
+      "resolucao": "O milagre combinou crédito, investimento estatal e entrada de capital externo, mas com arrocho salarial, sindicatos sob intervenção e forte concentração de renda; o financiamento do crescimento ampliou a dívida externa. As demais alternativas descrevem o oposto do que ocorreu."
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "media",
+      "conceitos": ["c2", "c4"],
+      "enunciado": "Leia o trecho a seguir, escrito para esta questão no estilo dos comunicados oficiais dos anos 1970.\n\n«Os órgãos de segurança neutralizaram mais um foco de subversão que ameaçava a família brasileira e as instituições. Cabe à imprensa divulgar apenas as notas oficiais, para não alarmar a população nem favorecer o inimigo interno.»\n\nConsiderando o trecho e seus conhecimentos sobre o período, é correto afirmar que ele",
+      "alternativas": [
+        { "letra": "A", "texto": "evidencia o respeito do regime à liberdade de imprensa garantida pela Constituição." },
+        { "letra": "B", "texto": "mostra a neutralidade das Forças Armadas diante de conflitos entre civis." },
+        { "letra": "C", "texto": "expressa a defesa do pluralismo político como fundamento da segurança nacional." },
+        { "letra": "D", "texto": "reflete a lógica da Doutrina de Segurança Nacional, que definia opositores como inimigo interno e justificava censura e repressão." },
+        { "letra": "E", "texto": "indica a transferência do controle da repressão para autoridades civis eleitas." }
+      ],
+      "gabarito": "D",
+      "resolucao": "Os termos «subversão», «inimigo interno» e o controle da informação pelo Estado são marcas da Doutrina de Segurança Nacional, que legitimou a repressão pós-AI-5. **A**, **C** e **E** contradizem o que se conhece do regime. **B** erra ao supor neutralidade: as Forças Armadas eram o centro do poder. A estrutura é a mesma de x4: identificar a construção do inimigo interno."
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c8"],
+      "enunciado": "A abertura política «lenta, gradual e segura» do governo Geisel foi controlada pelo regime. Um episódio que ilustra esse caráter controlado foi",
+      "alternativas": [
+        { "letra": "A", "texto": "a decretação do AI-5, após a Passeata dos Cem Mil." },
+        { "letra": "B", "texto": "a aprovação da Lei da Anistia ampla, geral e irrestrita, em 1979." },
+        { "letra": "C", "texto": "o Pacote de Abril (1977), que fechou o Congresso por cerca de duas semanas, criou senadores indiretos e mudou regras para barrar o avanço do MDB." },
+        { "letra": "D", "texto": "a rejeição da emenda Dante de Oliveira, em 1984." },
+        { "letra": "E", "texto": "a eleição de Tancredo Neves no Colégio Eleitoral, em 1985." }
+      ],
+      "gabarito": "C",
+      "resolucao": "Após a vitória do MDB nas eleições de 1974, Geisel recorreu ao Pacote de Abril (1977) para garantir a maioria governista, mesmo no meio da distensão. **A** é de 1968 (Costa e Silva). **B** é do governo Figueiredo e a lei foi limitada. **D** e **E** ocorrem no governo Figueiredo e na transição."
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x9",
+      "dificuldade": "media",
+      "conceitos": ["c5", "c8", "c9"],
+      "enunciado": "Sobre a relação entre economia e política na ditadura militar brasileira, é correto afirmar:",
+      "alternativas": [
+        { "letra": "A", "texto": "O fim do milagre, em 1973, provocou o colapso imediato do regime por falta de apoio." },
+        { "letra": "B", "texto": "A crise do petróleo de 1979 derrubou o regime e levou à posse imediata de um presidente eleito pelo voto direto." },
+        { "letra": "C", "texto": "A prosperidade do milagre levou o governo a extinguir a censura e revogar o AI-5 ainda em 1973." },
+        { "letra": "D", "texto": "A recessão de 1981–83 foi politicamente irrelevante, já que a oposição só ganhou força depois da eleição de Tancredo." },
+        { "letra": "E", "texto": "A recessão do início dos anos 1980, com inflação alta e crise da dívida externa, ampliou o desgaste do regime e coincidiu com a mobilização das Diretas Já." }
+      ],
+      "gabarito": "E",
+      "resolucao": "A crise econômica dos anos 1980 corroeu a base de apoio do regime e coincidiu com greves, eleições de 1982 e Diretas Já. **A** é falsa: após 1973 o regime ainda durou mais de uma década, em abertura controlada. **B** é falsa: a transição foi gradual e a eleição de 1985 foi indireta. **C** é falsa: o AI-5 só foi revogado em 1978. **D** ignora o papel da crise na campanha de 1983–84."
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x5",
+      "dificuldade": "media",
+      "conceitos": ["c10"],
+      "enunciado": "Sobre a Operação Condor, formalizada em 1975, é correto afirmar que foi",
+      "alternativas": [
+        { "letra": "A", "texto": "um acordo militar entre os EUA e países sul-americanos para impedir uma invasão soviética." },
+        { "letra": "B", "texto": "uma cooperação entre aparatos repressivos de ditaduras do Cone Sul, com troca de informações e ações contra opositores além das fronteiras." },
+        { "letra": "C", "texto": "uma aliança econômica criada para renegociar a dívida externa dos regimes militares." },
+        { "letra": "D", "texto": "uma organização guerrilheira transnacional que combatia as ditaduras da região." },
+        { "letra": "E", "texto": "um tratado que obrigou as ditaduras a libertar presos políticos em troca de reconhecimento internacional." }
+      ],
+      "gabarito": "B",
+      "resolucao": "A Condor foi uma rede de cooperação entre serviços de repressão de regimes como Argentina, Chile, Uruguai, Paraguai, Bolívia e Brasil, que trocavam informações e prendiam, sequestravam e eliminavam opositores exilados. As demais alternativas descrevem coisas que não existiram ou não são o que a Condor representou."
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "media",
+      "conceitos": ["c4", "c7"],
+      "enunciado": "Durante o regime militar, jornais, músicos e artistas enfrentaram a censura. (a) Cite duas estratégias usadas para driblar o censor. (b) Explique por que o AI-5 ampliou a necessidade dessas estratégias.",
+      "alternativas": null,
+      "gabarito": "(a) Exemplos aceitáveis: uso de metáforas e duplo sentido em letras e peças; pseudônimos; imprensa alternativa (como O Pasquim); jornais que substituíam matérias vetadas por poemas, receitas ou trechos de obras clássicas, denunciando indiretamente a censura. (b) O AI-5 (1968) suspendeu garantias constitucionais e legitimou a censura e a repressão sem controle judicial, o que levou à censura prévia de jornais, música, teatro e cinema; sem canais legais de oposição, a crítica passou a depender de linguagem indireta e circulação alternativa.",
+      "resolucao": "Resposta com dois exemplos corretos em (a) e relação causal clara com o AI-5 em (b). Para pontuação completa, o texto deve ligar a **suspensão de direitos** à **perda de liberdade de expressão**. Em prova da Unicamp, 2 pontos por item: um exemplo vago, sem relação com o AI-5, perde metade."
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x10",
+      "dificuldade": "dificil",
+      "conceitos": ["c9", "c10"],
+      "enunciado": "A campanha pela anistia, no fim dos anos 1970, pedia que ela fosse «ampla, geral e irrestrita». (a) Explique por que a Lei da Anistia de 1979 é considerada limitada e recíproca, e por que isso gera debate até hoje. (b) Aponte o objetivo do governo Figueiredo ao extinguir o bipartidarismo em 1979 e cite dois partidos criados a partir da reforma.",
+      "alternativas": null,
+      "gabarito": "(a) A lei beneficiou presos políticos e exilados, mas excluiu condenados por certos crimes (como luta armada com mortes) e foi interpretada como abrangendo também agentes do Estado acusados de tortura e assassinato; por isso, até hoje se discute a responsabilização desses crimes (STF mantendo a lei; Corte IDH condenando o Brasil). (b) O governo buscava fragmentar a oposição, que se concentrava no MDB, e preservar a maioria governista (PDS). Podem ser citados PMDB, PT, PDT, PTB, PP.",
+      "resolucao": "Boas respostas articulam: (1) **reciprocidade** (anistia a opositores e a agentes); (2) **limites** (exclusão de alguns presos); (3) **debate atual** (justiça de transição). Em (b), o ponto é **estratégia política** (dividir a oposição), não apenas «pluripartidarismo». Erro comum: dizer que o PT surgiu da divisão do MDB; o PT nasceu do novo sindicalismo."
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": ["c4", "c5", "c6"],
+      "enunciado": "O AI-5 é chamado de «golpe dentro do golpe», e o governo Médici costuma ser lembrado ao mesmo tempo pelo «milagre econômico» e pelos «Anos de Chumbo». Explique como o regime combinou repressão e crescimento econômico para obter legitimidade e quais os limites dessa estratégia.",
+      "alternativas": null,
+      "gabarito": "O AI-5 (1968) concentrou poderes no Executivo, permitiu o fechamento do Congresso, cassações e censura, eliminando canais legais de oposição (golpe dentro do golpe). Sob Médici, a repressão (OBAN, DOI-CODI, tortura, desaparecimentos) coexistiu com taxas de crescimento próximas de 10% ao ano e com propaganda (Copa de 1970, «Brasil: ame-o ou deixe-o»), que ampliou o apoio de parte das classes médias. Limites: o crescimento concentrou renda, houve arrocho salarial e aumento da dívida externa; a censura escondia a violência; com a crise do petróleo (1973) e o desgaste causado pelos casos Herzog e Fiel Filho, a legitimidade se enfraqueceu.",
+      "resolucao": "Estrutura sugerida em três parágrafos curtos: (1) o que mudou com o AI-5; (2) como repressão e crescimento se reforçaram (propaganda, apoio de setores civis); (3) limites: concentração de renda, dívida externa, crise do petróleo e desgaste pelas mortes sob tortura. Conectar com **c4**, **c5** e **c6** garante nota alta."
+    }
+  ],
+  "imagens": [],
+  "fontes": [
+    { "titulo": "Comvest/Unicamp — Prova comentada de História, 1ª fase 2018", "url": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_historia.pdf" },
+    { "titulo": "Comvest/Unicamp — Provas comentadas de História, 2015", "url": "https://www.comvest.unicamp.br/vest_anteriores/2015/download/comentadas/historia.pdf" },
+    { "titulo": "Elite Campinas — Resolução da Questão 18, Unicamp 2024 (1ª fase)", "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=10240" },
+    { "titulo": "Só Exercícios — Questões sobre Ditadura Civil-Militar (Unicamp, Unesp)", "url": "https://soexercicios.com.br/plataforma/questoes-de-vestibular/UNICAMP/15639/ditadura-militar-(64-85)/1" },
+    { "titulo": "Projeto Agatha — Fuvest, Brasil República (com gabarito)", "url": "https://www.projetoagathaedu.com.br/questoes-fuvest/resolucao-historia/republica.php" },
+    { "titulo": "Projeto Agatha — Unicamp, Brasil República (com gabarito)", "url": "https://projetoagathaedu.com.br/questoes-unicamp/historia/republica.php" },
+    { "titulo": "Edukavest — Questões ENEM sobre Ditadura militar", "url": "https://edukavest.com.br/questoes/historia-do-brasil/ditadura-militar" },
+    { "titulo": "Estratégia Vestibulares — 21 questões sobre a ditadura militar", "url": "https://vestibulares.estrategia.com.br/portal/atualidades-e-dicas/21-questoes-sobre-a-ditadura-militar-que-ja-cairam-nos-vestibulares-e-enem/" },
+    { "titulo": "Estratégia Vestibulares — O que estudar de História para a Unicamp", "url": "https://vestibulares.estrategia.com.br/portal/enem-e-vestibulares/unicamp-o-que-estudar-para-a-prova-de-historia-do-vestibular-da-instituicao/" },
+    { "titulo": "Politize! — Ditadura militar no Brasil", "url": "https://www.politize.com.br/ditadura-militar-no-brasil/" },
+    { "titulo": "Todo Matéria — AI-5 (Ato Institucional nº 5)", "url": "https://www.todamateria.com.br/ato-institucional-n-5-ai-5/" },
+    { "titulo": "Wikipédia — Passeata dos Cem Mil", "url": "https://pt.wikipedia.org/wiki/Passeata_dos_Cem_Mil" },
+    { "titulo": "Wikipédia — Diretas Já", "url": "https://pt.wikipedia.org/wiki/Diretas_J%C3%A1" },
+    { "titulo": "Fundação Perseu Abramo — Primeiro comício unificado das Diretas Já", "url": "https://fpabramo.org.br/?p=26914" },
+    { "titulo": "Portal Amazônia — História da Transamazônica", "url": "https://portalamazonia.com/amazonia/relembre-a-historia-da-transamazonica-a-utopica-rodovia-na-amazonia" },
+    { "titulo": "Prepara ENEM — Marcha da Família com Deus pela Liberdade", "url": "https://www.preparaenem.com/historia-do-brasil/marcha-familia-com-deus-pela-liberdade.htm" },
+    { "titulo": "Instituto de Economia/Unicamp — Macarini, A política econômica da ditadura militar no limiar do milagre (1967/69)", "url": "https://www.eco.unicamp.br/images/arquivos/artigos/1729/texto99.pdf" }
+  ]
+}

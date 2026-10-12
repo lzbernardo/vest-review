@@ -15,9 +15,30 @@
       "questoes": 10
     },
     {
+      "arquivo": "historia/historia-brasil-colonial.json",
+      "titulo": "Brasil Colonial (1500–1808)",
+      "disciplina": "História",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    },
+    {
+      "arquivo": "historia/historia-ditadura-militar-brasileira.json",
+      "titulo": "Ditadura civil-militar brasileira (1964–1985)",
+      "disciplina": "História",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    },
+    {
       "arquivo": "matematica/matematica-pa-pg.json",
       "titulo": "Progressões: PA e PG",
       "disciplina": "Matemática",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    },
+    {
+      "arquivo": "quimica/quimica-quimica-organica.json",
+      "titulo": "Química Orgânica: funções, isomeria, reações e polímeros",
+      "disciplina": "Química",
       "gerado_em": "2026-10-12",
       "questoes": 10
     }
