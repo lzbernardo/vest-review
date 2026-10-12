@@ -26,24 +26,7 @@
       "Leitura de cladograma: **parentesco = recência do ancestral comum**. Dois táxons que saem do mesmo nó são **grupos-irmãos**. Nós podem girar sem mudar as relações.",
       "Monofilético = ancestral comum + **todos** os descendentes. Parafilético = ancestral comum + **só parte** dos descendentes. Polifilético = reúne linhagens sem ancestral comum exclusivo (geralmente por convergência).",
       "**Sinapomorfia** (novidade evolutiva compartilhada) define clados; **plesiomorfia** (caráter ancestral) e **homoplasia** (convergência, paralelismo, reversão) não servem para agrupar.",
-      "Quando o enunciado diz que o comprimento do ramo é proporcional ao tempo, aplica-se o **relógio molecular**: ramo curto = menos mutações acumuladas = maior semelhança com o ancestral."
-    ],
-    "formulas": [
-      {
-        "nome": "Regra do pertencimento taxonômico",
-        "expressao": "Mesma categoria X → mesmas categorias superiores a X",
-        "quando_usar": "Questões do tipo 'duas espécies da mesma família pertencem obrigatoriamente à mesma...?' e leitura de tabelas com categorias omitidas."
-      },
-      {
-        "nome": "Regra de leitura de cladograma",
-        "expressao": "Parentesco(X, Y) ↑ quanto mais recente o ancestral comum de X e Y",
-        "quando_usar": "Qualquer pergunta sobre 'maior parentesco', 'grupo-irmão' ou 'ancestral comum'; ignore a posição dos táxons na página e a semelhança externa."
-      },
-      {
-        "nome": "Relógio molecular",
-        "expressao": "$d \\approx 2\\mu t$",
-        "quando_usar": "Com taxa de mutação $\\mu$ constante, a distância genética $d$ entre duas linhagens é proporcional ao tempo $t$ desde a divergência; cada linhagem acumula $\\mu t$."
-      }
+      "Quando o enunciado diz que o comprimento do ramo é proporcional ao tempo, aplica-se o **relógio molecular**: ramo curto = menos mutações acumuladas = maior semelhança com o ancestral. Com taxa de mutação $\\mu$ constante, a distância genética entre duas linhagens é $d \\approx 2\\mu t$, pois cada uma acumula $\\mu t$ desde a divergência."
     ],
     "erros_comuns": [
       "Dizer que 'humanos descendem dos chimpanzés': eles compartilham um ancestral comum exclusivo e são grupos-irmãos; nenhum descende do outro.",

@@ -6,6 +6,9 @@ const LAST_KEY = 'revest:last';
 const GROUPS_KEY = 'revest:groups';
 const NAV_KEY = 'revest:nav';
 const DATA_DIR = 'revisoes/';
+const GUIDE_ROUTE = 'criar';
+const SKILL_FILE = 'downloads/revisao-vestibular.skill';
+const REPO_URL = 'https://github.com/lzbernardo/vest-review';
 
 const icon = (body) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
 // Each subject is matched against the normalized "disciplina" of a review; the first match wins.
@@ -28,6 +31,7 @@ const OTHER = { key: 'outras', name: 'Outras', color: '#6e6e73', icon: icon('<re
 const DIFF = { facil: 'Fácil', media: 'Média', dificil: 'Difícil' };
 const TABS = [['resumo', 'Resumo'], ['conceitos', 'Conceitos'], ['questoes', 'Questões'], ['referencias', 'Provas']];
 const X_ICON = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 2l8 8M10 2l-8 8"/></svg>';
+const PLAY_ICON = '<svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 1.6v8.8a.6.6 0 0 0 .9.5l7.3-4.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z"/></svg>';
 const EXT_ICON = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 2.5H2.5v7h7v-2M7 2h3v3M10 2L5.5 6.5"/></svg>';
 
 const $ = (id) => document.getElementById(id);
@@ -41,6 +45,7 @@ const state = {
   current: null,    // { id, data } of the open review
   openGroups: [],   // subject keys expanded in the sidebar
   subject: null,    // subject whose screen is open, when no theme is
+  guide: false,     // the "create new reviews" screen is open
   pendingQ: null,   // practice question to scroll to once its review opens
   error: null,      // [title, text] shown in place of a review
   progress: {},     // { [reviewId]: { [questionId]: { choice?, revealed?, self? } } }
@@ -112,8 +117,10 @@ async function route() {
   const wanted = routeId();
   const entry = state.lib.find((e) => e.id === wanted) || null; // none means the home or a subject screen
   state.subject = (wanted.startsWith('@') && state.lib.find((e) => e.materia.key === wanted.slice(1))?.materia) || null;
+  state.guide = !entry && wanted === GUIDE_ROUTE;
   state.currentId = entry?.id || null;
   state.error = null;
+  closeFocus();
   renderSidebar();
   if (!entry) {
     state.current = null;
@@ -185,7 +192,7 @@ function renderSidebar() {
   $('lib-count').textContent = state.lib.length ? plural(state.lib.length, 'tema de revisão', 'temas de revisão') : 'Revisões de vestibular';
   $('search').hidden = state.lib.length < 2;
   const home = state.lib.length ? `
-    <button class="item item-home" data-action="home" aria-current="${!state.currentId && !state.subject}">
+    <button class="item item-home" data-action="home" aria-current="${!state.currentId && !state.subject && !state.guide}">
       <span class="glyph">${HOME_ICON}</span>
       <span class="item-text"><span class="item-title">Início</span></span>
     </button>
@@ -215,15 +222,21 @@ function renderSidebar() {
         }).join('')}
       </div></div>
     </div>`;
-  }).join('') || (state.lib.length ? '<div class="group-label">Nada encontrado</div>' : ''));
+  }).join('') || (state.lib.length ? '<div class="group-label">Nada encontrado</div>' : '')) + (q ? '' : `
+    <div class="group-label">Criar</div>
+    <button class="item item-home" data-action="guide" aria-current="${state.guide}">
+      <span class="glyph">${PLUS_ICON}</span>
+      <span class="item-text"><span class="item-title">Novas revisões</span></span>
+    </button>`);
 }
 
 /* ---------- Render: top bar ---------- */
 // Present on every screen: the sidebar toggle plus a trail showing where the reader is
 function topRow(subj, title) {
   const here = (text) => `<span aria-current="page">${esc(text)}</span>`;
-  const trail = !subj ? [here('Início')] : [
-    '<button data-action="home">Início</button>',
+  const home = '<button data-action="home">Início</button>';
+  const trail = !subj ? (title ? [home, here(title)] : [here('Início')]) : [
+    home,
     title ? `<button data-action="subject" data-key="${subj.key}">${esc(subj.name)}</button>` : here(subj.name),
     ...(title ? [here(title)] : []),
   ];
@@ -258,7 +271,7 @@ function renderMain() {
   const entry = current();
   const main = $('main');
   if (!entry) {
-    main.innerHTML = state.error || !state.lib.length
+    main.innerHTML = state.guide ? renderGuide() : state.error || !state.lib.length
       ? message(...(state.error || ['Nenhuma revisão publicada ainda', 'Assim que um tema for adicionado à pasta de revisões, ele aparece aqui.']))
       : state.subject ? renderSubject(state.subject) : renderHome();
     return;
@@ -294,6 +307,7 @@ function renderView() {
   view.style.animation = 'none';
   void view.offsetWidth;
   view.style.animation = '';
+  fitFormulas();
 }
 
 const empty = (msg) => `<div class="card" style="color:var(--text-2)">${esc(msg)}</div>`;
@@ -321,7 +335,12 @@ const VIEWS = {
   conceitos(entry) {
     const cs = arr(entry.data.conceitos);
     if (!cs.length) return empty('Este arquivo não traz conceitos.');
-    return cs.map((c, i) => `<article class="card concept" id="c-${esc(c.id)}"><div class="num">Conceito ${i + 1}</div>${conceptBody(entry.data, c)}</article>`).join('');
+    return `
+      <div class="play-row">
+        <span>${plural(cs.length, 'conceito', 'conceitos')}</span>
+        <button class="btn btn-primary btn-sm" data-action="play">${PLAY_ICON}Modo foco</button>
+      </div>
+      ${cs.map((c, i) => conceptCard(entry.data, c, i)).join('')}`;
   },
 
   questoes(entry) {
@@ -414,6 +433,8 @@ function conceptBody(data, c) {
     ${linkRow('Já caiu em', exams.map((r) => `<button class="chip chip-accent" data-action="ref" data-ref="${esc(r.id)}">${esc([refLabel(r), r.numero].filter(Boolean).join(' · '))}</button>`))}
     ${linkRow('Praticar', practice.map((q) => practiceChip(data, q)))}`;
 }
+
+const conceptCard = (data, c, i) => `<article class="card concept" id="c-${esc(c.id)}"><div class="num">Conceito ${i + 1}</div>${conceptBody(data, c)}</article>`;
 
 function refBody(data, r) {
   const question = safeUrl(r.link_questao) || safeUrl(r.link);
@@ -535,6 +556,8 @@ const pct = (part, whole) => (whole ? Math.round((part / whole) * 100) : 0);
 const stackBar = (right, wrong, total) => `<span class="stack" aria-hidden="true"><i class="ok" style="width:${total ? (right / total) * 100 : 0}%"></i><i class="no" style="width:${total ? (wrong / total) * 100 : 0}%"></i></span>`;
 const CHEVRON = '<svg class="chev" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 1.5l5.5 5.5-5.5 5.5"/></svg>';
 const HOME_ICON = icon('<path d="M4 11l8-7 8 7M6 9.5V20h4.5v-5.5h3V20H18V9.5"/>');
+const PLUS_ICON = icon('<path d="M12 5.5v13M5.5 12h13"/>');
+const DOWNLOAD_ICON = icon('<path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/>');
 
 const tile = (value, label, sub, extra = '') => `<div class="card tile"><div class="tile-label">${label}</div><div class="tile-value">${value}</div><div class="tile-sub">${sub}</div>${extra}</div>`;
 const totals = (themes) => ({ total: sum(themes.map((t) => t.s), 'total'), done: sum(themes.map((t) => t.s), 'done'), right: sum(themes.map((t) => t.s), 'right') });
@@ -671,6 +694,84 @@ function renderHome() {
     </div>`;
 }
 
+/* ---------- Render: guide to creating new reviews ---------- */
+function renderGuide() {
+  const code = (s) => `<code class="tex-raw">${esc(s)}</code>`;
+  const items = (list, cls, mark) => `<div class="card"><ul class="list">${list.map((t, i) => `<li><span class="dot ${cls}">${mark ?? i + 1}</span><div>${t}</div></li>`).join('')}</ul></div>`;
+  return `
+    <div class="bar"><div class="wrap">${topRow(null, 'Novas revisões')}</div></div>
+    <div class="wrap home guide">
+      <div class="hero">
+        <div class="eyebrow">Criar</div>
+        <h2>Crie novas revisões</h2>
+        <div class="meta">Cada tema do ReVest é um arquivo JSON gerado pelo Claude com a skill revisao-vestibular. Baixe a skill, peça um tema e publique o arquivo.</div>
+      </div>
+
+      <div class="card skill">
+        <span class="glyph">${DOWNLOAD_ICON}</span>
+        <span class="resume-text">
+          <span class="resume-title">revisao-vestibular.skill</span>
+          <span class="resume-sub">Skill para o Claude · 15 KB · instruções, formato do arquivo, exemplo e validador</span>
+        </span>
+        <a class="btn btn-primary" href="${SKILL_FILE}" download>Baixar skill</a>
+      </div>
+
+      <h3 class="section-title">O que a skill faz</h3>
+      <div class="card"><p>Uma skill é um pacote de instruções que ensina o Claude a executar uma tarefa sempre do mesmo jeito. Esta recebe um tema do ensino médio, pesquisa na web e entrega um único arquivo JSON, no formato exato que esta página lê. O arquivo traz:</p></div>
+      ${items([
+        '<strong>Resumo prático</strong>: o tema em uma frase, pontos-chave, erros comuns, como a Unicamp cobra e, quando o tema tem equações, um formulário.',
+        '<strong>Conceitos</strong>: de 5 a 10, cada um com explicação curta, exemplo e dica de prova.',
+        '<strong>Questões de vestibular</strong>: até 10 questões reais, com Comvest/Unicamp em primeiro lugar e Fuvest, Unesp e ENEM para completar. O enunciado não é copiado: a skill descreve o que a questão cobra e guarda o link para a prova e para o gabarito.',
+        '<strong>Questões de reforço</strong>: cerca de 10 questões inéditas no estilo da Comvest, de múltipla escolha e dissertativas, com gabarito e resolução passo a passo.',
+        '<strong>Imagens</strong>: gráficos, mapas e diagramas de fontes abertas, com legenda, crédito e licença.',
+      ], 'dot-key', '•')}
+
+      <h3 class="section-title">Como usar</h3>
+      ${items([
+        `<strong>Baixe a skill</strong> pelo botão acima. O arquivo ${code('.skill')} é um ZIP comum com outra extensão.`,
+        `<strong>Instale no Claude.</strong> No aplicativo ou em claude.ai, abra as configurações, vá até a área de skills e envie o arquivo. No Claude Code, extraia o conteúdo em ${code('~/.claude/skills/')}, de modo que exista a pasta ${code('~/.claude/skills/revisao-vestibular/')}.`,
+        'Deixe a <strong>busca na web</strong> ligada: a skill confirma prova, ano e número de cada questão antes de indexá-la.',
+        `<strong>Peça o tema</strong> em uma conversa nova, por exemplo: <em>“Revisão de eletroquímica para o vestibular”</em>. Não é preciso citar a skill; o Claude a aciona sozinho. Um tema por pedido, pois cada arquivo cobre um tema.`,
+        `<strong>Receba o arquivo</strong>, com nome no padrão ${code('quimica-eletroquimica.json')}. O Claude valida o resultado e informa quantas questões reais conseguiu confirmar.`,
+        `<strong>Publique.</strong> Coloque o arquivo em ${code('revisoes/<matéria>/')} no <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">repositório do ReVest</a> (ou em uma cópia sua) e envie para a branch ${code('main')}. O site é atualizado sozinho e o tema aparece no menu, dentro da matéria.`,
+      ], 'dot-key')}
+
+      <h3 class="section-title">Antes de publicar</h3>
+      ${items([
+        'Leia o resumo e resolva algumas questões de reforço. O conteúdo é gerado por IA e pode conter erros, mesmo com a validação.',
+        'Abra os links das questões de vestibular e confira se levam à prova certa.',
+        `Para atualizar um tema que já existe, mantenha o nome do arquivo: o progresso de quem estuda fica salvo no navegador, associado a esse nome.`,
+      ], 'dot-err', '!')}
+    </div>`;
+}
+
+/* ---------- Formula sheet layout ---------- */
+// A formula never scrolls sideways: its card grows to span 2 or 3 grid columns as needed,
+// and only when even the full row is too narrow (phones) the formula is scaled down to fit.
+function fitFormulas() {
+  const grid = document.querySelector('.formulas');
+  if (!grid) return;
+  const cards = [...grid.children];
+  for (const card of cards) { card.style.gridColumn = ''; const e = card.querySelector('.f-expr'); e.style.fontSize = ''; e.style.overflowX = ''; }
+  const style = getComputedStyle(grid);
+  const cols = style.gridTemplateColumns.split(' ').length;
+  const gap = parseFloat(style.columnGap) || 0;
+  const colWidth = (grid.clientWidth - gap * (cols - 1)) / cols;
+  const plans = cards.map((card) => {
+    const expr = card.querySelector('.f-expr');
+    const pad = card.clientWidth - expr.clientWidth;
+    // the widest piece that cannot wrap decides how much room the card needs
+    const need = Math.max(0, ...[...expr.querySelectorAll('.katex')].map((k) => k.getBoundingClientRect().width));
+    const span = Math.min(cols, Math.max(1, Math.ceil((need + pad + gap) / (colWidth + gap))));
+    return { card, expr, need, span, room: span * colWidth + (span - 1) * gap - pad };
+  });
+  for (const { card, expr, need, span, room } of plans) {
+    if (span > 1) card.style.gridColumn = `span ${span}`;
+    if (need > room) expr.style.fontSize = `${Math.max(0.6, room / need) * parseFloat(getComputedStyle(expr).fontSize)}px`;
+    if (room / need < 0.6) expr.style.overflowX = 'auto'; // last resort for a formula too long even at the smallest size
+  }
+}
+
 function render() { renderSidebar(); renderMain(); }
 
 /* ---------- Sheet, sidebar drawer, toast ---------- */
@@ -691,6 +792,68 @@ function closeSheet() {
   if (!$('sidebar').classList.contains('on')) $('scrim').classList.remove('on');
   sheetReturn?.isConnected && sheetReturn.focus({ preventScroll: true });
 }
+
+/* ---------- Focus mode: one concept per screen ---------- */
+// The slides sit in a horizontal scroll-snap track, so swiping and sideways scrolling work natively;
+// the buttons and the arrow keys only scroll that same track.
+const focusOn = () => $('focus').classList.contains('on');
+let focusIndex = 0, focusReturn = null;
+function openFocus(start = 0) {
+  const entry = current();
+  const cs = arr(entry?.data.conceitos);
+  if (!cs.length) return;
+  const el = $('focus');
+  focusReturn = document.activeElement;
+  el.style.setProperty('--tint', state.lib.find((e) => e.id === entry.id).materia.color);
+  el.innerHTML = `
+    <header class="focus-head">
+      <div class="focus-title"><strong id="focus-count" aria-live="polite"></strong><span>${esc(entry.data.tema.titulo)}</span></div>
+      <button class="sheet-close" data-action="focus-close" aria-label="Sair do modo foco">${X_ICON}</button>
+    </header>
+    <div class="track"><i id="focus-bar"></i></div>
+    <div class="focus-track" id="focus-track">
+      ${cs.map((c, i) => `<div class="focus-slide" tabindex="-1">${conceptCard(entry.data, c, i).replace(/ id="[^"]*"/, '')}</div>`).join('')}
+    </div>
+    <footer class="focus-foot">
+      <button class="btn btn-quiet prev" data-action="focus-step" data-step="-1">${CHEVRON}Anterior</button>
+      <button class="btn btn-quiet next" data-action="focus-step" data-step="1">Próximo${CHEVRON}</button>
+    </footer>`;
+  const track = $('focus-track');
+  track.addEventListener('scroll', () => {
+    if (!track.isConnected || !track.clientWidth) return; // a late event from a track already replaced
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    if (i !== focusIndex) setFocusIndex(i);
+  }, { passive: true });
+  el.classList.add('on');
+  document.body.classList.add('focus-on');
+  focusIndex = -1;
+  track.scrollTo({ left: start * track.clientWidth, behavior: 'instant' });
+  setFocusIndex(start);
+}
+function setFocusIndex(i) {
+  const slides = $('focus-track').children;
+  focusIndex = Math.max(0, Math.min(slides.length - 1, i));
+  $('focus-count').textContent = `Conceito ${focusIndex + 1} de ${slides.length}`;
+  $('focus-bar').style.setProperty('--p', (focusIndex + 1) / slides.length);
+  $('focus').querySelector('.prev').disabled = focusIndex === 0;
+  $('focus').querySelector('.next').disabled = focusIndex === slides.length - 1;
+  // the visible slide holds the focus so the keyboard scrolls its text
+  if (!$('sheet').classList.contains('on')) slides[focusIndex].focus({ preventScroll: true });
+}
+function stepFocus(step) {
+  const track = $('focus-track');
+  const i = Math.max(0, Math.min(track.children.length - 1, focusIndex + step));
+  if (i === focusIndex) return;
+  const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  track.scrollTo({ left: i * track.clientWidth, behavior: calm ? 'instant' : 'smooth' });
+}
+function closeFocus() {
+  if (!focusOn()) return;
+  $('focus').classList.remove('on');
+  document.body.classList.remove('focus-on');
+  focusReturn?.isConnected && focusReturn.focus({ preventScroll: true });
+}
+
 const isNarrow = () => window.matchMedia('(max-width: 56rem)').matches;
 // Narrow screens get a drawer over the page; wide ones push the page and remember the choice
 function toggleSidebar() {
@@ -721,6 +884,7 @@ const ACTIONS = {
   open: (el) => select(el.dataset.id),
   home: () => { closeSidebar(); if (routeId()) location.hash = '#/'; },
   'review-q'(el) { state.pendingQ = el.dataset.q; select(el.dataset.id); },
+  guide: () => { closeSidebar(); location.hash = `#/${GUIDE_ROUTE}`; },
   menu: toggleSidebar,
   group(el) {
     const key = el.dataset.key;
@@ -766,6 +930,9 @@ const ACTIONS = {
     toast('Respostas apagadas', 'Desfazer', () => { state.progress[id] = before; persist(); renderView(); renderSidebar(); });
   },
   inst(el) { state.inst = el.dataset.inst; renderView(); },
+  play: () => openFocus(0),
+  'focus-close': closeFocus,
+  'focus-step': (el) => stepFocus(+el.dataset.step),
   concept(el) {
     const c = byId(current().data.conceitos, el.dataset.concept);
     if (c) openSheet(conceptBody(current().data, c));
@@ -787,6 +954,7 @@ const ACTIONS = {
   'goto-q'(el) {
     const id = el.dataset.q;
     closeSheet();
+    closeFocus();
     state.filter = 'todas';
     if (state.tab === 'questoes') renderView(); else setTab('questoes');
     document.getElementById(`q-${id}`)?.scrollIntoView({ block: 'start' });
@@ -811,9 +979,27 @@ document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-action]');
   if (el && ACTIONS[el.dataset.action]) ACTIONS[el.dataset.action](el);
 });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') ACTIONS.dismiss(); });
+document.addEventListener('keydown', (e) => {
+  const sheetOpen = $('sheet').classList.contains('on');
+  if (e.key === 'Escape') { if (focusOn() && !sheetOpen) closeFocus(); else ACTIONS.dismiss(); }
+  else if (focusOn() && !sheetOpen && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+    e.preventDefault();
+    stepFocus(e.key === 'ArrowRight' ? 1 : -1);
+  }
+});
 $('search').addEventListener('input', (e) => { state.query = e.target.value; renderSidebar(); });
 window.addEventListener('hashchange', route);
+
+// Refit the formula sheet whenever the reading column changes width, and once the math fonts arrive
+let fitWidth = 0;
+new ResizeObserver(([entry]) => {
+  const width = Math.round(entry.contentRect.width);
+  if (width !== fitWidth) { fitWidth = width; fitFormulas(); }
+}).observe($('main'));
+window.addEventListener('resize', fitFormulas);
+// the track is measured in slide widths, so a resize has to put the current slide back in place
+window.addEventListener('resize', () => { if (focusOn()) $('focus-track').scrollTo({ left: focusIndex * $('focus-track').clientWidth, behavior: 'instant' }); });
+document.fonts?.addEventListener('loadingdone', fitFormulas);
 
 /* ---------- Boot ---------- */
 async function boot() {

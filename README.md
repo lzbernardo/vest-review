@@ -17,6 +17,8 @@ revisoes/
     geografia-atividade-economica-brasileira.json
   matematica/
     matematica-pa-pg.json
+downloads/
+  revisao-vestibular.skill   skill do Claude que gera as revisões (baixada pela página "Novas revisões")
 scripts/
   gerar-indice.mjs      recria revisoes/index.json
   servir.mjs            servidor local para testes
@@ -31,6 +33,10 @@ scripts/
 O workflow do GitHub Actions recria `revisoes/index.json` e publica o site. Se algum JSON estiver inválido ou sem `tema.titulo`, a publicação falha e o log aponta o arquivo.
 
 Cada revisão ganha um link próprio, formado pelo caminho do arquivo: `…/#/fisica/nome-do-arquivo`. O progresso do aluno fica salvo no navegador dele, associado a esse caminho, então renomear ou mover um arquivo zera o progresso daquele tema.
+
+## Gerar revisões com a skill
+
+O item **Novas revisões**, no menu lateral (`#/criar`), explica o processo e oferece para download a skill `revisao-vestibular`, que faz o Claude pesquisar um tema e entregar o JSON no formato da página. O arquivo publicado é `downloads/revisao-vestibular.skill`, um ZIP da pasta da skill (`SKILL.md`, `references/`, `assets/`, `scripts/`). Ao alterar a skill, gere o pacote de novo e substitua esse arquivo, senão o site continua distribuindo a versão antiga.
 
 ## Publicar no GitHub Pages
 
@@ -60,7 +66,7 @@ node scripts/gerar-indice.mjs
 
 ## Formato do JSON
 
-Só `tema.titulo` é obrigatório; as seções ausentes simplesmente não aparecem. A página lê as versões 1.0 e 1.1 do formato: na 1.0, as questões de vestibular vêm em `questoes_vestibular_referencia[]`, com um único campo `link`.
+Só `tema.titulo` é obrigatório; as seções ausentes simplesmente não aparecem. Em especial, `resumo_pratico.formulas` é opcional: use só quando o tema tem fórmulas ou equações de fato (Matemática, Física, Química, partes de Biologia) e omita o campo nos demais (História, Geografia etc.), em vez de preenchê-lo com regras em texto. A página lê as versões 1.0 e 1.1 do formato: na 1.0, as questões de vestibular vêm em `questoes_vestibular_referencia[]`, com um único campo `link`.
 
 | Campo | Conteúdo |
 | --- | --- |

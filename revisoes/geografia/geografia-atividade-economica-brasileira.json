@@ -27,18 +27,6 @@
       "Corredores clássicos do MT: BR-163 até Miritituba e hidrovia do Tapajós/Amazonas; BR-364 até Porto Velho e hidrovia do Madeira; BR-158/Norte-Sul até Itaqui. A Ferrogrão (Sinop–Miritituba) segue como projeto, com discussão judicial e socioambiental.",
       "Matriz de transportes brasileira é rodoviarista (≈ 65% pelo PNL 2015), solução cara para longas distâncias; ferrovia e hidrovia têm vantagem para granéis e grandes volumes."
     ],
-    "formulas": [
-      {
-        "nome": "Participação percentual",
-        "expressao": "$p = \\dfrac{\\text{parte}}{\\text{total}} \\times 100$",
-        "quando_usar": "Questões que dão dois valores (ex.: TUPs × total portuário, soja × exportações) e pedem a fatia; cuidado para não trocar a parte pelo complemento (portos públicos)."
-      },
-      {
-        "nome": "Saldo da balança comercial",
-        "expressao": "$S = X - M$",
-        "quando_usar": "Leitura de gráficos de exportação (X) e importação (M): saldo positivo é superávit. Em gráfico de linhas, o saldo é a distância vertical entre as curvas."
-      }
-    ],
     "erros_comuns": [
       "Dizer que o maior porto do país é sempre Santos: entre as instalações, o maior volume é de Ponta da Madeira (TUP). Santos é o maior porto público/organizado.",
       "Confundir Arco Norte com 'Norte do país': o critério é estar acima do paralelo 16° S, o que inclui Itaqui (MA), no Nordeste, e exclui Paranaguá e Santos.",
