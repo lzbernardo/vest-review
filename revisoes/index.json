@@ -5,42 +5,531 @@
       "titulo": "Citologia e bioenergética",
       "disciplina": "Biologia",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "media",
+          "gabarito": "A"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "A"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": "A"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
+    },
+    {
+      "arquivo": "biologia/biologia-taxonomia-filogenetica.json",
+      "titulo": "Taxonomia e Filogenética: classificação, nomenclatura e leitura de cladogramas",
+      "disciplina": "Biologia",
+      "gerado_em": "2026-10-12",
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "media",
+          "gabarito": "A"
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
+    },
+    {
+      "arquivo": "fisica/fisica-termodinamica-calorimetria.json",
+      "titulo": "Termodinâmica e Calorimetria",
+      "disciplina": "Física",
+      "gerado_em": "2026-10-12",
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
     },
     {
       "arquivo": "geografia/geografia-atividade-economica-brasileira.json",
       "titulo": "Atividade econômica brasileira: exportações, portos e rotas de escoamento",
       "disciplina": "Geografia",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "facil",
+          "gabarito": "D"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "D"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "dificil",
+          "gabarito": "E"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
     },
     {
       "arquivo": "historia/historia-brasil-colonial.json",
       "titulo": "Brasil Colonial (1500–1808)",
       "disciplina": "História",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "D"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "dificil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
     },
     {
       "arquivo": "historia/historia-ditadura-militar-brasileira.json",
       "titulo": "Ditadura civil-militar brasileira (1964–1985)",
       "disciplina": "História",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "facil",
+          "gabarito": "A"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "D"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "E"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
+    },
+    {
+      "arquivo": "matematica/matematica-geometria-plana.json",
+      "titulo": "Geometria plana: triângulos, quadriláteros, polígonos regulares e círculo",
+      "disciplina": "Matemática",
+      "gerado_em": "2026-10-12",
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": "B"
+        }
+      ]
     },
     {
       "arquivo": "matematica/matematica-pa-pg.json",
       "titulo": "Progressões: PA e PG",
       "disciplina": "Matemática",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q8",
+          "dificuldade": "dificil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": "C"
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
     },
     {
       "arquivo": "quimica/quimica-quimica-organica.json",
       "titulo": "Química Orgânica: funções, isomeria, reações e polímeros",
       "disciplina": "Química",
       "gerado_em": "2026-10-12",
-      "questoes": 10
+      "questoes": 10,
+      "itens": [
+        {
+          "id": "q1",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q2",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q3",
+          "dificuldade": "facil",
+          "gabarito": "B"
+        },
+        {
+          "id": "q4",
+          "dificuldade": "media",
+          "gabarito": "C"
+        },
+        {
+          "id": "q5",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q6",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q7",
+          "dificuldade": "media",
+          "gabarito": "B"
+        },
+        {
+          "id": "q8",
+          "dificuldade": "media",
+          "gabarito": null
+        },
+        {
+          "id": "q9",
+          "dificuldade": "dificil",
+          "gabarito": null
+        },
+        {
+          "id": "q10",
+          "dificuldade": "dificil",
+          "gabarito": null
+        }
+      ]
     }
   ]
 }

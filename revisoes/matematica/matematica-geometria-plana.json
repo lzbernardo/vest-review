@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Geometria plana: triângulos, quadriláteros, polígonos regulares e círculo",
+    "disciplina": "Matemática",
+    "subtopicos": [
+      "Ângulos e polígonos",
+      "Triângulos e pontos notáveis",
+      "Semelhança e Tales",
+      "Triângulo retângulo e trigonometria",
+      "Lei dos senos e dos cossenos",
+      "Quadriláteros e áreas",
+      "Polígonos regulares",
+      "Circunferência e círculo (arcos, setor, coroa)"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "Quase toda questão de geometria plana se resolve decompondo a figura em triângulos e círculos e escolhendo entre semelhança, Pitágoras/trigonometria e uma fórmula de área, com unidades e interpretação do enunciado como armadilhas.",
+    "pontos_chave": [
+      "Antes de calcular, trace alturas, diagonais, raios e perpendiculares: a figura costuma ficar pronta para um triângulo retângulo ou um par de triângulos semelhantes.",
+      "Escolha da ferramenta: paralelas ou ângulos iguais levam a semelhança/Tales; ângulo reto leva a Pitágoras e razões trigonométricas; dois lados e o ângulo entre eles levam a $\\frac{1}{2}ab\\,\\operatorname{sen}\\theta$; três lados levam a Heron ou lei dos cossenos.",
+      "Semelhança: se a razão linear é $k$, a razão de áreas é $k^2$ (e a de volumes, $k^3$).",
+      "Circunferência: ângulo inscrito vale metade do central que subtende o mesmo arco; ângulo inscrito em semicírculo é reto, então a hipotenusa desse triângulo é um diâmetro.",
+      "Hexágono regular = 6 triângulos equiláteros de lado $\\ell$ (o lado é igual ao raio da circunscrita); altura do equilátero $= \\ell\\sqrt3/2$.",
+      "Áreas compostas: some ou subtraia figuras conhecidas (coroa circular, setor, segmento, lúnula).",
+      "Problemas de máximo ou mínimo de área costumam virar função quadrática: o vértice está em $x=-b/2a$, dentro do intervalo permitido.",
+      "Confira unidades no fim: $1\\,\\text{m}^2 = 10\\,000\\,\\text{cm}^2$."
+    ],
+    "formulas": [
+      {
+        "nome": "Ângulos internos de um polígono convexo",
+        "expressao": "$S_i=(n-2)\\cdot180^\\circ$, e no regular $a_i=\\frac{(n-2)\\cdot180^\\circ}{n}$",
+        "quando_usar": "Polígonos com número de lados dado, ou ângulo interno/externo dado (externos sempre somam $360^\\circ$)."
+      },
+      {
+        "nome": "Relações métricas no triângulo retângulo",
+        "expressao": "$a^2=b^2+c^2,\\quad a\\,h=b\\,c,\\quad h^2=m\\,n,\\quad b^2=a\\,m$",
+        "quando_usar": "Quando há ângulo reto e se pede altura, projeção ou lado; $a$ é a hipotenusa e $h$ a altura relativa a ela."
+      },
+      {
+        "nome": "Área do triângulo (formas equivalentes)",
+        "expressao": "$A=\\frac{b\\,h}{2}=\\frac{a\\,b\\,\\operatorname{sen}\\theta}{2}=\\sqrt{p(p-a)(p-b)(p-c)}=p\\,r=\\frac{abc}{4R}$",
+        "quando_usar": "Base e altura (geral); dois lados e o ângulo entre eles; três lados (Heron, $p$ semiperímetro); raio da inscrita ($r$) ou da circunscrita ($R$) envolvido."
+      },
+      {
+        "nome": "Triângulo equilátero",
+        "expressao": "$h=\\frac{\\ell\\sqrt3}{2},\\quad A=\\frac{\\ell^2\\sqrt3}{4}$",
+        "quando_usar": "Hexágonos regulares, cevianas em equiláteros, polígonos montados sobre triângulos equiláteros."
+      },
+      {
+        "nome": "Lei dos cossenos",
+        "expressao": "$a^2=b^2+c^2-2bc\\cos\\hat A$",
+        "quando_usar": "Dois lados e o ângulo entre eles (acha o terceiro lado) ou três lados (acha um ângulo)."
+      },
+      {
+        "nome": "Lei dos senos",
+        "expressao": "$\\frac{a}{\\operatorname{sen}\\hat A}=\\frac{b}{\\operatorname{sen}\\hat B}=\\frac{c}{\\operatorname{sen}\\hat C}=2R$",
+        "quando_usar": "Relaciona lado, ângulo oposto e raio da circunferência circunscrita."
+      },
+      {
+        "nome": "Semelhança de figuras",
+        "expressao": "$\\frac{A_1}{A_2}=k^2,\\quad \\frac{P_1}{P_2}=k$",
+        "quando_usar": "Figuras semelhantes (paralelas cortando um triângulo, ampliações, escala de mapa)."
+      },
+      {
+        "nome": "Áreas de quadriláteros",
+        "expressao": "Paralelogramo $A=b\\,h$; losango $A=\\frac{D\\,d}{2}$; trapézio $A=\\frac{(B+b)\\,h}{2}$",
+        "quando_usar": "Diagonais perpendiculares (losango), lados paralelos (trapézio/paralelogramo)."
+      },
+      {
+        "nome": "Hexágono regular",
+        "expressao": "$A=\\frac{3\\ell^2\\sqrt3}{2}$, apótema $=\\frac{\\ell\\sqrt3}{2}$",
+        "quando_usar": "Hexágonos isolados ou justapostos; distância entre lados paralelos $=\\ell\\sqrt3$."
+      },
+      {
+        "nome": "Círculo, setor e coroa",
+        "expressao": "$C=2\\pi r,\\quad A=\\pi r^2,\\quad A_{setor}=\\frac{\\alpha}{360^\\circ}\\pi r^2,\\quad A_{coroa}=\\pi(R^2-r^2)$",
+        "quando_usar": "Peças com furo, rodas, pizzas, canteiros circulares; atenção a diâmetro versus raio."
+      },
+      {
+        "nome": "Potência de ponto e teorema de Pitot",
+        "expressao": "Cordas: $PA\\cdot PB=PC\\cdot PD$; tangente e secante: $PT^2=PA\\cdot PB$; quadrilátero circunscritível: $a+c=b+d$",
+        "quando_usar": "Cordas que se cruzam, tangentes traçadas de um ponto externo, quadriláteros ao redor de uma circunferência."
+      }
+    ],
+    "erros_comuns": [
+      "Esquecer a conversão de unidades de área (cm² para m² divide por $10^4$): em enunciados contextualizados a conversão vem escondida entre dados em unidades diferentes.",
+      "Usar o diâmetro no lugar do raio em $\\pi r^2$ (erro de fator 4) ou confundir comprimento da circunferência com área do círculo.",
+      "Igualar a razão de áreas à razão de lados; a razão de áreas é o quadrado da razão de semelhança.",
+      "Aplicar Pitágoras em triângulo que não é retângulo, ou assumir sem olhar a figura onde está o ângulo $\\theta$ dado.",
+      "Confundir ângulo central e inscrito, ou esquecer que o inscrito num semicírculo é reto (e que a hipotenusa vira diâmetro).",
+      "Hexágono regular: tomar o apótema pelo raio da circunscrita; o raio da circunscrita é igual ao lado.",
+      "Em otimização, aceitar um valor de $x$ fora do intervalo da figura sem checar o domínio.",
+      "Depois de uma conta que não bate com nenhuma alternativa, reler enunciado e figura antes de concluir que errou: a Comvest já anulou uma questão de geometria plana por erro no texto, mas isso é exceção."
+    ],
+    "como_a_unicamp_cobra": "Nas questões indexadas aparecem dois padrões. Na 1ª fase (múltipla escolha, com quatro alternativas), o tema vem contextualizado e com cálculo em etapas: a questão 53 da prova Q/Z de 2025 envolvia a área de arruelas (coroas circulares), conversão de cm² para m² e número de latas de tinta, o que testa leitura de unidades além da fórmula (a Comvest anulou a questão por erro no enunciado). Na 2ª fase (dissertativa), a geometria plana vem combinada com trigonometria: em 2020, um triângulo isósceles com o cosseno de um ângulo dado pedia a área e o raio da circunscrita, exigindo identidade fundamental, área com seno, lei dos cossenos e lei dos senos em sequência. Segundo o Estratégia Vestibulares, geometria plana está entre os assuntos de Matemática mais cobrados na 1ª fase (12 questões de Matemática em 2025). A Fuvest, usada aqui para completar as questões indexadas, exige as mesmas ferramentas com mais figuras compostas e otimização."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Ângulos, paralelas e polígonos",
+      "explicacao": "Paralelas cortadas por transversal geram ângulos correspondentes e alternos internos iguais. A soma dos ângulos internos de um triângulo é $180^\\circ$; num polígono convexo de $n$ lados é $(n-2)\\cdot180^\\circ$, e a soma dos externos é sempre $360^\\circ$. O número de diagonais é $\\frac{n(n-3)}{2}$.",
+      "exemplo": "Um polígono regular com ângulo externo de $30^\\circ$ tem $360/30=12$ lados e soma interna $(12-2)\\cdot180^\\circ=1800^\\circ$.",
+      "dica_de_prova": "Se o enunciado dá ângulos externos ou fala em polígono regular, parta de $360^\\circ/n$: costuma ser mais curto que a soma dos internos.",
+      "imagens": []
+    },
+    {
+      "id": "c2",
+      "nome": "Triângulos: classificação, desigualdade triangular e pontos notáveis",
+      "explicacao": "Num triângulo, cada lado é menor que a soma dos outros dois e maior que o módulo da diferença. Pontos notáveis: baricentro (medianas, divide cada uma na razão $2:1$ a partir do vértice), incentro (bissetrizes, centro da inscrita), circuncentro (mediatrizes, centro da circunscrita) e ortocentro (alturas). Em triângulo isósceles, altura, mediana, bissetriz e mediatriz da base coincidem.",
+      "exemplo": "Dois lados de 7 e 9: o terceiro, inteiro, satisfaz $2<x<16$, ou seja, 13 valores possíveis.",
+      "dica_de_prova": "Triângulo isósceles ou equilátero: trace a altura para a base e você ganha dois triângulos retângulos iguais.",
+      "imagens": []
+    },
+    {
+      "id": "c3",
+      "nome": "Semelhança de triângulos e teorema de Tales",
+      "explicacao": "Triângulos com ângulos respectivamente iguais são semelhantes e têm lados proporcionais. Uma paralela a um lado corta os outros dois em segmentos proporcionais (Tales) e forma um triângulo menor semelhante ao original. A razão entre áreas de figuras semelhantes é o quadrado da razão de semelhança.",
+      "exemplo": "Razão de semelhança $3:5$ e área menor de $18\\,\\text{cm}^2$: a área maior é $18\\cdot\\left(\\frac{5}{3}\\right)^2=50\\,\\text{cm}^2$.",
+      "dica_de_prova": "Em figura com paralela dentro de triângulo, a semelhança é quase sempre o caminho: identifique o par de triângulos e monte a proporção com lados homólogos.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "Triângulo retângulo: relações métricas e razões trigonométricas",
+      "explicacao": "Com ângulo reto valem Pitágoras e as relações com a altura relativa à hipotenusa: $a\\,h=b\\,c$, $h^2=mn$, $b^2=am$. Para ângulos, $\\operatorname{sen}=\\frac{\\text{oposto}}{\\text{hipot.}}$, $\\cos=\\frac{\\text{adjacente}}{\\text{hipot.}}$, $\\operatorname{tg}=\\frac{\\text{oposto}}{\\text{adjacente}}$. Ângulos de $30^\\circ$, $45^\\circ$ e $60^\\circ$ aparecem com frequência. Para ângulo composto, $\\operatorname{tg}(\\alpha-\\beta)=\\frac{\\operatorname{tg}\\alpha-\\operatorname{tg}\\beta}{1+\\operatorname{tg}\\alpha\\operatorname{tg}\\beta}$.",
+      "exemplo": "Catetos 9 e 12: hipotenusa 15; altura relativa à hipotenusa $h=\\frac{9\\cdot12}{15}=7{,}2$.",
+      "dica_de_prova": "Quando a figura pede a tangente de um ângulo 'no meio', escreva-o como diferença ou soma de dois ângulos que você consegue calcular nos triângulos retângulos.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Lei dos senos, lei dos cossenos e áreas de triângulos",
+      "explicacao": "Lei dos cossenos: $a^2=b^2+c^2-2bc\\cos\\hat A$. Lei dos senos: $\\frac{a}{\\operatorname{sen}\\hat A}=2R$. Áreas: $\\frac{1}{2}ab\\operatorname{sen}\\theta$ (dois lados e ângulo entre eles), Heron (três lados), $A=pr$ (inscrita) e $A=\\frac{abc}{4R}$ (circunscrita). Dado $\\cos\\theta$ de um ângulo de triângulo, $\\operatorname{sen}\\theta=\\sqrt{1-\\cos^2\\theta}$ (positivo).",
+      "exemplo": "Lados 5, 5 e ângulo entre eles com $\\cos\\theta=\\frac{3}{5}$: $\\operatorname{sen}\\theta=\\frac{4}{5}$, área $=\\frac{1}{2}\\cdot5\\cdot5\\cdot\\frac{4}{5}=10$; base $=\\sqrt{50-30}=2\\sqrt5$; $R=\\frac{2\\sqrt5}{2\\cdot\\frac45}=\\frac{5\\sqrt5}{4}$.",
+      "dica_de_prova": "Dado um cosseno e pedida área ou raio circunscrito, o roteiro quase certo é identidade fundamental, depois área com seno, depois lei dos cossenos (lado) e lei dos senos (raio).",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Quadriláteros e suas áreas",
+      "explicacao": "Paralelogramo: lados opostos paralelos e iguais, $A=b\\,h$. Retângulo: ângulos retos, diagonais iguais. Losango: lados iguais, diagonais perpendiculares e bissetrizes, $A=\\frac{Dd}{2}$. Quadrado reúne as propriedades dos anteriores. Trapézio: $A=\\frac{(B+b)h}{2}$, base média $=\\frac{B+b}{2}$. Num paralelogramo, as diagonais se cortam ao meio.",
+      "exemplo": "Losango de diagonais 10 e 24: lado $=\\sqrt{5^2+12^2}=13$ e área $=\\frac{10\\cdot24}{2}=120$.",
+      "dica_de_prova": "Em retângulo com pontos médios e cevianas, coordenadas cartesianas (com a origem em um vértice) costumam ser mais seguras que semelhança.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Polígonos regulares, hexágono e triângulo equilátero",
+      "explicacao": "Todo polígono regular de $n$ lados divide-se em $n$ triângulos isósceles com vértice no centro. O hexágono regular divide-se em 6 triângulos equiláteros de lado $\\ell$: $A=\\frac{3\\ell^2\\sqrt3}{2}$, apótema $\\frac{\\ell\\sqrt3}{2}$, distância entre lados paralelos $\\ell\\sqrt3$ e raio da circunscrita igual a $\\ell$. Triângulo equilátero: $h=\\frac{\\ell\\sqrt3}{2}$ e $A=\\frac{\\ell^2\\sqrt3}{4}$.",
+      "exemplo": "Distância entre lados paralelos de 25 m: $\\ell=\\frac{25}{\\sqrt3}$ e área do hexágono $=\\frac{3\\sqrt3}{2}\\cdot\\frac{625}{3}\\approx541\\,\\text{m}^2$.",
+      "dica_de_prova": "Dado 'distância entre lados paralelos' num hexágono regular, o lado é essa distância dividida por $\\sqrt3$; não a confunda com o lado.",
+      "imagens": []
+    },
+    {
+      "id": "c8",
+      "nome": "Circunferência: ângulos, cordas, tangentes e circunscrição",
+      "explicacao": "Ângulo central é igual ao arco; inscrito é metade do arco. Inscrito em semicírculo é reto. Cordas que se cruzam: $PA\\cdot PB=PC\\cdot PD$. Tangente é perpendicular ao raio no ponto de contato; duas tangentes por um ponto externo têm o mesmo comprimento. Triângulo retângulo inscrito tem a hipotenusa como diâmetro. Quadrilátero inscritível tem ângulos opostos suplementares; circunscritível satisfaz $a+c=b+d$ (Pitot).",
+      "exemplo": "Quadrilátero $ABCD$ com ângulos retos em $B$ e $D$: $B$ e $D$ estão na circunferência de diâmetro $AC$, então $AC^2=AB^2+BC^2$.",
+      "dica_de_prova": "Dois ângulos retos opostos num quadrilátero são um sinal para pensar em circunferência de diâmetro na diagonal que liga os outros dois vértices.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Áreas circulares: círculo, coroa, setor e segmento",
+      "explicacao": "Círculo $A=\\pi r^2$; coroa circular $A=\\pi(R^2-r^2)$ (nunca $\\pi(R-r)^2$); setor $A=\\frac{\\alpha}{360^\\circ}\\pi r^2$; segmento circular = setor menos triângulo. Comprimento do arco $=\\frac{\\alpha}{360^\\circ}2\\pi r$. Regiões contextualizadas (arruelas, pistas, canteiros) misturam unidades: converta antes de multiplicar.",
+      "exemplo": "Arruela de raio externo 30 cm e interno 20 cm: $A=\\pi(900-400)=500\\pi\\,\\text{cm}^2$; 90 arruelas dão $45\\,000\\pi\\,\\text{cm}^2=4{,}5\\pi\\,\\text{m}^2$.",
+      "dica_de_prova": "Em questão com 'latas', 'metros de cerca' ou 'rolos', calcule a área ou o comprimento total e só no fim divida pela capacidade, arredondando para cima.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Estratégias para figuras compostas e otimização",
+      "explicacao": "Área composta: decomponha em partes conhecidas e some ou subtraia. Quando a figura tem um ponto móvel ou um parâmetro, escreva a área em função de uma variável e use o vértice da parábola; confira se o ponto de máximo está no intervalo permitido. Em figuras com muitos pontos médios ou ângulos retos, coordenadas cartesianas transformam a geometria em álgebra.",
+      "exemplo": "Retângulo com vértice na hipotenusa de um triângulo retângulo de catetos 6 e 8: com $x/6+y/8=1$, a área $xy=8x-\\frac{4x^2}{3}$ é máxima em $x=3$, valendo $12$, que é metade da área do triângulo.",
+      "dica_de_prova": "Em 'qual é o maior valor' ou 'valor máximo' de uma área, não derive de cabeça: escreva a função quadrática e use $-b/2a$.",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2025,
+      "fase": "1ª fase",
+      "numero": "Q53 (prova Q/Z; 32 em R/W, 19 em S/X, 33 em T/Y)",
+      "tipo": "multipla_escolha",
+      "assunto": "Área de coroa circular com conversão de unidades",
+      "o_que_cobra": "Área total de arruelas (coroas circulares) a pintar, convertendo cm² em m² e determinando o número de latas de tinta. A Comvest anulou a questão por não haver alternativa correta, por erro no texto do enunciado.",
+      "gabarito_oficial": null,
+      "link_questao": "https://querobolsa.com.br/revista/unicamp-2025-questao-matematica-anulada",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/noticias/vestibular-unicamp-2025-gabarito-oficial-1-fase/",
+      "conceitos": ["c9"]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2020,
+      "fase": "2ª fase",
+      "numero": "Q06",
+      "tipo": "dissertativa",
+      "assunto": "Triângulo isósceles: área e raio da circunferência circunscrita",
+      "o_que_cobra": "Triângulo isósceles com dois lados de 5 cm e cosseno de um dos ângulos internos dado: calcular a área e o raio da circunferência circunscrita.",
+      "gabarito_oficial": null,
+      "link_questao": "https://vestibulares.estrategia.com/portal/materias/matematica/prova-matematica-2-fase-unicamp-2020/",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/materias/matematica/prova-matematica-2-fase-unicamp-2020/",
+      "conceitos": ["c5", "c8"]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Fuvest",
+      "ano": 2017,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Retângulo, pontos médios e área de triângulo formado por cevianas",
+      "o_que_cobra": "Retângulo de lados 4 e 2 com os pontos médios de dois lados: calcular a área do triângulo cujos vértices são um vértice do retângulo e os cruzamentos de cevianas com um segmento.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c2", "c6", "c10"]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Fuvest",
+      "ano": 2017,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Soma de áreas em retângulo com ponto móvel: valor máximo",
+      "o_que_cobra": "Retângulo de lados 3 e 4 com um ponto móvel sobre um lado: escrever a soma das áreas de um retângulo e de dois triângulos em função de x e achar o maior valor.",
+      "gabarito_oficial": "A",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c6", "c10"]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Fuvest",
+      "ano": 2016,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Quadrilátero com dois ângulos retos: cosseno de um ângulo",
+      "o_que_cobra": "Quadrilátero plano com dois ângulos retos opostos e lados iguais dois a dois: calcular o cosseno do ângulo em um dos outros vértices.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c4", "c8"]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Fuvest",
+      "ano": 2015,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Triângulo retângulo e tangente de ângulo formado por ceviana",
+      "o_que_cobra": "Triângulo retângulo com hipotenusa 12 cm e um cateto de 6 cm, com o ponto médio desse cateto: calcular a tangente do ângulo entre a hipotenusa e o segmento que liga o ponto médio ao vértice oposto.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c4", "c5"]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Fuvest",
+      "ano": 2014,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Área de uma piscina formada por hexágonos regulares justapostos",
+      "o_que_cobra": "Piscina formada por três hexágonos regulares congruentes com lados comuns, dada a distância entre lados paralelos de cada um: estimar a área total.",
+      "gabarito_oficial": "A",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c7"]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Fuvest",
+      "ano": 2012,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Hexágono regular, mediatriz e área de triângulo",
+      "o_que_cobra": "Lado de um hexágono regular de área dada e ponto sobre a mediatriz desse lado formando um triângulo de área conhecida: achar a distância do ponto ao lado.",
+      "gabarito_oficial": "E",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c2", "c7"]
+    },
+    {
+      "id": "x9",
+      "instituicao": "Fuvest",
+      "ano": 2011,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Triângulo equilátero com quadrados nos lados: área do polígono externo",
+      "o_que_cobra": "Triângulo equilátero de lado 1 com um quadrado sobre cada lado: calcular a área do polígono que liga os vértices livres dos quadrados.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c2", "c5", "c10"]
+    },
+    {
+      "id": "x10",
+      "instituicao": "Fuvest",
+      "ano": 2010,
+      "fase": "fase não informada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Paralelogramo inscrito em triângulo retângulo",
+      "o_que_cobra": "Triângulo retângulo de catetos 3 e 4 com um paralelogramo que tem um vértice no ângulo reto oposto e um lado dado: calcular a área do paralelogramo.",
+      "gabarito_oficial": "A",
+      "link_questao": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php",
+      "link_gabarito": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php",
+      "conceitos": ["c3", "c6"]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c1"],
+      "enunciado": "Qual é a soma das medidas dos ângulos internos de um polígono convexo de 12 lados?",
+      "alternativas": [
+        { "letra": "A", "texto": "1440°" },
+        { "letra": "B", "texto": "1620°" },
+        { "letra": "C", "texto": "1800°" },
+        { "letra": "D", "texto": "2160°" }
+      ],
+      "gabarito": "C",
+      "resolucao": "$S_i=(n-2)\\cdot180^\\circ=(12-2)\\cdot180^\\circ=1800^\\circ$. A alternativa D vem de $12\\cdot180^\\circ$ (esquecer o $-2$) e a A é a soma para 10 lados.",
+      "imagens": []
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c4"],
+      "enunciado": "Em um triângulo retângulo, os catetos medem 9 cm e 12 cm. A altura relativa à hipotenusa mede",
+      "alternativas": [
+        { "letra": "A", "texto": "6,0 cm" },
+        { "letra": "B", "texto": "7,2 cm" },
+        { "letra": "C", "texto": "7,5 cm" },
+        { "letra": "D", "texto": "9,0 cm" }
+      ],
+      "gabarito": "B",
+      "resolucao": "Hipotenusa: $a=\\sqrt{9^2+12^2}=15$. Como $a\\,h=b\\,c$, temos $h=\\frac{9\\cdot12}{15}=7{,}2$ cm. A alternativa C, 7,5 cm, é a metade da hipotenusa, ou seja, a mediana relativa a ela (não a altura).",
+      "imagens": []
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c3"],
+      "enunciado": "Dois triângulos são semelhantes e a razão de semelhança do menor para o maior é 3:5. Se a área do triângulo menor é 18 cm², a área do triângulo maior é",
+      "alternativas": [
+        { "letra": "A", "texto": "30 cm²" },
+        { "letra": "B", "texto": "50 cm²" },
+        { "letra": "C", "texto": "54 cm²" },
+        { "letra": "D", "texto": "90 cm²" }
+      ],
+      "gabarito": "B",
+      "resolucao": "A razão de áreas é o quadrado da razão linear: $\\frac{18}{A}=\\left(\\frac{3}{5}\\right)^2=\\frac{9}{25}$, logo $A=18\\cdot\\frac{25}{9}=50$ cm². A alternativa A aplica a razão linear $\\frac{5}{3}$ à área, e a D multiplica por 5.",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x6",
+      "dificuldade": "media",
+      "conceitos": ["c4", "c5"],
+      "enunciado": "No triângulo ABC, retângulo em B, tem-se AB = 8 cm e BC = 6 cm. Se M é o ponto médio de BC, a tangente do ângulo MÂC é igual a",
+      "alternativas": [
+        { "letra": "A", "texto": "3/8" },
+        { "letra": "B", "texto": "12/41" },
+        { "letra": "C", "texto": "3/4" },
+        { "letra": "D", "texto": "9/32" }
+      ],
+      "gabarito": "B",
+      "resolucao": "$\\operatorname{tg}B\\hat{A}C=\\frac{6}{8}=\\frac{3}{4}$ e, como $BM=3$, $\\operatorname{tg}B\\hat{A}M=\\frac{3}{8}$. O ângulo $M\\hat{A}C=B\\hat{A}C-B\\hat{A}M$, então $\\operatorname{tg}M\\hat{A}C=\\frac{\\frac34-\\frac38}{1+\\frac34\\cdot\\frac38}=\\frac{\\frac38}{\\frac{41}{32}}=\\frac{12}{41}$. A alternativa A é a tangente de $B\\hat{A}M$, a C a de $B\\hat{A}C$ e a D o produto das duas.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x7",
+      "dificuldade": "media",
+      "conceitos": ["c7"],
+      "enunciado": "Uma bandeja é formada por dois hexágonos regulares congruentes, de lado 4 cm, justapostos de modo que têm um lado em comum (sem sobreposição). A área total da bandeja, em cm², é",
+      "alternativas": [
+        { "letra": "A", "texto": "$24\\sqrt3$" },
+        { "letra": "B", "texto": "$48\\sqrt3$" },
+        { "letra": "C", "texto": "$72\\sqrt3$" },
+        { "letra": "D", "texto": "$96\\sqrt3$" }
+      ],
+      "gabarito": "B",
+      "resolucao": "Cada hexágono regular de lado $\\ell=4$ tem área $\\frac{3\\ell^2\\sqrt3}{2}=\\frac{3\\cdot16\\sqrt3}{2}=24\\sqrt3$ cm². Como não há sobreposição, a área total é $2\\cdot24\\sqrt3=48\\sqrt3$ cm². A alternativa A é a área de um só hexágono.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x1",
+      "dificuldade": "media",
+      "conceitos": ["c9"],
+      "enunciado": "Uma chapa metálica circular de raio externo 25 cm tem um furo circular central de raio 15 cm. A área de uma face da região metálica, em m², é",
+      "alternativas": [
+        { "letra": "A", "texto": "$0{,}01\\pi$" },
+        { "letra": "B", "texto": "$0{,}04\\pi$" },
+        { "letra": "C", "texto": "$4\\pi$" },
+        { "letra": "D", "texto": "$400\\pi$" }
+      ],
+      "gabarito": "B",
+      "resolucao": "Área da coroa: $\\pi(25^2-15^2)=\\pi(625-225)=400\\pi$ cm². Como $1\\,\\text{m}^2=10\\,000\\,\\text{cm}^2$, $400\\pi\\,\\text{cm}^2=0{,}04\\pi\\,\\text{m}^2$. A alternativa D não converte a unidade; a C usa 100 cm² por m²; a A calcula $\\pi(R-r)^2=100\\pi$ cm², o erro clássico da coroa.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "media",
+      "conceitos": ["c5"],
+      "enunciado": "Um triângulo isósceles tem dois lados de 10 cm e o ângulo θ entre eles satisfaz cos θ = 4/5. a) Calcule a área do triângulo. b) Determine o raio da circunferência circunscrita ao triângulo.",
+      "alternativas": null,
+      "gabarito": "a) 30 cm²; b) $\\frac{5\\sqrt{10}}{3}$ cm.",
+      "resolucao": "De $\\operatorname{sen}^2\\theta+\\cos^2\\theta=1$ e $\\theta$ agudo, $\\operatorname{sen}\\theta=\\frac35$. a) $A=\\frac12\\cdot10\\cdot10\\cdot\\frac35=30$ cm². b) Pela lei dos cossenos, a base $x$ cumpre $x^2=100+100-2\\cdot100\\cdot\\frac45=40$, logo $x=2\\sqrt{10}$. Pela lei dos senos, $\\frac{x}{\\operatorname{sen}\\theta}=2R$, então $R=\\frac{2\\sqrt{10}}{2\\cdot\\frac35}=\\frac{5\\sqrt{10}}{3}$ cm ($\\approx5{,}27$ cm). Conferência: $R=\\frac{abc}{4A}=\\frac{10\\cdot10\\cdot2\\sqrt{10}}{4\\cdot30}=\\frac{5\\sqrt{10}}{3}$.",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x10",
+      "dificuldade": "dificil",
+      "conceitos": ["c3", "c6"],
+      "enunciado": "No triângulo ABC, retângulo em B, tem-se AB = 6 cm e BC = 8 cm. Os pontos D, E e F pertencem, respectivamente, a AB, BC e AC, de modo que DECF é um paralelogramo e DE = 5/2 cm. Calcule a área do paralelogramo DECF.",
+      "alternativas": null,
+      "gabarito": "9 cm².",
+      "resolucao": "Pitágoras dá $AC=10$ cm. Como DECF é paralelogramo e F está em AC, $DE\\parallel CF$, ou seja, $DE\\parallel AC$, e o triângulo BDE é semelhante ao BAC com razão $k=\\frac{DE}{AC}=\\frac{5/2}{10}=\\frac14$. Então $BD=\\frac64=\\frac32$ cm e $BE=\\frac84=2$ cm, e portanto $EC=8-2=6$ cm. A altura do paralelogramo em relação ao lado EC é a distância de D a BC, que é $BD=\\frac32$ cm (pois $AB\\perp BC$). Logo $A=EC\\cdot BD=6\\cdot\\frac32=9$ cm². Conferência pelas partes: $24=\\underbrace{\\tfrac32}_{BDE}+\\underbrace{\\tfrac{27}{2}}_{ADF}+9$.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x9",
+      "dificuldade": "dificil",
+      "conceitos": ["c2", "c5", "c10"],
+      "enunciado": "Sobre os lados de um triângulo equilátero ABC, de lado 2 cm, constroem-se externamente os quadrados ACDE, AFGB e BHIC, de modo que cada vértice do triângulo é comum a dois quadrados. O polígono DEFGHI é limitado pelos lados externos dos quadrados e pelos segmentos EF, GH e ID. Calcule a área desse polígono.",
+      "alternativas": null,
+      "gabarito": "$12+4\\sqrt3$ cm².",
+      "resolucao": "O polígono se decompõe em: 3 quadrados de lado 2 ($3\\cdot4=12$), o triângulo equilátero central ($\\frac{2^2\\sqrt3}{4}=\\sqrt3$) e 3 triângulos externos, como EAF. Em cada um desses, os dois lados medem 2 e o ângulo no vértice do triângulo vale $360^\\circ-60^\\circ-90^\\circ-90^\\circ=120^\\circ$, logo cada área é $\\frac12\\cdot2\\cdot2\\cdot\\operatorname{sen}120^\\circ=\\sqrt3$, totalizando $3\\sqrt3$. Área $=12+\\sqrt3+3\\sqrt3=12+4\\sqrt3$ cm² ($\\approx18{,}9$ cm²). Em geral, para lado $\\ell$, a área é $\\ell^2(3+\\sqrt3)$.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "dificil",
+      "conceitos": ["c3", "c10"],
+      "enunciado": "Um terreno tem a forma de um triângulo retângulo com catetos de 6 m e 8 m. Deseja-se cercar um canteiro retangular com dois lados sobre os catetos e um vértice sobre a hipotenusa. A maior área possível para o canteiro, em m², é",
+      "alternativas": [
+        { "letra": "A", "texto": "10" },
+        { "letra": "B", "texto": "12" },
+        { "letra": "C", "texto": "16" },
+        { "letra": "D", "texto": "24" }
+      ],
+      "gabarito": "B",
+      "resolucao": "Com a origem no ângulo reto e os catetos sobre os eixos (6 no eixo x e 8 no eixo y), a hipotenusa é $\\frac{x}{6}+\\frac{y}{8}=1$, ou seja, $y=8\\left(1-\\frac{x}{6}\\right)$. A área do retângulo é $A(x)=xy=8x-\\frac{4}{3}x^2$, com $0<x<6$. O vértice da parábola está em $x=-\\frac{b}{2a}=\\frac{8}{2\\cdot\\frac43}=3$, que está no intervalo, e $y=4$; logo $A_{max}=3\\cdot4=12$ m², exatamente metade da área do triângulo (24 m², alternativa D, que não cabe dentro do triângulo).",
+      "imagens": []
+    }
+  ],
+  "imagens": [],
+  "fontes": [
+    {
+      "titulo": "Quero Bolsa: Unicamp 2025, questão de Matemática é anulada",
+      "url": "https://querobolsa.com.br/revista/unicamp-2025-questao-matematica-anulada"
+    },
+    {
+      "titulo": "Estratégia Vestibulares: Unicamp 2025, gabarito oficial da 1ª fase publicado",
+      "url": "https://vestibulares.estrategia.com/portal/noticias/vestibular-unicamp-2025-gabarito-oficial-1-fase/"
+    },
+    {
+      "titulo": "Estratégia Vestibulares: Resolução da prova de Matemática da 2ª fase da Unicamp 2020",
+      "url": "https://vestibulares.estrategia.com/portal/materias/matematica/prova-matematica-2-fase-unicamp-2020/"
+    },
+    {
+      "titulo": "AgathaEdu: Geometria Plana, questões da Fuvest com gabarito",
+      "url": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/geometria-plana.php"
+    },
+    {
+      "titulo": "AgathaEdu: Geometria Plana, Fuvest com resolução",
+      "url": "https://projetoagathaedu.com.br/questoes-fuvest/resolucao-matematica/geometria-plana.php"
+    },
+    {
+      "titulo": "Estratégia Vestibulares: Unicamp, o que estudar para a prova de Matemática",
+      "url": "https://vestibulares.estrategia.com/portal/enem-e-vestibulares/unicamp-o-que-estudar-para-a-prova-de-matematica-do-vestibular/"
+    }
+  ]
+}

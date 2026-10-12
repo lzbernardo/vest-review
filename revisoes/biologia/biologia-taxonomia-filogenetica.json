@@ -1,0 +1,728 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Taxonomia e Filogenética: classificação, nomenclatura e leitura de cladogramas",
+    "disciplina": "Biologia",
+    "subtopicos": [
+      "Categorias taxonômicas e hierarquia de Lineu",
+      "Nomenclatura binomial",
+      "Conceito biológico de espécie",
+      "Sistemas de classificação: cinco reinos e três domínios",
+      "Cladogramas: raiz, nós, grupo-irmão e ancestral comum mais recente",
+      "Grupos monofiléticos, parafiléticos e polifiléticos",
+      "Homologia, homoplasia, apomorfias e sinapomorfias",
+      "Relógio molecular e comprimento de ramos"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "Taxonomia nomeia e organiza os seres vivos em categorias hierárquicas; a sistemática filogenética exige que esses grupos reflitam ancestralidade comum, e quem lê cladogramas pela recência do ancestral comum (e não pela aparência) acerta a maior parte das questões.",
+    "pontos_chave": [
+      "**Taxonomia** descreve, nomeia e classifica; **sistemática** estuda a diversidade e as relações de parentesco; **filogenia** é a história evolutiva de um grupo. Na sistemática filogenética (Hennig), só são aceitos grupos **monofiléticos**.",
+      "Hierarquia: Domínio > Reino > Filo (Divisão em plantas) > Classe > Ordem > Família > Gênero > Espécie. Pertencer a uma categoria implica pertencer a **todas as superiores**, nunca a todas as inferiores.",
+      "Nome científico é **binomial**, latino ou latinizado: Gênero com inicial maiúscula + epíteto específico com inicial minúscula, ambos destacados (itálico ou sublinhado). O epíteto nunca aparece sozinho; o gênero pode aparecer sem ele.",
+      "Conceito biológico de espécie (Mayr): populações que trocam genes e geram descendentes férteis, isoladas reprodutivamente das demais. Fluxo gênico entre duas populações indica mesma espécie.",
+      "Sistema de 5 reinos (Whittaker) usa organização celular e nutrição; o de 3 domínios (Woese) usa sequências de RNA ribossômico, ou seja, relações filogenéticas. Monera deixou de ser grupo natural.",
+      "Leitura de cladograma: **parentesco = recência do ancestral comum**. Dois táxons que saem do mesmo nó são **grupos-irmãos**. Nós podem girar sem mudar as relações.",
+      "Monofilético = ancestral comum + **todos** os descendentes. Parafilético = ancestral comum + **só parte** dos descendentes. Polifilético = reúne linhagens sem ancestral comum exclusivo (geralmente por convergência).",
+      "**Sinapomorfia** (novidade evolutiva compartilhada) define clados; **plesiomorfia** (caráter ancestral) e **homoplasia** (convergência, paralelismo, reversão) não servem para agrupar.",
+      "Quando o enunciado diz que o comprimento do ramo é proporcional ao tempo, aplica-se o **relógio molecular**: ramo curto = menos mutações acumuladas = maior semelhança com o ancestral."
+    ],
+    "formulas": [
+      {
+        "nome": "Regra do pertencimento taxonômico",
+        "expressao": "Mesma categoria X → mesmas categorias superiores a X",
+        "quando_usar": "Questões do tipo 'duas espécies da mesma família pertencem obrigatoriamente à mesma...?' e leitura de tabelas com categorias omitidas."
+      },
+      {
+        "nome": "Regra de leitura de cladograma",
+        "expressao": "Parentesco(X, Y) ↑ quanto mais recente o ancestral comum de X e Y",
+        "quando_usar": "Qualquer pergunta sobre 'maior parentesco', 'grupo-irmão' ou 'ancestral comum'; ignore a posição dos táxons na página e a semelhança externa."
+      },
+      {
+        "nome": "Relógio molecular",
+        "expressao": "$d \\approx 2\\mu t$",
+        "quando_usar": "Com taxa de mutação $\\mu$ constante, a distância genética $d$ entre duas linhagens é proporcional ao tempo $t$ desde a divergência; cada linhagem acumula $\\mu t$."
+      }
+    ],
+    "erros_comuns": [
+      "Dizer que 'humanos descendem dos chimpanzés': eles compartilham um ancestral comum exclusivo e são grupos-irmãos; nenhum descende do outro.",
+      "Chamar espécies atuais de 'mais evoluídas' ou 'mais primitivas'. Todas as linhagens atuais têm o mesmo tempo de evolução desde a raiz; o que difere é a ordem de divergência.",
+      "Medir parentesco pela distância entre os nomes na figura: o que vale é o nó que une os dois táxons.",
+      "Esquecer que os nós giram: a ordem em que os ramos aparecem na página não carrega informação.",
+      "Confundir grupo-irmão com ancestral, ou tratar o ancestral comum como uma das espécies terminais.",
+      "Escrever nome científico errado: epíteto com maiúscula, gênero com minúscula, epíteto sozinho, nome em português no meio.",
+      "Achar que mesmo gênero significa mesma espécie, ou que mesma família significa mesmo gênero.",
+      "Tratar 'répteis' (sem aves), 'peixes' ou 'invertebrados' como grupos naturais: são parafiléticos.",
+      "Agrupar por semelhança de função (asas, nadadeiras) em vez de por homologia: gera grupos polifiléticos."
+    ],
+    "como_a_unicamp_cobra": "Nas questões da Comvest indexadas (2017, 2020 e 2022), o assunto aparece como leitura de cladogramas contextualizados: hominoides, vertebrados com novidades evolutivas e betacoronavírus com seus hospedeiros (ligado à pandemia). O candidato precisa identificar grupos-irmãos, ancestral comum e características derivadas; quase nada é memorização de categorias. Enem, Unesp e UEL, também indexados, cobram mais nomenclatura, hierarquia, contagem de gêneros/espécies e critérios dos sistemas de classificação."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Taxonomia, sistemática e filogenia",
+      "explicacao": "**Taxonomia** é a ciência de descrever, nomear e classificar os seres vivos. **Sistemática** é mais ampla: estuda a diversidade biológica e as relações de parentesco entre os grupos, e a taxonomia faz parte dela. **Filogenia** é a história evolutiva de um grupo, representada em árvores filogenéticas. A **sistemática filogenética** (cladística, de Willi Hennig) classifica só por ancestralidade comum, em oposição ao sistema de Lineu (século XVIII), baseado em semelhanças estruturais.",
+      "exemplo": "Aves e crocodilianos são muito diferentes por fora, mas a sistemática filogenética os agrupa porque compartilham ancestral comum mais recente do que qualquer um deles com lagartos.",
+      "dica_de_prova": "Se a questão perguntar quem desenvolveu um método de classificação baseado em ancestralidade evolutiva, a resposta é Hennig, não Lineu (UEL 2020).",
+      "imagens": []
+    },
+    {
+      "id": "c2",
+      "nome": "Hierarquia taxonômica",
+      "explicacao": "As categorias principais, da mais inclusiva à menos inclusiva, são Domínio, Reino, Filo (chamado Divisão em botânica), Classe, Ordem, Família, Gênero e Espécie. Existem categorias intermediárias (subfamília, superfamília, subespécie). Cada categoria está contida na superior: duas espécies da mesma família pertencem necessariamente à mesma ordem, classe, filo e reino, mas podem ser de gêneros diferentes. Em geral, quanto mais baixa a categoria compartilhada, maior o parentesco esperado.",
+      "exemplo": "Cão: Eukarya, Animalia, Chordata, Mammalia, Carnivora, Canidae, *Canis*, *Canis lupus*. Cabra, ovelha e vaca (Bovidae) estão na mesma família e na mesma ordem, mas em gêneros diferentes (*Capra*, *Ovis*, *Bos*).",
+      "dica_de_prova": "Em tabelas com categorias omitidas, só vale o que está escrito ou o que é consequência de uma categoria superior compartilhada. Termos terminados em -idae indicam família animal; -aceae, família vegetal.",
+      "imagens": [
+        "i3"
+      ]
+    },
+    {
+      "id": "c3",
+      "nome": "Nomenclatura binomial",
+      "explicacao": "Regras vindas de Lineu e fixadas em códigos internacionais: o nome da espécie tem duas palavras em latim ou latinizadas. A primeira é o **gênero** (substantivo, inicial maiúscula); a segunda é o **epíteto específico** (adjetivo, inicial minúscula). Os dois são destacados do texto (itálico, ou sublinhado quando manuscrito). O epíteto nunca é usado sozinho, mas o gênero pode ser citado sem ele. Subespécie leva um terceiro termo, também minúsculo. O nome da espécie é o conjunto das duas palavras; o 'nome específico' completo é o binômio.",
+      "exemplo": "*Zea mays* (milho): *Zea* é o gênero, *mays* o epíteto. *Canis lupus familiaris* é uma subespécie. *Tangara cayana* e *Tangara seledon* são espécies diferentes do mesmo gênero e, por isso, muito aparentadas.",
+      "dica_de_prova": "Nomes populares são imprecisos e variam por região; por isso a ciência usa o binômio. Atenção a alternativas que invertem maiúsculas, usam o epíteto isolado ou colocam o nome em grego.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "Conceito biológico de espécie",
+      "explicacao": "Proposto por Ernst Mayr (1942): espécie é um conjunto de populações naturais que se cruzam (ou têm potencial para isso) e geram descendentes férteis, isoladas reprodutivamente de outros conjuntos. O critério central é o **fluxo gênico**. O conceito tem limites: organismos de reprodução assexuada, fósseis e grupos com hibridação frequente.",
+      "exemplo": "Égua com jumento gera mula, estéril: são espécies distintas. Lobos e coiotes que se cruzam e geram descendentes férteis mantêm fluxo gênico, o que desafia a classificação como espécies distintas.",
+      "dica_de_prova": "Aparência, nicho ou ancestral comum não definem espécie. Se a alternativa fala em fluxo gênico mantido ou descendentes férteis, é o conceito biológico (Enem 2013 PPL).",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Cinco reinos e três domínios",
+      "explicacao": "Whittaker (1969) propôs cinco reinos (Monera, Protista, Fungi, Plantae, Animalia) usando **organização celular** e **modo de nutrição**. Woese e colaboradores, comparando sequências de **RNA ribossômico**, mostraram que os procariontes não formam um grupo coeso e propuseram três domínios: **Bacteria**, **Archaea** e **Eukarya**. No modelo clássico, Archaea e Eukarya são grupos-irmãos, o que torna Monera (Bacteria + Archaea) parafilético. Há debate atual sobre o enraizamento da árvore e a origem dos eucariontes.",
+      "exemplo": "Cianobactérias ('algas azuis') são procariontes do domínio Bacteria. Um lanche pode reunir organismos de vários reinos: trigo (Plantae), fermento e cogumelo (Fungi), leite e frango (Animalia), bactérias da coalhada (Monera).",
+      "dica_de_prova": "A diferença básica entre os dois sistemas é o critério: o mais recente usa relações filogenéticas (Enem 2017). Em questões de contagem de reinos, lembre-se de fermentos, bactérias de fermentação e óleos vegetais.",
+      "imagens": [
+        "i1",
+        "i4"
+      ]
+    },
+    {
+      "id": "c6",
+      "nome": "Como ler um cladograma",
+      "explicacao": "A **raiz** representa o ancestral comum de todos os táxons do diagrama; cada **nó** é um ancestral comum que se dividiu em duas linhagens; as pontas são os táxons atuais (ou terminais). **Grupos-irmãos** saem do mesmo nó. O **ancestral comum mais recente** de dois táxons é o primeiro nó que os une, indo da ponta para a raiz. Quanto mais recente esse nó, maior o parentesco. Girar os ramos em torno de um nó não altera as relações. Traços marcados sobre os ramos são novidades evolutivas presentes em todos os táxons à direita da marcação.",
+      "exemplo": "No cladograma dos hominoides, humanos e chimpanzés saem de um nó comum exclusivo: são grupos-irmãos. Gibões se separam antes, mas ainda compartilham ancestral comum com todos os demais, pois estão na mesma superfamília.",
+      "dica_de_prova": "Faça o teste do nó: para cada alternativa, marque o ponto onde os dois táxons se encontram e compare qual nó é mais recente. Não confunda 'divergiu primeiro' com 'mais primitivo'.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Grupos monofiléticos, parafiléticos e polifiléticos",
+      "explicacao": "**Monofilético (clado)**: contém o ancestral comum e todos os seus descendentes; é definido por sinapomorfias. **Parafilético**: contém o ancestral comum, mas exclui um ou mais descendentes; costuma ser definido por plesiomorfias. **Polifilético**: não contém o ancestral comum de todos os membros; reúne linhagens independentes, em geral por convergência. A sistemática filogenética aceita só grupos monofiléticos.",
+      "exemplo": "Mammalia e Aves são monofiléticos. 'Répteis' sem aves e 'peixes' sem tetrápodes são parafiléticos. 'Animais de asas' (aves, morcegos, insetos) é polifilético.",
+      "dica_de_prova": "Pergunte-se: 'dá para desenhar um círculo em torno do grupo no cladograma sem deixar nenhum descendente do ancestral comum de fora?' Se sim, monofilético.",
+      "imagens": [
+        "i2",
+        "i5"
+      ]
+    },
+    {
+      "id": "c8",
+      "nome": "Homologia, homoplasia e tipos de caracteres",
+      "explicacao": "**Homologia**: estruturas com mesma origem evolutiva (herdadas de um ancestral), mesmo que com funções diferentes. **Analogia/homoplasia**: semelhança sem origem comum, por convergência, paralelismo ou reversão. **Plesiomorfia**: estado ancestral do caráter. **Apomorfia**: estado derivado. **Sinapomorfia**: apomorfia compartilhada por um grupo e seu ancestral comum, que sustenta o clado. **Autapomorfia**: apomorfia exclusiva de um único táxon, que não informa parentesco.",
+      "exemplo": "Membro anterior de morcego e braço humano são homólogos; asa de morcego e asa de inseto são análogas. Ovo amniótico é sinapomorfia dos amniotas.",
+      "dica_de_prova": "Um caráter só é sinapomorfia ou plesiomorfia em relação a um nível do cladograma: 'vértebras' é sinapomorfia dos vertebrados, mas plesiomorfia dentro de mamíferos.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Relógio molecular e comprimento de ramos",
+      "explicacao": "Se as mutações ocorrem em taxa aproximadamente constante, o número de diferenças entre sequências cresce com o tempo desde a divergência. Em árvores cujo enunciado define o comprimento do ramo como proporcional ao tempo (ou ao número de mutações), o ramo terminal mais curto pertence à espécie que acumulou menos mudanças desde seu ancestral mais próximo. Em cladogramas comuns, o comprimento dos ramos não tem significado.",
+      "exemplo": "Em árvore de mamíferos com ramos proporcionais ao tempo, a espécie com a menor linha horizontal final é a mais semelhante ao seu ancestral mais próximo.",
+      "dica_de_prova": "Leia a 'regra do jogo' do enunciado antes de interpretar a figura: se ele diz que o comprimento importa, ele importa; se não diz, só a topologia conta.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Cladogramas clássicos de vertebrados",
+      "explicacao": "Sequência de novidades usual: crânio e coluna vertebral, mandíbulas, membros locomotores e pulmões (tetrápodes), **ovo amniótico** (répteis, aves e mamíferos), **pelos e glândulas mamárias** (mamíferos) e **penas** (aves). Aves e crocodilianos são grupos-irmãos; mamíferos formam a outra grande linhagem de amniotas. Endotermia e coração de quatro câmaras surgiram de modo independente em aves e mamíferos (homoplasia), e 'répteis' sem aves é parafilético.",
+      "exemplo": "No cladograma do Enem 2021 PPL, jacaré e pardal compartilham o ancestral comum mais recente entre os pares listados, portanto têm maior semelhança genética do que sapo e jacaré.",
+      "dica_de_prova": "Ao associar numeração a características, lembre que o ovo amniótico marca o nó dos amniotas, não dos tetrápodes, e que a coluna vertebral está presente em todos os grupos do diagrama.",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2017,
+      "fase": "Fase não confirmada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Cladograma de Hominoidea",
+      "o_que_cobra": "Interpretar um cladograma da superfamília Hominoidea e dizer qual afirmação sobre homens, gibões, chimpanzés, gorilas e orangotangos é sustentada, envolvendo ancestral comum e pertencimento a famílias.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "conceitos": [
+        "c6",
+        "c2"
+      ]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2022,
+      "fase": "Fase não confirmada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Filogenia de betacoronavírus e hospedeiros",
+      "o_que_cobra": "A partir de um cladograma de vírus do gênero Betacoronavirus com seus hospedeiros (morcegos, artiodáctilos, humanos), identificar quais vírus são grupos-irmãos dos que infectam humanos.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "conceitos": [
+        "c6"
+      ]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2020,
+      "fase": "Fase não confirmada na fonte",
+      "numero": "Q14",
+      "tipo": "multipla_escolha",
+      "assunto": "Cladograma de vertebrados e novidades evolutivas",
+      "o_que_cobra": "Associar quatro marcações de um cladograma de vertebrados (anfíbios, amniotas, aves, mamíferos) às características evolutivas que as correspondem.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://vestibulares.estrategia.com/portal/materias/biologia/gabarito-unicamp-2020-biologia/",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/materias/biologia/gabarito-unicamp-2020-biologia/",
+      "conceitos": [
+        "c10",
+        "c8"
+      ]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Enem/Inep",
+      "ano": 2020,
+      "fase": "Enem Digital, caderno azul",
+      "numero": "Q106",
+      "tipo": "multipla_escolha",
+      "assunto": "Árvore filogenética com ramos proporcionais ao tempo",
+      "o_que_cobra": "Em uma árvore de mamíferos cujo ramo é proporcional ao tempo de divergência, indicar qual espécie é geneticamente mais semelhante ao seu ancestral mais próximo, usando a lógica do relógio molecular.",
+      "gabarito_oficial": "E",
+      "link_questao": "https://plataformaassaad.com.br/questao-106-caderno-azul-do-enem-2020-digital/",
+      "link_gabarito": "https://plataformaassaad.com.br/questao-106-caderno-azul-do-enem-2020-digital/",
+      "conceitos": [
+        "c9",
+        "c6"
+      ]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Enem/Inep",
+      "ano": 2021,
+      "fase": "PPL, caderno azul",
+      "numero": "Q102",
+      "tipo": "multipla_escolha",
+      "assunto": "Parentesco entre vertebrados em cladograma",
+      "o_que_cobra": "Dado um cladograma com cinco grupos de vertebrados, escolher o par de animais com maior semelhança genética, o que exige localizar o ancestral comum mais recente.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://plataformaassaad.com.br/questao-102-caderno-azul-enem-2021-ppl/",
+      "link_gabarito": "https://plataformaassaad.com.br/questao-102-caderno-azul-enem-2021-ppl/",
+      "conceitos": [
+        "c6",
+        "c10"
+      ]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Enem/Inep",
+      "ano": 2016,
+      "fase": "3ª aplicação",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Características evolutivas em cladograma de vertebrados",
+      "o_que_cobra": "Relacionar indicações numéricas de um cladograma de vertebrados com a característica evolutiva correta, distinguindo o que é exclusivo de certos grupos do que é comum a todos.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/",
+      "conceitos": [
+        "c10",
+        "c8"
+      ]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Enem/Inep",
+      "ano": 2013,
+      "fase": "PPL",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Conceito biológico de espécie",
+      "o_que_cobra": "Explicar por que lobos e coiotes que se cruzam e geram descendentes férteis não se confirmam como espécies distintas pelo conceito de Mayr.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-1/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-1/",
+      "conceitos": [
+        "c4"
+      ]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Enem/Inep",
+      "ano": 2017,
+      "fase": "Fase não confirmada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Cinco reinos (Whittaker) versus três domínios (Woese)",
+      "o_que_cobra": "Identificar o critério em que o sistema mais recente de classificação difere do de cinco reinos, a partir de dois esquemas de classificação.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "conceitos": [
+        "c5"
+      ]
+    },
+    {
+      "id": "x9",
+      "instituicao": "UEL",
+      "ano": 2020,
+      "fase": "Fase não confirmada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Categorias taxonômicas, sinapomorfia e história da sistemática",
+      "o_que_cobra": "Julgar afirmações sobre história da classificação, tipos de caracteres, pertencimento a categorias taxonômicas e nomes científicos de espécies.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "conceitos": [
+        "c2",
+        "c8",
+        "c1"
+      ]
+    },
+    {
+      "id": "x10",
+      "instituicao": "Unesp",
+      "ano": 2022,
+      "fase": "Fase não confirmada na fonte",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Contagem de reinos nos ingredientes de lanches",
+      "o_que_cobra": "Dados três lanches, listar os reinos (sistema de 5 reinos) dos organismos que originaram os ingredientes e decidir quem tem o menor número de reinos representados.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "link_gabarito": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/",
+      "conceitos": [
+        "c5",
+        "c2"
+      ]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c3"
+      ],
+      "enunciado": "Os nomes abaixo referem-se ao gato doméstico, todos destacados em itálico. Qual deles segue as regras da nomenclatura binomial quanto ao uso de letras maiúsculas e minúsculas?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "*Felis Catus*"
+        },
+        {
+          "letra": "B",
+          "texto": "*felis catus*"
+        },
+        {
+          "letra": "C",
+          "texto": "*Felis catus*"
+        },
+        {
+          "letra": "D",
+          "texto": "*FELIS catus*"
+        },
+        {
+          "letra": "E",
+          "texto": "*felis Catus*"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "O gênero (primeira palavra) leva inicial maiúscula e o epíteto específico (segunda palavra) leva inicial minúscula. A: epíteto com maiúscula. B: gênero com minúscula. D: gênero todo em caixa alta. E: inverte as duas regras. Só C está correta.",
+      "imagens": []
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x9",
+      "dificuldade": "facil",
+      "conceitos": [
+        "c2"
+      ],
+      "enunciado": "Duas espécies de mamíferos pertencem à mesma família. É correto afirmar que, obrigatoriamente, elas pertencem à mesma:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "espécie."
+        },
+        {
+          "letra": "B",
+          "texto": "gênero."
+        },
+        {
+          "letra": "C",
+          "texto": "ordem."
+        },
+        {
+          "letra": "D",
+          "texto": "subespécie."
+        },
+        {
+          "letra": "E",
+          "texto": "população."
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "A hierarquia é Reino > Filo > Classe > Ordem > Família > Gênero > Espécie. Compartilhar uma categoria implica compartilhar todas as superiores. Acima de família estão ordem, classe, filo e reino, e só 'ordem' aparece entre as alternativas. Espécie, gênero e subespécie são categorias inferiores a família, e duas espécies diferentes nunca compartilham a mesma espécie. Duas espécies da mesma família podem ser de gêneros diferentes.",
+      "imagens": []
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c2",
+        "c3"
+      ],
+      "enunciado": "Em uma reserva foram catalogados cinco animais: *Panthera leo*, *Panthera onca*, *Felis catus*, *Canis lupus* e *Canis latrans*. Considerando os critérios da classificação biológica, a lista contém:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "2 gêneros e 5 espécies."
+        },
+        {
+          "letra": "B",
+          "texto": "3 gêneros e 5 espécies."
+        },
+        {
+          "letra": "C",
+          "texto": "3 gêneros e 3 espécies."
+        },
+        {
+          "letra": "D",
+          "texto": "5 gêneros e 5 espécies."
+        },
+        {
+          "letra": "E",
+          "texto": "5 gêneros e 3 espécies."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "O gênero é a primeira palavra: *Panthera*, *Felis* e *Canis* resultam em 3 gêneros. A espécie é o binômio completo, e os cinco binômios são diferentes (o epíteto sozinho não define espécie), logo são 5 espécies. Erro típico: contar epítetos (lupus, latrans...) ou confundir gênero com espécie.",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x7",
+      "dificuldade": "media",
+      "conceitos": [
+        "c4"
+      ],
+      "enunciado": "Duas populações de borboletas vivem em ilhas vizinhas e diferem na cor das asas. Em laboratório, indivíduos das duas populações acasalam livremente e geram descendentes férteis. Segundo o conceito biológico de espécie, conclui-se que as populações pertencem:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "a espécies distintas, pois a cor das asas é diferente."
+        },
+        {
+          "letra": "B",
+          "texto": "à mesma espécie, pois podem trocar genes e gerar descendentes férteis."
+        },
+        {
+          "letra": "C",
+          "texto": "a espécies distintas, pois vivem em ilhas diferentes."
+        },
+        {
+          "letra": "D",
+          "texto": "a gêneros diferentes, pois apresentam coloração distinta."
+        },
+        {
+          "letra": "E",
+          "texto": "à mesma espécie, pois ocupam o mesmo nicho ecológico."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "O conceito biológico (Mayr) usa isolamento reprodutivo e fluxo gênico, não aparência nem localização. Se há cruzamento e descendentes férteis, há fluxo gênico potencial e as populações são da mesma espécie. A e D usam a cor, um critério morfológico. C usa isolamento geográfico, que sozinho não define espécie. E chega ao resultado certo por um motivo errado: nicho ecológico não faz parte do conceito.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x8",
+      "dificuldade": "media",
+      "conceitos": [
+        "c5"
+      ],
+      "enunciado": "Na classificação de Whittaker, bactérias e arqueias eram reunidas no reino Monera. Estudos de sequências do RNA ribossômico levaram à proposta de três domínios (Bacteria, Archaea e Eukarya). (a) Que critério distingue, em essência, o sistema de cinco reinos do sistema de três domínios? (b) Por que o reino Monera deixou de ser considerado um grupo natural?",
+      "alternativas": null,
+      "gabarito": "(a) O sistema de Whittaker usa organização celular e modo de nutrição; o sistema de domínios usa relações filogenéticas inferidas de sequências de RNA ribossômico. (b) No modelo clássico dos três domínios, Archaea e Eukarya compartilham ancestral comum mais recente do que Archaea e Bacteria. Monera (Bacteria + Archaea) reúne apenas procariontes e deixa de fora os eucariontes, que descendem de linhagem aparentada às arqueias. Logo, não é um grupo monofilético (é parafilético).",
+      "resolucao": "Pontos de correção: (1) citar que o critério passou de estrutural/nutricional para filogenético (rRNA); (2) explicar que bactérias e arqueias divergiram muito cedo e que arqueias são mais próximas de eucariontes; (3) concluir que reunir bactérias e arqueias em um só grupo exclui descendentes do ancestral comum, o que caracteriza grupo não monofilético. Erro comum: dizer apenas que 'procariontes são todos iguais', sem referência a ancestralidade.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c6"
+      ],
+      "enunciado": "As relações entre quatro táxons (P, Q, R e S) são representadas pela notação (((P, Q), R), S), em que cada par de parênteses indica um nó, isto é, um ancestral comum exclusivo dos itens contidos nele. Com base nessa filogenia, é correto afirmar que:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "R é mais próximo de S do que de P."
+        },
+        {
+          "letra": "B",
+          "texto": "P e Q compartilham um ancestral comum mais recente do que P e R."
+        },
+        {
+          "letra": "C",
+          "texto": "S é mais próximo de P do que de Q."
+        },
+        {
+          "letra": "D",
+          "texto": "Q e R são grupos-irmãos."
+        },
+        {
+          "letra": "E",
+          "texto": "P descende de Q."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Leia os parênteses de dentro para fora. Nó 1 une P e Q (grupos-irmãos). Nó 2 une o grupo (P, Q) a R. Nó 3 une o grupo (P, Q, R) a S. B: o ancestral comum de P e Q (nó 1) é mais recente que o de P e R (nó 2): verdadeira. A: R se liga a P no nó 2 e a S no nó 3, portanto é mais próximo de P. C: S está à mesma distância filogenética de P e de Q. D: o grupo-irmão de R é (P, Q), não Q sozinho. E: nenhum táxon terminal descende de outro; eles descendem de ancestrais comuns.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "media",
+      "conceitos": [
+        "c9",
+        "c6"
+      ],
+      "enunciado": "Em uma árvore filogenética de cinco espécies de roedores (A a E), o comprimento do ramo terminal de cada espécie é proporcional ao tempo decorrido desde que ela se separou de seu ancestral mais próximo. Admitindo taxa de mutação constante, esses tempos são: A = 14 milhões de anos; B = 3; C = 9; D = 21; E = 6. A espécie geneticamente mais semelhante ao seu ancestral mais próximo é:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "A."
+        },
+        {
+          "letra": "B",
+          "texto": "B."
+        },
+        {
+          "letra": "C",
+          "texto": "C."
+        },
+        {
+          "letra": "D",
+          "texto": "D."
+        },
+        {
+          "letra": "E",
+          "texto": "E."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Com taxa de mutação constante, mutações acumuladas são proporcionais ao tempo ($d \\approx \\mu t$ para cada linhagem). Menos tempo desde a divergência significa menos mutações e maior semelhança com o ancestral. O menor tempo é o de B (3 milhões de anos). D, com 21, é a mais distinta; E (6) é a segunda mais semelhante e é o distrator mais tentador.",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c7",
+        "c8"
+      ],
+      "enunciado": "Considere os agrupamentos: I – Mammalia (todos os mamíferos); II – 'Invertebrados' (todos os animais sem coluna vertebral); III – 'animais nadadores de corpo hidrodinâmico' (golfinhos, tubarões e pinguins). Do ponto de vista da sistemática filogenética, I, II e III são, respectivamente:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "monofilético, parafilético e polifilético."
+        },
+        {
+          "letra": "B",
+          "texto": "parafilético, monofilético e polifilético."
+        },
+        {
+          "letra": "C",
+          "texto": "monofilético, polifilético e parafilético."
+        },
+        {
+          "letra": "D",
+          "texto": "polifilético, parafilético e monofilético."
+        },
+        {
+          "letra": "E",
+          "texto": "monofilético, monofilético e polifilético."
+        }
+      ],
+      "gabarito": "A",
+      "resolucao": "I: Mammalia contém o ancestral comum dos mamíferos e todos os seus descendentes, logo é monofilético. II: 'Invertebrados' inclui o ancestral comum de todos os animais, mas exclui os vertebrados, que também descendem dele: parafilético. III: golfinhos, tubarões e pinguins evoluíram o corpo hidrodinâmico de modo independente (convergência) e não têm ancestral comum exclusivo entre si: polifilético. E erra por tratar 'invertebrados' como clado; C inverte parafilia e polifilia.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c6",
+        "c8"
+      ],
+      "enunciado": "Uma matriz de caracteres (1 = presente; 0 = ausente) foi obtida para o grupo externo O e para quatro táxons do grupo interno. Táxon O: caracteres 1, 2, 3, 4 = 0, 0, 0, 0. Táxon A: 1, 0, 0, 0. Táxon B: 1, 1, 0, 0. Táxon C: 1, 1, 1, 0. Táxon D: 1, 1, 1, 1. (a) Escreva o cladograma mais parcimonioso, usando notação com parênteses. (b) Que caráter sustenta o clado formado por C e D? (c) O caráter 4 ajuda a estabelecer parentesco? Justifique.",
+      "alternativas": null,
+      "gabarito": "(a) (O, (A, (B, (C, D)))): A é o primeiro táxon do grupo interno a divergir, depois B, e C e D são grupos-irmãos. (b) O caráter 3, presente em C e D e ausente nos demais, é a sinapomorfia que sustenta o clado (C, D). (c) Não: o caráter 4 ocorre em um único táxon (D), é uma autapomorfia, descreve D mas não o agrupa com nenhum outro.",
+      "resolucao": "O caráter 1 ocorre em A, B, C e D e não em O: sustenta o clado (A, B, C, D). O caráter 2 ocorre em B, C e D: sustenta (B, C, D). O caráter 3 ocorre em C e D: sustenta (C, D). O caráter 4 só ocorre em D. Cada caráter muda uma única vez na árvore (sem homoplasia), o que a torna a mais parcimoniosa. Note que o caráter 1, sinapomorfia de A+B+C+D, é plesiomorfia quando se compara apenas B, C e D, pois já estava presente em seu ancestral comum.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c7",
+        "c10"
+      ],
+      "enunciado": "Livros tradicionais separam 'répteis' (tartarugas, lagartos, serpentes e crocodilianos) e aves em classes distintas. Estudos filogenéticos mostram que os crocodilianos têm ancestral comum mais recente com as aves do que com lagartos e serpentes. (a) Classifique o grupo 'répteis', definido sem as aves, quanto à monofilia e justifique. (b) Indique duas maneiras de corrigir essa classificação mantendo apenas grupos monofiléticos.",
+      "alternativas": null,
+      "gabarito": "(a) O grupo é parafilético: contém o ancestral comum dos répteis e das aves, mas exclui as aves, que descendem dele e são grupo-irmão dos crocodilianos. (b) Incluir as aves no grupo, ampliando o clado para abranger répteis e aves, ou abandonar 'répteis' como categoria e tratar lagartos e serpentes, tartarugas, crocodilianos e aves como grupos monofiléticos separados.",
+      "resolucao": "Se crocodilianos e aves são grupos-irmãos, qualquer grupo que contenha crocodilianos, lagartos e serpentes mas não contenha aves deixa de fora um descendente do ancestral comum: isso é parafilia. A correção pode ser feita ampliando o grupo (incluindo as aves) ou fragmentando-o em clados que contenham todos os seus descendentes. Erro comum: chamar o grupo de polifilético, pois o grupo tem ancestral comum; falta apenas um descendente.",
+      "imagens": []
+    }
+  ],
+  "imagens": [
+    {
+      "id": "i1",
+      "tipo": "diagrama",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phylogenetic_tree.svg",
+      "alt": "Árvore filogenética da vida com três ramos principais, Bacteria, Archaea e Eukarya, ligados a um ancestral comum na raiz.",
+      "legenda": "Árvore dos três domínios (Woese, baseada em RNA ribossômico). Observe que Archaea e Eukarya compartilham um ramo comum que não inclui Bacteria, o que explica por que Monera (Bacteria + Archaea) não forma um grupo monofilético.",
+      "credito": "Eric Gaba (Sting), a partir de figura do NASA Astrobiology Institute",
+      "licenca": "domínio público",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Phylogenetic_tree.svg",
+      "verificada": false
+    },
+    {
+      "id": "i2",
+      "tipo": "diagrama",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phylogenetic-Groups.svg",
+      "alt": "Cladograma com grupos destacados por cor que ilustram agrupamentos monofilético, parafilético e polifilético.",
+      "legenda": "Compare um grupo que inclui todos os descendentes de um ancestral (monofilético) com um que deixa parte deles de fora (parafilético) e com um que reúne ramos sem ancestral comum exclusivo (polifilético).",
+      "credito": "Wikimedia Commons (autoria não confirmada)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Phylogenetic-Groups.svg",
+      "verificada": false
+    },
+    {
+      "id": "i3",
+      "tipo": "esquema",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biological_classification_L_Pengo.svg",
+      "alt": "Esquema vertical das oito categorias principais da classificação biológica, de espécie a domínio.",
+      "legenda": "Hierarquia das categorias taxonômicas: cada categoria está contida na superior, então duas espécies da mesma família pertencem também à mesma ordem, classe, filo e reino.",
+      "credito": "Pengo (Wikimedia Commons)",
+      "licenca": "CC BY-SA 2.5",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Biological_classification_L_Pengo.svg",
+      "verificada": false
+    },
+    {
+      "id": "i4",
+      "tipo": "diagrama",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tree_of_life_SVG.svg",
+      "alt": "Árvore filogenética circular da vida com ramos coloridos que separam os domínios Eukarya, Bacteria e Archaea.",
+      "legenda": "Árvore da vida baseada em genomas sequenciados: as cores separam os três domínios e o centro representa o último ancestral comum universal.",
+      "credito": "LadyofHats (Wikimedia Commons), a partir da ferramenta iTOL (Ciccarelli e outros, 2006)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Tree_of_life_SVG.svg",
+      "verificada": false
+    },
+    {
+      "id": "i5",
+      "tipo": "diagrama",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clade-grade_II.svg",
+      "alt": "Árvore filogenética com grupos de ramos destacados que ilustram monofilia e parafilia.",
+      "legenda": "Um grupo parafilético contém o ancestral comum, mas deixa de fora um clado que também descende dele; é isso que o torna inadequado para a sistemática filogenética.",
+      "credito": "Wikimedia Commons (autoria não confirmada)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Clade-grade_II.svg",
+      "verificada": false
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Questões sobre Cladogramas (Vestibulando Web)",
+      "url": "https://www.vestibulandoweb.com.br/biologia/questoes-cladogramas/"
+    },
+    {
+      "titulo": "Questões sobre Taxonomia, Parte 1 (Vestibulando Web)",
+      "url": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-1/"
+    },
+    {
+      "titulo": "Questões sobre Taxonomia, Parte 2 (Vestibulando Web)",
+      "url": "https://www.vestibulandoweb.com.br/biologia/questoes-taxonomia-parte-2/"
+    },
+    {
+      "titulo": "Nomenclatura Binomial: Nome Científico (Vestibulando Web)",
+      "url": "https://www.vestibulandoweb.com.br/biologia/resumo-nomenclatura-binomial-nome-cientifico/"
+    },
+    {
+      "titulo": "Gabarito Unicamp 2020, Biologia (Estratégia Vestibulares)",
+      "url": "https://vestibulares.estrategia.com/portal/materias/biologia/gabarito-unicamp-2020-biologia/"
+    },
+    {
+      "titulo": "Questão 106, Enem 2020 Digital (Plataforma Assaad)",
+      "url": "https://plataformaassaad.com.br/questao-106-caderno-azul-do-enem-2020-digital/"
+    },
+    {
+      "titulo": "Questão 102, Enem 2021 PPL (Plataforma Assaad)",
+      "url": "https://plataformaassaad.com.br/questao-102-caderno-azul-enem-2021-ppl/"
+    },
+    {
+      "titulo": "Monophyly (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Monophyly"
+    },
+    {
+      "titulo": "Termos e conceitos de sistemática filogenética (Yuri Leite, UFES)",
+      "url": "https://edisciplinas.usp.br/pluginfile.php/4458621/mod_book/chapter/20216/Zoologia/Semana7/2012_Termos_e_Conceitos_de_Sistematica_Filogenetica_-_Prof._Yuri_Leite_-_UFES.pdf"
+    },
+    {
+      "titulo": "Taxon types (Scarr, Memorial University)",
+      "url": "https://mun.ca/biology/scarr/Taxon_types.htm"
+    },
+    {
+      "titulo": "The Taxonomic Classification System (Lumen Learning)",
+      "url": "https://courses.lumenlearning.com/hccs-waymakerbiology1/chapter/reading-the-taxonomic-classification-system/"
+    }
+  ]
+}
