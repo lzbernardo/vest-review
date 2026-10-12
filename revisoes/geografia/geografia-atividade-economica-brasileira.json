@@ -1,0 +1,643 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Atividade econômica brasileira: exportações, portos e rotas de escoamento",
+    "disciplina": "Geografia",
+    "subtopicos": [
+      "Pauta exportadora e balança comercial (2025)",
+      "Matriz de transportes e intermodalidade",
+      "Sistema portuário: portos públicos × TUPs",
+      "Corredores de grãos: Sul/Sudeste × Arco Norte",
+      "Mina-ferrovia-porto: Carajás, Vitória-Minas, Itaguaí",
+      "Petróleo e o eixo Rio de Janeiro",
+      "Fronteira agrícola, fixos e fluxos"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "O Brasil exporta sobretudo commodities (soja, petróleo, minério de ferro, carnes, café) por um sistema de portos e corredores em que rodovia, ferrovia e hidrovia se combinam, e a fronteira da soja empurrou parte do escoamento do Sul/Sudeste para o Arco Norte.",
+    "pontos_chave": [
+      "Balança 2025: exportações de US$ 348,7 bi (+3,5%), importações de US$ 280,4 bi e superávit de US$ 68,3 bi (−7,9% sobre 2024), mesmo com a tarifa de 50% imposta pelos EUA a parte dos produtos brasileiros.",
+      "Líderes em valor em 2025: petróleo bruto (≈ US$ 44,7 bi), soja (≈ US$ 43,5 bi), minério de ferro (≈ US$ 28,9 bi), carne bovina (≈ US$ 16,6 bi, +42,5%) e café (≈ US$ 14,9 bi, recorde). Recordes de volume: minério (416 Mt), petróleo (98 Mt) e soja (108 Mt).",
+      "Esses três primeiros (soja, petróleo, minério) somam cerca de um terço das exportações: é a primarização da pauta, que expõe o país a preços internacionais e à demanda da China.",
+      "Portos 2025 (ANTAQ): 1,403 bilhão de toneladas (+6,1%). Granéis sólidos são 59,8% da carga, granéis líquidos 23,7%, contêineres 11,7% e carga geral 4,7%.",
+      "Terminais de Uso Privado (TUPs) movimentaram 906,1 Mt (≈ 65% do total); portos públicos, 497 Mt (≈ 35%). Maior terminal do país: Ponta da Madeira (MA), 172,4 Mt, privado da Vale. Maior porto público: Santos, 142,8 Mt.",
+      "Santos concentra contêineres, açúcar, café, suco de laranja e soja; Paranaguá (PR) é o 2º em fluxo de comércio; Itaguaí (RJ) e Tubarão (ES) são polos de minério; Itaqui (MA) escoa grãos e a carga da Ferrovia Norte-Sul.",
+      "Arco Norte = portos e eixos acima do paralelo 16° S (Itacoatiara, Santarém, Barcarena/Vila do Conde, Santana, Itaqui etc.). Seu trunfo é a intermodalidade (rodovia + hidrovia ou ferrovia), frete menor e menos congestionamento que Santos/Paranaguá.",
+      "Corredores clássicos do MT: BR-163 até Miritituba e hidrovia do Tapajós/Amazonas; BR-364 até Porto Velho e hidrovia do Madeira; BR-158/Norte-Sul até Itaqui. A Ferrogrão (Sinop–Miritituba) segue como projeto, com discussão judicial e socioambiental.",
+      "Matriz de transportes brasileira é rodoviarista (≈ 65% pelo PNL 2015), solução cara para longas distâncias; ferrovia e hidrovia têm vantagem para granéis e grandes volumes."
+    ],
+    "formulas": [
+      {
+        "nome": "Participação percentual",
+        "expressao": "$p = \\dfrac{\\text{parte}}{\\text{total}} \\times 100$",
+        "quando_usar": "Questões que dão dois valores (ex.: TUPs × total portuário, soja × exportações) e pedem a fatia; cuidado para não trocar a parte pelo complemento (portos públicos)."
+      },
+      {
+        "nome": "Saldo da balança comercial",
+        "expressao": "$S = X - M$",
+        "quando_usar": "Leitura de gráficos de exportação (X) e importação (M): saldo positivo é superávit. Em gráfico de linhas, o saldo é a distância vertical entre as curvas."
+      }
+    ],
+    "erros_comuns": [
+      "Dizer que o maior porto do país é sempre Santos: entre as instalações, o maior volume é de Ponta da Madeira (TUP). Santos é o maior porto público/organizado.",
+      "Confundir Arco Norte com 'Norte do país': o critério é estar acima do paralelo 16° S, o que inclui Itaqui (MA), no Nordeste, e exclui Paranaguá e Santos.",
+      "Achar que a intermodalidade elimina a rodovia: ela combina modais, e o trecho rodoviário até o transbordo (ex.: Miritituba) continua central.",
+      "Atribuir o crescimento do Arco Norte só à proximidade do mercado asiático: pesam também o custo do frete, o congestionamento do Sul/Sudeste e as obras de infraestrutura.",
+      "Confundir minério (metálico, exportado por Ponta da Madeira, Tubarão, Itaguaí) com petróleo (energético, forte no RJ e no pré-sal).",
+      "Tratar a ferrovia de Carajás como corredor de importação: é corredor de exportação de minério."
+    ],
+    "como_a_unicamp_cobra": "Nas provas da Comvest que indexamos (1ª fase 2007, tema Agricultura), o assunto aparece como agronegócio, fronteira agrícola e Cerrado/Amazônia dentro de uma prova interdisciplinar, em perguntas dissertativas curtas que pedem definir conceito, comparar domínios e relacionar a expansão da soja ao território. O ENEM, por sua vez, repete o trio logística de escoamento (fixos e fluxos), intermodalidade e Carajás/minério. Para a Unicamp, treine três movimentos: ler mapa/texto e identificar a rota, justificar por que o corredor existe (distância, custo, pauta de commodities) e apontar o impacto socioambiental."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Pauta exportadora e primarização",
+      "explicacao": "Em 2025, o Brasil exportou US$ 348,7 bi. A indústria de transformação respondeu por ≈ US$ 188,7 bi e a agropecuária por ≈ US$ 77,6 bi. Entre produtos, lideram petróleo, soja e minério de ferro, seguidos por carnes, café, celulose e açúcar. A concentração em produtos primários e semimanufaturados de baixo valor agregado chama-se primarização e deixa a balança sensível a preços de commodities e ao câmbio.",
+      "exemplo": "Soja, petróleo e minério juntos: ≈ 43,5 + 44,7 + 28,9 = US$ 117,1 bi, cerca de 34% das exportações.",
+      "dica_de_prova": "Quando a questão pedir causa do cenário exportador agrícola, pense em expansão do capital agroindustrial e tecnologia no campo, e não em redução do poder de compra interno. Câmbio desvalorizado ajuda exportar.",
+      "imagens": []
+    },
+    {
+      "id": "c2",
+      "nome": "Parceiros comerciais, tarifaço e câmbio",
+      "explicacao": "A China é o principal parceiro comercial, seguida pelos EUA; a Argentina aparece como 3º destino das exportações em 2025. Em 2025, os EUA aplicaram tarifa total de 50% (10% geral + 40% adicional) a vários produtos brasileiros, com queda das vendas aos EUA, mas as exportações totais bateram recorde por compensação em outros mercados. A União Europeia é o 2º maior parceiro (≈ 17,9% das importações do Brasil).",
+      "exemplo": "Carne bovina e café cresceram em valor em 2025 mesmo com o tarifaço, redirecionando vendas (China e outros mercados absorveram parte).",
+      "dica_de_prova": "Diversificação de parceiros e de produtos é a resposta-padrão de política para reduzir vulnerabilidade externa.",
+      "imagens": []
+    },
+    {
+      "id": "c3",
+      "nome": "Matriz de transportes e intermodalidade",
+      "explicacao": "Matriz de transportes é a participação dos modais (rodoviário, ferroviário, aquaviário, dutoviário, aéreo) no deslocamento de cargas. A matriz brasileira é concentrada no rodoviário (≈ 65% no PNL 2015), herança da industrialização automobilística. Para longas distâncias e grandes volumes (soja, milho, minério), ferrovia e hidrovia têm custo menor. Intermodalidade é o uso integrado de modais numa mesma cadeia, com transbordo, reduzindo custo e tempo.",
+      "exemplo": "Soja de Sinop (MT): caminhão pela BR-163 até Miritituba (PA), barcaças pelo Tapajós/Amazonas, navio em Santarém/Barcarena.",
+      "dica_de_prova": "ENEM 2013 (Q9): a intermodalidade se justifica pelas grandes distâncias e pela busca de redução de custo, e não pela proximidade entre produção e portos.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "Sistema portuário: portos públicos × TUPs",
+      "explicacao": "Portos organizados (públicos) são administrados por autoridade portuária e têm áreas arrendadas; TUPs são terminais privados autorizados. Em 2025: TUPs 906,1 Mt (+7%), portos públicos 497 Mt (+4,5%). Santos: 142,8 Mt (maior porto público; em jun/2025, ≈ 29,9% do fluxo de comércio exterior brasileiro, à frente de Paranaguá com 7,7% e Itaguaí com 5%). Ponta da Madeira (MA): 172,4 Mt, maior terminal. Tubarão (ES): ≈ 87,4 Mt, 3º maior terminal.",
+      "exemplo": "Cargas a granel de commodities de uma única empresa (minério da Vale) costumam sair por TUP integrado à ferrovia; contêineres e carga diversa, por portos públicos como Santos.",
+      "dica_de_prova": "Pergunta clássica: 'qual o maior porto?'. Responda conforme o recorte: maior porto público = Santos; maior terminal = Ponta da Madeira.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Arco Norte e os corredores do Centro-Norte",
+      "explicacao": "Arco Norte são os eixos de transporte que levam aos portos acima do paralelo 16° S. Em 2022, esses portos passaram os do Sul/Sudeste na exportação de soja e milho; no 1º trimestre de 2024 responderam por 33,5% dessas exportações (a fatia varia com a safra). Fatores: intermodalidade, frete estimado até ≈ 30% menor, menor congestionamento, navios maiores e investimentos (Lei dos Portos, BR-163 até Miritituba, estações de transbordo). Corredores: BR-163 + Tapajós (Miritituba → Santarém/Barcarena/Vila do Conde); BR-364 + Madeira (Porto Velho → Itacoatiara); BR-158 + Ferrovia Norte-Sul → Itaqui; Ferrogrão (Sinop–Miritituba, ≈ 933 km) projetada.",
+      "exemplo": "Estação de transbordo em Miritituba (Itaituba, PA): o caminhão descarrega e a soja segue por barcaças até o porto de exportação.",
+      "dica_de_prova": "Mapas de corredores: identifique o rio (Tapajós, Madeira, Tocantins) e o porto final. A Ferrogrão ainda não foi construída: não a trate como obra existente.",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Corredor Sul/Sudeste de grãos e a hidrovia Tietê-Paraná",
+      "explicacao": "Santos e Paranaguá são as saídas históricas de grãos do Centro-Oeste e do Sul. Em 2025, Santos exportou ≈ 42,1 Mt de soja e milho, Paranaguá ≈ 19,7 Mt e Itaqui ≈ 18,8 Mt (ANTAQ). A hidrovia Tietê-Paraná tem ≈ 2,4 mil km navegáveis (≈ 1,6 mil no Paraná e ≈ 800 km no Tietê), conecta seis estados, tem terminais intermodais e escoa produção agrícola, com destino principal ao porto de Santos; exige eclusas e é sensível à seca. Rumo (malha sul) e MRS acessam Santos por ferrovia.",
+      "exemplo": "Soja de Goiás e Mato Grosso do Sul embarcada em São Simão (GO) em barcaças, seguindo para terminais de transbordo no interior paulista.",
+      "dica_de_prova": "Calado (profundidade) de Santos e Paranaguá é gargalo para navios maiores; por isso há dragagem e concessão de canais de acesso.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Mina-ferrovia-porto: Carajás, Vitória-Minas e Itaguaí",
+      "explicacao": "Sistema mina-ferrovia-porto liga jazida, ferrovia e terminal de embarque, típico do minério. Carajás (PA): a Estrada de Ferro Carajás (≈ 892 km) leva o minério a Ponta da Madeira, em São Luís (MA); em 2024 movimentou ≈ 179,5 Mt, quase tudo minério, com trens de ≈ 330 vagões. Minas Gerais exporta pela Estrada de Ferro Vitória-Minas até Tubarão (ES) e por ferrovia ao porto de Itaguaí (RJ). Minério de ferro é mineral metálico, matéria-prima da siderurgia.",
+      "exemplo": "ENEM 2010 (Q14): a importância da região atendida pela Estrada de Ferro Carajás está na capacidade de produção de minerais metálicos.",
+      "dica_de_prova": "Carajás + Vale + São Luís = minério de ferro para exportação. Não confunda com energia (petróleo, carvão).",
+      "imagens": []
+    },
+    {
+      "id": "c8",
+      "nome": "Petróleo e o eixo Rio de Janeiro",
+      "explicacao": "O Rio de Janeiro lidera as exportações estaduais (US$ 48,1 bi em 2025, ≈ 13,8% do país), com petróleo bruto acima de US$ 37 bi, ligado ao pré-sal da Bacia de Santos e de Campos. Terminais como o de Açu (RJ) e os do litoral fluminense embarcam óleo bruto. Já o refino e os derivados também aparecem na pauta de importação (óleos combustíveis ≈ US$ 15,5 bi em 2025).",
+      "exemplo": "O Brasil exporta petróleo bruto e importa parte dos derivados: dependência de refino e de diesel.",
+      "dica_de_prova": "Petróleo é mineral energético; liga-se a plataformas, dutos e terminais, e não à ferrovia de minério.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Fixos e fluxos, fronteira agrícola e impactos",
+      "explicacao": "Fluxos (cargas, informação, capital) exigem fixos (rodovias, ferrovias, portos, armazéns). O agronegócio exportador pressiona o Estado a instalar fixos no território, como as rodovias do Centro-Oeste (ENEM 2020, Q65: expansão das rodovias como projeção do escoamento da produção). A expansão da soja avançou do Sul ao Cerrado e à Amazônia, com desmatamento, conflitos fundiários e pressão sobre biomas; as 'espinhas de peixe' ao longo da BR-163 estão associadas a desmatamento e grilagem.",
+      "exemplo": "A pavimentação da BR-163 e a instalação de terminais em Miritituba consolidaram o corredor Centro-Norte, e também atraíram frentes de ocupação e conflito.",
+      "dica_de_prova": "A Unicamp costuma pedir o outro lado do agronegócio: concentração fundiária, êxodo rural, desmatamento. Tenha um impacto positivo (divisas, empregos) e um negativo na ponta da língua.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Cabotagem e hidrovias interiores",
+      "explicacao": "Cabotagem é a navegação entre portos do próprio território, pelo mar ou também por vias interiores; navegação interior ocorre em rios, lagos e canais. A cabotagem cresceu com políticas de incentivo e é alternativa à rodovia no litoral. As principais hidrovias de carga são as do Arco Norte (Madeira, Tapajós, Amazonas, Tocantins) e a Tietê-Paraná; na Amazônia, a hidrovia é o eixo da logística do agronegócio.",
+      "exemplo": "Contêineres e granéis entre Santos, Suape, Manaus e outros portos por cabotagem.",
+      "dica_de_prova": "Diferencie cabotagem (costeira, entre portos do mesmo país) de longo curso (internacional).",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2007,
+      "fase": "1ª fase",
+      "numero": "Q9",
+      "tipo": "dissertativa",
+      "assunto": "Agronegócio e empresa agrícola (prova com o tema Agricultura; realizada em 19/11/2006)",
+      "o_que_cobra": "Pede que o candidato defina empresa agrícola e liste características da agricultura tradicional, contrastando-as, e depois descreva as condições naturais da região central dos EUA como área de alta produtividade.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao_comentada/unicamp/2007_1fase/unicamp2007_1fase_prova.pdf",
+      "link_gabarito": null,
+      "conceitos": [
+        "c1",
+        "c9"
+      ]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2007,
+      "fase": "1ª fase",
+      "numero": "Q10",
+      "tipo": "dissertativa",
+      "assunto": "Fronteira agrícola: soja no Cerrado e Amazônia como nova fronteira (prova com o tema Agricultura; realizada em 19/11/2006)",
+      "o_que_cobra": "Pede para diferenciar o domínio morfoclimático do Cerrado do amazônico, explicar o que caracteriza uma faixa de transição e apontar benefícios ambientais do plantio direto.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.curso-objetivo.br/vestibular/resolucao_comentada/unicamp/2007_1fase/unicamp2007_1fase_prova.pdf",
+      "link_gabarito": null,
+      "conceitos": [
+        "c5",
+        "c9"
+      ]
+    },
+    {
+      "id": "x3",
+      "instituicao": "ENEM",
+      "ano": 2010,
+      "fase": "Caderno azul",
+      "numero": "Q14",
+      "tipo": "multipla_escolha",
+      "assunto": "Estrada de Ferro Carajás e logística do setor primário",
+      "o_que_cobra": "Dado um texto sobre a inauguração da Estrada de Ferro Carajás, pede o argumento que destaca a importância estratégica da região atendida pela ferrovia (qual tipo de recurso mineral a região produz).",
+      "gabarito_oficial": "C",
+      "link_questao": "https://plataformaassaad.com.br/questao-14-caderno-azul-do-enem-2010/",
+      "link_gabarito": "https://plataformaassaad.com.br/questao-14-caderno-azul-do-enem-2010/",
+      "conceitos": [
+        "c7"
+      ]
+    },
+    {
+      "id": "x4",
+      "instituicao": "ENEM",
+      "ano": 2013,
+      "fase": "Caderno azul",
+      "numero": "Q9",
+      "tipo": "multipla_escolha",
+      "assunto": "Intermodalidade e a escala geográfica do Brasil",
+      "o_que_cobra": "A partir de um trecho sobre intermodalidade na logística, pergunta por que o território brasileiro exige modais de transporte interligados.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://plataformaassaad.com.br/questao-09-caderno-azul-do-enem-2013/",
+      "link_gabarito": "https://plataformaassaad.com.br/questao-09-caderno-azul-do-enem-2013/",
+      "conceitos": [
+        "c3"
+      ]
+    },
+    {
+      "id": "x5",
+      "instituicao": "ENEM",
+      "ano": 2014,
+      "fase": "Caderno azul",
+      "numero": "Q27",
+      "tipo": "multipla_escolha",
+      "assunto": "Rodoviarismo, urbanização e transportes",
+      "o_que_cobra": "Relaciona a urbanização brasileira de meados do século XX à predominância do transporte rodoviário, associada à entrada das montadoras multinacionais.",
+      "gabarito_oficial": "E",
+      "link_questao": "https://descomplica.com.br/gabarito-enem/questoes/2014/primeiro-dia/a-urbanizacao-brasileira-no-inicio-da-segunda-metade-do-seculo-xx-promoveu-uma-radical-alteracao/",
+      "link_gabarito": "https://descomplica.com.br/gabarito-enem/questoes/2014/primeiro-dia/a-urbanizacao-brasileira-no-inicio-da-segunda-metade-do-seculo-xx-promoveu-uma-radical-alteracao/",
+      "conceitos": [
+        "c3"
+      ]
+    },
+    {
+      "id": "x6",
+      "instituicao": "ENEM",
+      "ano": 2017,
+      "fase": "Prova de Ciências Humanas",
+      "numero": null,
+      "tipo": "multipla_escolha",
+      "assunto": "Logística da soja: filas de navios, caminhões e trens",
+      "o_que_cobra": "Com base em um texto sobre a infraestrutura logística da exportação de granéis (minério, petróleo, soja) e as filas nos portos, pergunta qual ação resolveria os problemas logísticos da soja no início do século XXI. O número na prova original e o gabarito não foram confirmados na fonte consultada (a numeração da página é reorganizada).",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.infoescola.com/exercicios/prova/enem-2017/6/",
+      "link_gabarito": null,
+      "conceitos": [
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "id": "x7",
+      "instituicao": "ENEM",
+      "ano": 2020,
+      "fase": "Caderno azul",
+      "numero": "Q65",
+      "tipo": "multipla_escolha",
+      "assunto": "Logística de transportes do agronegócio em Mato Grosso",
+      "o_que_cobra": "Combina um texto sobre fluxos e instalação de fixos com um mapa de rodovias no Centro-Oeste e pede a razão da expansão das rodovias.",
+      "gabarito_oficial": "D",
+      "link_questao": "https://plataformaassaad.com.br/questao-65-caderno-azul-do-enem-2020/",
+      "link_gabarito": "https://plataformaassaad.com.br/questao-65-caderno-azul-do-enem-2020/",
+      "conceitos": [
+        "c9",
+        "c3"
+      ]
+    },
+    {
+      "id": "x8",
+      "instituicao": "ENEM",
+      "ano": 2025,
+      "fase": "1º dia, caderno azul",
+      "numero": "Q63 (Q73 na prova amarela)",
+      "tipo": "multipla_escolha",
+      "assunto": "Agronegócio exportador e condição que favorece o cenário produtivo",
+      "o_que_cobra": "Interpreta um infográfico da CNA sobre a produção agrícola brasileira (alta produção e alta exportação) e pede a condição que favoreceu esse cenário.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://aprovatotal.com.br/?p=60767",
+      "link_gabarito": "https://aprovatotal.com.br/?p=60767",
+      "conceitos": [
+        "c1",
+        "c9"
+      ]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c4"
+      ],
+      "enunciado": "Entre os portos públicos (organizados) brasileiros, qual teve a maior movimentação de cargas em 2025, com cerca de 142,8 milhões de toneladas?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Paranaguá (PR)"
+        },
+        {
+          "letra": "B",
+          "texto": "Itaqui (MA)"
+        },
+        {
+          "letra": "C",
+          "texto": "Santos (SP)"
+        },
+        {
+          "letra": "D",
+          "texto": "Rio Grande (RS)"
+        },
+        {
+          "letra": "E",
+          "texto": "Suape (PE)"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "Santos é o maior porto público, com 142,8 Mt em 2025. Cuidado: o maior terminal do país é privado (Ponta da Madeira, 172,4 Mt), por isso o enunciado restringe a portos públicos.",
+      "imagens": []
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": "x3",
+      "dificuldade": "facil",
+      "conceitos": [
+        "c7"
+      ],
+      "enunciado": "A Estrada de Ferro Carajás liga a Serra dos Carajás, no Pará, a qual terminal marítimo de exportação de minério de ferro?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Tubarão (ES)"
+        },
+        {
+          "letra": "B",
+          "texto": "Ponta da Madeira (MA)"
+        },
+        {
+          "letra": "C",
+          "texto": "Itaguaí (RJ)"
+        },
+        {
+          "letra": "D",
+          "texto": "Santarém (PA)"
+        },
+        {
+          "letra": "E",
+          "texto": "Paranaguá (PR)"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "A EFC (≈ 892 km) leva o minério a Ponta da Madeira, em São Luís (MA). Tubarão recebe minério mineiro pela Vitória-Minas; Itaguaí, de Minas Gerais; Santarém é porto fluvial de grãos; Paranaguá é o grande porto de grãos do Paraná.",
+      "imagens": []
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c5"
+      ],
+      "enunciado": "O termo 'Arco Norte' designa os eixos de transporte que levam aos portos situados acima do paralelo 16° S. Qual dos portos abaixo NÃO integra o Arco Norte?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Itacoatiara (AM)"
+        },
+        {
+          "letra": "B",
+          "texto": "Santarém (PA)"
+        },
+        {
+          "letra": "C",
+          "texto": "Vila do Conde/Barcarena (PA)"
+        },
+        {
+          "letra": "D",
+          "texto": "Paranaguá (PR)"
+        },
+        {
+          "letra": "E",
+          "texto": "Itaqui (MA)"
+        }
+      ],
+      "gabarito": "D",
+      "resolucao": "Paranaguá fica no litoral paranaense (≈ 25° S), ao sul do paralelo 16° S, logo pertence ao corredor Sul. Os demais ficam ao norte desse paralelo, incluindo Itaqui, perto do equador (≈ 2° S).",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x6",
+      "dificuldade": "media",
+      "conceitos": [
+        "c3",
+        "c5"
+      ],
+      "enunciado": "Nas últimas décadas, parte crescente da soja de Mato Grosso passou a ser exportada pelos portos do Arco Norte. Qual alternativa explica melhor esse deslocamento?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Substituição completa do transporte rodoviário por ferrovias nos corredores do Centro-Oeste."
+        },
+        {
+          "letra": "B",
+          "texto": "Proibição legal de embarques de soja pelos portos de Santos e Paranaguá."
+        },
+        {
+          "letra": "C",
+          "texto": "Combinação de rodovia com hidrovia ou ferrovia, que encurta o trajeto aos portos do Norte, reduz o frete e alivia o congestionamento do Sul/Sudeste."
+        },
+        {
+          "letra": "D",
+          "texto": "Localização dos portos do Norte junto aos principais centros consumidores internos da soja."
+        },
+        {
+          "letra": "E",
+          "texto": "Maior calado do rio Tietê, que permite navios oceânicos até o interior de Mato Grosso."
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "A literatura aponta a intermodalidade (ex.: BR-163 + Tapajós), frete menor (estimativas de até ≈ 30%) e menos filas que Santos/Paranaguá. A D é falsa (os consumidores estão no Sudeste); A e B são falsas e E mistura a hidrovia Tietê-Paraná com a rota amazônica.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": "x7",
+      "dificuldade": "media",
+      "conceitos": [
+        "c5",
+        "c9"
+      ],
+      "enunciado": "A Ferrogrão (EF-170) é frequentemente citada nas discussões sobre o escoamento da soja. Qual descrição corresponde a esse projeto?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Ferrovia que liga a Serra dos Carajás a São Luís, já em operação pela Vale."
+        },
+        {
+          "letra": "B",
+          "texto": "Projeto de ferrovia entre Sinop (MT) e Miritituba (PA), paralela à BR-163, para escoar grãos pelo Arco Norte."
+        },
+        {
+          "letra": "C",
+          "texto": "Ferrovia que liga Campo Grande (MS) ao porto de Paranaguá (PR)."
+        },
+        {
+          "letra": "D",
+          "texto": "Hidrovia que liga Porto Velho (RO) a Itacoatiara (AM)."
+        },
+        {
+          "letra": "E",
+          "texto": "Prolongamento da Ferrovia Norte-Sul até o porto de Santos."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "A Ferrogrão (≈ 933 km) ligaria Sinop a Miritituba, em paralelo à BR-163, e ainda não foi construída (há questionamentos judiciais e socioambientais). A alternativa A descreve a EFC; D, a hidrovia do Madeira.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c4"
+      ],
+      "enunciado": "Em 2025, os portos brasileiros movimentaram cerca de 1,403 bilhão de toneladas, das quais 906,1 milhões em Terminais de Uso Privado (TUPs) e 497 milhões em portos públicos. A participação aproximada dos TUPs no total foi de:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "25%"
+        },
+        {
+          "letra": "B",
+          "texto": "35%"
+        },
+        {
+          "letra": "C",
+          "texto": "50%"
+        },
+        {
+          "letra": "D",
+          "texto": "65%"
+        },
+        {
+          "letra": "E",
+          "texto": "80%"
+        }
+      ],
+      "gabarito": "D",
+      "resolucao": "906,1 / 1.403,1 ≈ 0,646, ou seja, ≈ 65%. A alternativa B (35%) é a participação dos portos públicos (497/1.403 ≈ 35%), erro de quem calcula o complemento.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c4",
+        "c7"
+      ],
+      "enunciado": "Os TUPs respondem pela maior parte da movimentação portuária brasileira. Qual fator explica melhor essa predominância?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "Proibição legal de que portos públicos movimentem granéis."
+        },
+        {
+          "letra": "B",
+          "texto": "Predomínio de carga geral de baixo volume, mais adequada a terminais pequenos."
+        },
+        {
+          "letra": "C",
+          "texto": "Localização dos TUPs no interior do continente, junto às minas."
+        },
+        {
+          "letra": "D",
+          "texto": "Concentração do tráfego de passageiros em terminais privados."
+        },
+        {
+          "letra": "E",
+          "texto": "Cargas de grande volume e baixo valor agregado (minério, petróleo), movimentadas por grandes empresas em terminais próprios integrados a mina e ferrovia, como Ponta da Madeira e Tubarão."
+        }
+      ],
+      "gabarito": "E",
+      "resolucao": "Granéis sólidos e líquidos somam ≈ 83% das toneladas, e terminais como Ponta da Madeira (172,4 Mt) e Tubarão (≈ 87,4 Mt) são privados e integrados ao sistema mina-ferrovia-porto. A A é falsa (a Lei 12.815/2013 amplia a atuação privada, mas não proíbe portos públicos de movimentar granéis).",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c3",
+        "c5"
+      ],
+      "enunciado": "O texto de apoio do ENEM 2013 afirma que a intermodalidade permite um sistema de transportes à escala geográfica do Brasil. (a) Defina intermodalidade. (b) Explique por que ela é importante para exportar a soja do norte de Mato Grosso. (c) Cite um corredor do Arco Norte e os modais que o compõem.",
+      "alternativas": null,
+      "gabarito": "(a) Uso integrado de dois ou mais modais (rodoviário, ferroviário, hidroviário etc.) na mesma cadeia, com transbordo. (b) As lavouras do MT estão a 2 mil km ou mais dos portos tradicionais; o frete rodoviário em longas distâncias é caro, e combinar rodovia com hidrovia ou ferrovia reduz custo e tempo. (c) Ex.: BR-163 + estação de transbordo de Miritituba + hidrovia do Tapajós/Amazonas até Santarém ou Barcarena; ou BR-364 + hidrovia do Madeira (Porto Velho a Itacoatiara); ou BR-158/Norte-Sul + ferrovia até Itaqui.",
+      "resolucao": "Respostas completas citam o conceito, ligam à distância e ao custo e nomeiam um corredor com os modais corretos. Erro frequente: dizer que a intermodalidade substitui a rodovia, quando o trecho rodoviário até o transbordo permanece.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c5",
+        "c6",
+        "c9"
+      ],
+      "enunciado": "Compare o corredor Sul/Sudeste (Santos e Paranaguá) e o Arco Norte na exportação de grãos: (a) indique uma vantagem e uma limitação de cada um; (b) aponte um impacto socioambiental associado à expansão da soja pelo corredor Centro-Norte.",
+      "alternativas": null,
+      "gabarito": "(a) Sul/Sudeste: infraestrutura consolidada e proximidade dos centros industriais e da maior parte da frota, mas congestionamento, filas de caminhões e limitação de calado para navios maiores. Arco Norte: frete menor via rodovia + hidrovia/ferrovia e menos filas, mas dependência de rodovias (BR-163), sazonalidade dos rios, ferrovia ainda em projeto (Ferrogrão). (b) Desmatamento e pressão sobre a floresta ao longo da BR-163 (espinhas de peixe), grilagem de terras, conflitos com povos e comunidades tradicionais, riscos para o Tapajós.",
+      "resolucao": "Boa resposta traz um par vantagem/limitação para cada corredor e um impacto concreto, sem generalizar 'impactos ambientais'. A Unicamp valoriza citar a conexão rodovia-hidrovia e a fronteira agrícola.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x8",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c1",
+        "c2",
+        "c4"
+      ],
+      "enunciado": "Em 2025, o Brasil exportou US$ 348,7 bi. Só soja (≈ US$ 43,5 bi), petróleo (≈ US$ 44,7 bi) e minério de ferro (≈ US$ 28,9 bi) renderam mais de US$ 117 bi. Nesse ano, os EUA impuseram tarifa total de 50% a vários produtos brasileiros. (a) Calcule a participação percentual aproximada desses três produtos nas exportações. (b) Explique o conceito de primarização da pauta e um risco associado. (c) Cite duas medidas para reduzir a vulnerabilidade externa.",
+      "alternativas": null,
+      "gabarito": "(a) (43,5 + 44,7 + 28,9) / 348,7 ≈ 117,1 / 348,7 ≈ 34% (cerca de um terço). (b) Primarização é a concentração das exportações em produtos primários ou de baixo valor agregado; risco: dependência de preços internacionais e da demanda de poucos compradores, como a China. (c) Diversificar parceiros comerciais (UE, Mercosul, Ásia) e agregar valor à produção (indústria de transformação, processamento).",
+      "resolucao": "(a) Soma: 43,5 + 44,7 + 28,9 = 117,1; 117,1 ÷ 348,7 ≈ 0,336, ou 33,6%. (b) e (c) são conceituais. O tarifaço mostra a exposição a decisões de mercados específicos; ainda assim, as exportações totais cresceram 3,5%, o que ilustra a importância da diversificação.",
+      "imagens": []
+    }
+  ],
+  "imagens": [],
+  "fontes": [
+    {
+      "titulo": "Poder360: Balança comercial atinge superávit de US$ 68,3 bi em 2025",
+      "url": "https://www.poder360.com.br/poder-economia/balanca-comercial-atinge-superavit-de-us-683-bi-em-2025/"
+    },
+    {
+      "titulo": "InvestNews: Balança comercial 2025 (soja, petróleo, minério, carne)",
+      "url": "https://investnews.com.br/economia/balanca-comercial-2025/"
+    },
+    {
+      "titulo": "Legismap: Comércio exterior 2025 (recordes de volume)",
+      "url": "https://legismap.com.br/conteudos/artigos-e-noticias/comercio-exterior-brasileiro-movimentou-us-629-1-bilhoes-em-2025"
+    },
+    {
+      "titulo": "ANTAQ: Desempenho Aquaviário 2025",
+      "url": "https://www.gov.br/antaq/pt-br/central-de-conteudos/publicacoes-da-antaq/Anuario2025.pdf"
+    },
+    {
+      "titulo": "Mundo Logística: Transporte aquaviário movimentou 1,4 bilhão de t em 2025",
+      "url": "https://mundologistica.com.br/noticias/transporte-aquaviario-movimentou-toneladas"
+    },
+    {
+      "titulo": "Diário do Comércio: Portos batem recorde em 2025",
+      "url": "https://diariodocomercio.com.br/economia/portos-brasileiros-batem-recorde-2025/"
+    },
+    {
+      "titulo": "Datamar: Santos, 1º semestre de 2025",
+      "url": "https://datamarnews.com/?p=62826"
+    },
+    {
+      "titulo": "Folha Vitória: Atlas Portuário do ES (Tubarão)",
+      "url": "https://www.folhavitoria.com.br/cotidiano/137-milhoes-de-toneladas-es-e-o-4o-em-movimentacao-portuaria-no-brasil/"
+    },
+    {
+      "titulo": "Brasil 61: protagonismo do Arco Norte",
+      "url": "https://brasil61.com/n/saiba-o-que-esta-por-tras-do-protagonismo-do-arco-norte-no-escoamento-da-producao-agropecuaria-brasileira-bras2411503"
+    },
+    {
+      "titulo": "O Liberal: Pará desponta no escoamento de grãos",
+      "url": "https://www.oliberal.com/economia/para-desponta-no-escoamento-da-produc-o-de-gr-os-1.586843"
+    },
+    {
+      "titulo": "O Povo: Ferrogrão",
+      "url": "https://www.opovo.com.br/trends/ferrovia-de-933-km-pode-encurtar-o-caminho-dos-graos-e-reduzir-custos-que-pesam-no-agro-brasileiro/"
+    },
+    {
+      "titulo": "Wikipédia: Estrada de Ferro Carajás",
+      "url": "https://pt.wikipedia.org/wiki/Estrada_de_Ferro_Carajás"
+    },
+    {
+      "titulo": "Wikipédia: Hidrovia Tietê-Paraná",
+      "url": "https://pt.wikipedia.org/wiki/Hidrovia_Tietê-Paraná"
+    },
+    {
+      "titulo": "SEMIL-SP: Hidrovia Tietê-Paraná",
+      "url": "https://semil.sp.gov.br/?p=103326"
+    },
+    {
+      "titulo": "IBGE: Mapa de Logística dos Transportes no Brasil (2014), PDF para consulta",
+      "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/redes_e_fluxos_geograficos/logistica_dos_transportes/2014/Mapa_de_Logistica_dos_Transportes_no_Brasil_2014.pdf"
+    },
+    {
+      "titulo": "Prova Unicamp 2007, 1ª fase (hospedada pelo Curso Objetivo)",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao_comentada/unicamp/2007_1fase/unicamp2007_1fase_prova.pdf"
+    }
+  ]
+}

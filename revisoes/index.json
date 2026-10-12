@@ -1,0 +1,25 @@
+{
+  "revisoes": [
+    {
+      "arquivo": "biologia/biologia-citologia-bioenergetica.json",
+      "titulo": "Citologia e bioenergética",
+      "disciplina": "Biologia",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    },
+    {
+      "arquivo": "geografia/geografia-atividade-economica-brasileira.json",
+      "titulo": "Atividade econômica brasileira: exportações, portos e rotas de escoamento",
+      "disciplina": "Geografia",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    },
+    {
+      "arquivo": "matematica/matematica-pa-pg.json",
+      "titulo": "Progressões: PA e PG",
+      "disciplina": "Matemática",
+      "gerado_em": "2026-10-12",
+      "questoes": 10
+    }
+  ]
+}

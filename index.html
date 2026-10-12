@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReVest · Revisões de vestibular</title>
+<meta name="description" content="ReVest: revisões de vestibular com resumo prático, conceitos, questões de referência e questões de reforço resolvidas.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="js/app.js"></script>
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar" aria-label="Biblioteca de revisões">
+  <div class="side-head">
+    <div class="brand">
+      <img src="favicon.svg" alt="">
+      <h1>ReVest</h1>
+    </div>
+    <p id="lib-count"></p>
+  </div>
+  <input class="search" id="search" type="search" placeholder="Buscar" aria-label="Buscar revisões" hidden>
+  <nav class="lib" id="lib"></nav>
+  <div class="side-foot">Seu progresso fica salvo neste navegador.</div>
+</aside>
+
+<main class="main" id="main"></main>
+
+<div class="scrim" id="scrim" data-action="dismiss"></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1"></section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

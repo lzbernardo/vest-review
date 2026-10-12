@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Progressões: PA e PG",
+    "disciplina": "Matemática",
+    "subtopicos": [
+      "Progressão aritmética: termo geral, propriedades e soma",
+      "Progressão geométrica: termo geral, propriedades e soma finita",
+      "Soma infinita de PG",
+      "Três termos em PA ou PG",
+      "Modelagem: crescimento linear × exponencial",
+      "PA e PG combinadas"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "PA soma uma constante a cada passo (crescimento linear) e PG multiplica por uma constante (crescimento exponencial): quase toda questão se resolve identificando qual é qual e escolhendo entre termo geral, soma ou propriedade dos termos vizinhos.",
+    "pontos_chave": [
+      "PA: $a_{n+1}-a_n=r$ é constante. PG: $a_{n+1}/a_n=q$ é constante.",
+      "Entre $a_k$ e $a_n$ há $n-k$ passos: $a_n=a_k+(n-k)r$ (PA) e $a_n=a_k\\,q^{\\,n-k}$ (PG). Isso dispensa descobrir $a_1$.",
+      "Na PA cada termo é a média aritmética dos vizinhos; na PG, a média geométrica ($b^2=ac$).",
+      "Soma de PA com número ímpar de termos = $n \\times$ termo central. Evita calcular $a_1$ e $r$.",
+      "A soma infinita da PG só existe se $|q|<1$.",
+      "Três termos em PA: $(x-r,\\,x,\\,x+r)$. Três termos em PG: $(x/q,\\,x,\\,xq)$.",
+      "Juros simples formam uma PA; juros compostos formam uma PG de razão $1+i$."
+    ],
+    "formulas": [
+      {
+        "nome": "Termo geral da PA",
+        "expressao": "$a_n = a_1 + (n-1)\\,r$ e $a_n = a_k + (n-k)\\,r$",
+        "quando_usar": "Achar um termo distante ou a posição de um valor. A segunda forma serve quando se conhece um termo que não é o primeiro."
+      },
+      {
+        "nome": "Soma dos n primeiros termos da PA",
+        "expressao": "$S_n = \\dfrac{n\\,(a_1+a_n)}{2}$",
+        "quando_usar": "Somar termos consecutivos. Se n é ímpar, $S_n = n\\cdot a_{\\text{central}}$."
+      },
+      {
+        "nome": "Propriedade da PA",
+        "expressao": "$a_k = \\dfrac{a_{k-p}+a_{k+p}}{2}$",
+        "quando_usar": "Termos equidistantes de um central, ou três números em PA ($2b=a+c$)."
+      },
+      {
+        "nome": "Termo geral da PG",
+        "expressao": "$a_n = a_1\\,q^{\\,n-1}$ e $a_n = a_k\\,q^{\\,n-k}$",
+        "quando_usar": "Crescimento por fator constante (população, juros compostos, depreciação)."
+      },
+      {
+        "nome": "Propriedade da PG",
+        "expressao": "$b^2 = a\\,c$",
+        "quando_usar": "Três termos consecutivos em PG. Admite $b=\\pm\\sqrt{ac}$, então confira o sinal."
+      },
+      {
+        "nome": "Soma finita da PG",
+        "expressao": "$S_n = a_1\\,\\dfrac{q^n-1}{q-1}$, com $q\\neq 1$",
+        "quando_usar": "Somar n termos de PG. Se $q=1$, $S_n=n\\,a_1$."
+      },
+      {
+        "nome": "Soma infinita da PG",
+        "expressao": "$S_\\infty = \\dfrac{a_1}{1-q}$, com $|q|<1$",
+        "quando_usar": "Processos que se repetem indefinidamente (figuras encaixadas, dízimas periódicas)."
+      },
+      {
+        "nome": "Juros compostos",
+        "expressao": "$M = C\\,(1+i)^t$",
+        "quando_usar": "Montante após t períodos: é o termo $a_{t+1}$ da PG que começa em C."
+      }
+    ],
+    "erros_comuns": [
+      "Usar $n$ no lugar de $n-1$ no termo geral ($a_1+nr$ ou $a_1q^n$).",
+      "Contar mal o número de termos: de $a$ a $b$ com passo $r$ são $\\frac{b-a}{r}+1$ termos, e $a$ e $b$ precisam ser termos de fato (ex.: o primeiro múltiplo de 7 maior que 100 é 105).",
+      "Em problemas de crescimento, confundir 'após t períodos' com o t-ésimo termo: se $a_1$ é o valor inicial, o valor após t períodos é $a_{t+1}$.",
+      "Aplicar $S_\\infty$ sem verificar $|q|<1$.",
+      "Esquecer a condição 'crescente'/'decrescente' e ficar com as duas soluções de $r$ ou $q$.",
+      "Em figuras semelhantes, usar a razão das áreas como razão dos perímetros: a razão das áreas é o quadrado da razão linear.",
+      "Racionalizar errado ao simplificar $\\frac{a}{b-\\sqrt c}$: o conjugado de $b-\\sqrt c$ é $b+\\sqrt c$."
+    ],
+    "como_a_unicamp_cobra": "Nas questões de referência abaixo, PA e PG quase nunca aparecem 'secas'. O padrão observado: (1) montar a sequência a partir de um padrão visual (camadas de um mosaico, Unicamp 2011) e aplicar o termo geral; (2) usar propriedades para fugir da conta (soma de 13 termos em PA que leva direto ao termo central, Unicamp 2015); (3) combinar PG com geometria ou trigonometria (lados de um pentágono em PG, Unicamp 2019). Em todos os casos o ganho de tempo está em reconhecer a estrutura antes de calcular. Para a 2ª fase (dissertativa), treine justificar o tipo de sequência e a razão por escrito."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "PA: definição e termo geral",
+      "explicacao": "Sequência em que a diferença entre termos consecutivos é uma constante $r$ (razão). É crescente se $r>0$, decrescente se $r<0$ e constante se $r=0$. O termo geral é $a_n=a_1+(n-1)r$: do 1º ao n-ésimo termo há $n-1$ passos.",
+      "exemplo": "Na PA $(5,9,13,\\dots)$, $r=4$ e $a_{40}=5+39\\cdot 4=161$.",
+      "dica_de_prova": "Pense em 'contar passos': entre $a_k$ e $a_n$ há $n-k$ passos, então $a_n=a_k+(n-k)r$. Funciona mesmo sem conhecer $a_1$."
+    },
+    {
+      "id": "c2",
+      "nome": "Propriedades da PA",
+      "explicacao": "Cada termo é a média aritmética dos vizinhos: $2b=a+c$. A soma de termos equidistantes dos extremos é constante: $a_1+a_n=a_2+a_{n-1}=\\cdots$. Três termos em PA podem ser escritos como $(x-r,x,x+r)$, o que elimina uma incógnita quando a soma é dada.",
+      "exemplo": "Três números em PA com soma 21: $(x-r)+x+(x+r)=3x=21$, logo $x=7$ (o termo do meio).",
+      "dica_de_prova": "Se o enunciado dá a soma de três (ou cinco) termos consecutivos, use $x-r,x,x+r$ (ou $x-2r,\\dots,x+2r$): a soma já entrega o termo central."
+    },
+    {
+      "id": "c3",
+      "nome": "Soma dos termos da PA",
+      "explicacao": "$S_n=\\frac{n(a_1+a_n)}{2}$. A ideia de Gauss: somar a sequência com ela mesma invertida produz $n$ parcelas iguais a $a_1+a_n$. Se $n$ é ímpar, $S_n=n\\cdot a_{\\text{central}}$.",
+      "exemplo": "$1+2+\\cdots+100=\\frac{100\\cdot101}{2}=5050$.",
+      "dica_de_prova": "Quando o enunciado dá a soma e o número (ímpar) de termos, o termo central sai por divisão simples (caso da Unicamp 2015)."
+    },
+    {
+      "id": "c4",
+      "nome": "PG: definição, termo geral e classificação",
+      "explicacao": "Sequência em que o quociente entre termos consecutivos é uma constante $q$ (razão). $a_n=a_1q^{n-1}$. Com $a_1>0$: $q>1$ dá PG crescente, $0<q<1$ decrescente, $q<0$ oscilante (alternante) e $q=1$ constante.",
+      "exemplo": "Na PG $(3,6,12,\\dots)$, $q=2$ e $a_8=3\\cdot2^7=384$.",
+      "dica_de_prova": "Se o termo inicial é o valor no instante 0, o valor após t períodos é $a_1q^{t}$ (é o termo de posição $t+1$)."
+    },
+    {
+      "id": "c5",
+      "nome": "Propriedades da PG",
+      "explicacao": "Cada termo é a média geométrica dos vizinhos: $b^2=ac$. O produto de termos equidistantes dos extremos é constante: $a_1a_n=a_2a_{n-1}=\\cdots$. Três termos em PG podem ser escritos como $(x/q,x,xq)$, com produto $x^3$.",
+      "exemplo": "Se $(x-3,\\,x,\\,x+6)$ é PG, então $x^2=(x-3)(x+6)$, logo $3x=18$ e $x=6$.",
+      "dica_de_prova": "$b^2=ac$ vale com sinais livres: $b=\\pm\\sqrt{ac}$. Confira se o enunciado impõe termos positivos ou razão positiva."
+    },
+    {
+      "id": "c6",
+      "nome": "Soma finita da PG",
+      "explicacao": "$S_n=a_1\\frac{q^n-1}{q-1}$ para $q\\neq1$. Dedução: $S_n-qS_n=a_1-a_1q^n$.",
+      "exemplo": "$1+2+4+\\cdots+2^9=\\frac{2^{10}-1}{2-1}=1023$.",
+      "dica_de_prova": "Se $|q|<1$, a forma $a_1\\frac{1-q^n}{1-q}$ evita sinais negativos e costuma poupar erro de conta."
+    },
+    {
+      "id": "c7",
+      "nome": "Soma infinita da PG",
+      "explicacao": "Se $|q|<1$, $q^n\\to0$ e $S_\\infty=\\frac{a_1}{1-q}$. Se $|q|\\ge1$ a soma não converge. Aparece em figuras que se repetem indefinidamente e em dízimas periódicas.",
+      "exemplo": "$0{,}333\\ldots=\\frac{3}{10}+\\frac{3}{100}+\\cdots=\\frac{3/10}{1-1/10}=\\frac13$.",
+      "dica_de_prova": "Em figuras encaixadas, a razão linear $k$ leva a razão $k^2$ nas áreas e $k$ nos perímetros. Defina primeiro qual grandeza está sendo somada."
+    },
+    {
+      "id": "c8",
+      "nome": "Modelagem: linear × exponencial",
+      "explicacao": "PA é a versão discreta da função afim (aumento fixo por período, juros simples). PG é a versão discreta da exponencial (aumento percentual fixo, juros compostos, $M=C(1+i)^t$). Uma PG com $q>1$ sempre acaba ultrapassando qualquer PA crescente, embora possa começar abaixo dela.",
+      "exemplo": "Salário inicial de R$ 3.000: +R$ 150 por mês (PA) ou +4% por mês (PG de razão 1,04). No início a PA ganha, mas depois a PG ultrapassa.",
+      "dica_de_prova": "Palavras-chave: 'a mais' / 'a cada' com valor fixo indica PA; 'por cento' / 'dobra' / 'triplica' indica PG. Defina se $a_1$ é o instante 0 ou o 1º período."
+    },
+    {
+      "id": "c9",
+      "nome": "PA e PG combinadas",
+      "explicacao": "Logaritmo transforma PG em PA ($\\log a_{n+1}-\\log a_n=\\log q$) e exponencial transforma PA em PG. Questões que combinam as duas pedem um sistema com os termos igualados: escreva cada termo em função de $r$ ou $q$ e resolva.",
+      "exemplo": "Se $(a_n)$ é PG de razão 4 e $a_1=2$, então $b_n=\\log_2 a_n=2n-1$ é PA de razão 2.",
+      "dica_de_prova": "Em 'somando/subtraindo valores aos termos da PA obtém-se uma PG', use $x-r,x,x+r$ e aplique $b^2=ac$ aos novos termos."
+    }
+  ],
+  "questoes_vestibular_referencia": [
+    {
+      "id": "r1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2011,
+      "fase": "1ª fase",
+      "numero": "Q26",
+      "assunto": "PA em padrão visual de camadas",
+      "o_que_cobra": "Mosaico com 4 ladrilhos cinza no centro, envolvidos por camadas que alternam brancos e cinza. Pede o número de ladrilhos da 10ª camada cinza. As camadas cinza formam uma PA e basta achar a razão e aplicar o termo geral.",
+      "link": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=148925&vestibular=unicamp&ano=2011&prova_vestibular_id=10848"
+    },
+    {
+      "id": "r2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2015,
+      "fase": "1ª fase (inferida; a fonte só indica o vestibular)",
+      "numero": null,
+      "assunto": "PA: soma dos termos e termo central",
+      "o_que_cobra": "Sequência em PA de 13 termos com soma dada; pede o 7º termo. É o termo central, então a soma dividida por 13 resolve sem achar $a_1$ nem $r$.",
+      "link": "https://www.blogdovestibular.com/questoes/questao-comentada-progressao-aritmetica-unicamp-2015.html"
+    },
+    {
+      "id": "r3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2019,
+      "fase": "1ª fase",
+      "numero": "Q67",
+      "assunto": "PG combinada com trigonometria",
+      "o_que_cobra": "Pentágono em que quatro lados consecutivos formam uma PG de razão $q>1$. Pede a tangente de um ângulo da figura. Exige construir um triângulo retângulo com diferenças de lados e escrever tudo em função de $a$ e $q$.",
+      "link": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=7704521&vestibular=unicamp&ano=2019&prova_vestibular_id=368003"
+    },
+    {
+      "id": "r4",
+      "instituicao": "Fuvest",
+      "ano": 2005,
+      "fase": "não informada na fonte",
+      "numero": null,
+      "assunto": "PA que vira PG ao somar valores aos termos",
+      "o_que_cobra": "Três números positivos em PA com soma dada; ao somar valores diferentes a cada termo, obtêm-se três números em PG. Pede um dos termos da PA. Combina $x-r,x,x+r$ com $b^2=ac$.",
+      "link": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/progressoes.php"
+    },
+    {
+      "id": "r5",
+      "instituicao": "Fuvest",
+      "ano": 2020,
+      "fase": "não informada na fonte",
+      "numero": null,
+      "assunto": "PA em contexto físico (soma de circunferências)",
+      "o_que_cobra": "Rolo de fita crepe em que o raio aumenta a cada volta pela espessura da fita. Pede o comprimento total, que é a soma de circunferências com raios em PA.",
+      "link": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/progressoes.php"
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "r2",
+      "dificuldade": "facil",
+      "conceitos": [
+        "c2",
+        "c3"
+      ],
+      "enunciado": "Se $(a_1, a_2, \\dots, a_{11})$ é uma progressão aritmética cuja soma dos termos é 154, então $a_6$ é igual a:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "7"
+        },
+        {
+          "letra": "B",
+          "texto": "14"
+        },
+        {
+          "letra": "C",
+          "texto": "28"
+        },
+        {
+          "letra": "D",
+          "texto": "77"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Com 11 termos (número ímpar), $a_6$ é o termo central e $a_1+a_{11}=2a_6$. Então $S_{11}=\\frac{11(a_1+a_{11})}{2}=11\\,a_6$ e $a_6=\\frac{154}{11}=14$. Armadilhas: 28 é $a_1+a_{11}$ (esquecer de dividir por 2); 7 é a divisão por 2 aplicada duas vezes; 77 é $S/2$."
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c1"
+      ],
+      "enunciado": "Qual é o 40º termo da progressão aritmética $(5, 9, 13, \\dots)$?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "156"
+        },
+        {
+          "letra": "B",
+          "texto": "160"
+        },
+        {
+          "letra": "C",
+          "texto": "161"
+        },
+        {
+          "letra": "D",
+          "texto": "165"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "$r=4$ e $a_{40}=a_1+39r=5+156=161$. Armadilhas: 156 esquece o $a_1$; 160 usa $nr$; 165 usa $a_1+nr$ (n no lugar de n−1)."
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "r1",
+      "dificuldade": "media",
+      "conceitos": [
+        "c1",
+        "c8"
+      ],
+      "enunciado": "Em um anfiteatro, a 1ª fileira tem 8 lugares e cada fileira seguinte tem 12 lugares a mais que a anterior. Quantos lugares tem a 15ª fileira?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "164"
+        },
+        {
+          "letra": "B",
+          "texto": "176"
+        },
+        {
+          "letra": "C",
+          "texto": "180"
+        },
+        {
+          "letra": "D",
+          "texto": "188"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "O número de lugares forma uma PA com $a_1=8$ e $r=12$. Então $a_{15}=8+14\\cdot12=176$. Armadilhas: 164 é $a_{14}$; 180 é $15\\cdot12$ (esquece o $a_1$); 188 é $8+15\\cdot12$ (n no lugar de n−1)."
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c1",
+        "c3"
+      ],
+      "enunciado": "Qual é a soma de todos os múltiplos de 7 compreendidos entre 100 e 500?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "16 856"
+        },
+        {
+          "letra": "B",
+          "texto": "17 157"
+        },
+        {
+          "letra": "C",
+          "texto": "17 458"
+        },
+        {
+          "letra": "D",
+          "texto": "17 100"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Os múltiplos formam uma PA de razão 7. O primeiro é $105=7\\cdot15$ e o último é $497=7\\cdot71$. Número de termos: $71-15+1=57$. Soma: $S=\\frac{57\\,(105+497)}{2}=57\\cdot301=17\\,157$. Armadilhas: 17 100 usa 100 e 500 como extremos, que não são múltiplos de 7; 16 856 e 17 458 erram a contagem em um termo (56 ou 58)."
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c4",
+        "c8"
+      ],
+      "enunciado": "Uma cultura começa com 500 bactérias e a população dobra a cada hora. Quantas bactérias haverá após 8 horas?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "4 000"
+        },
+        {
+          "letra": "B",
+          "texto": "64 000"
+        },
+        {
+          "letra": "C",
+          "texto": "128 000"
+        },
+        {
+          "letra": "D",
+          "texto": "256 000"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "A população forma uma PG de razão 2 com valor inicial 500 (instante 0). Após 8 horas é o 9º termo: $500\\cdot2^8=128\\,000$. Armadilhas: 64 000 usa $2^7$ (trata como 8º termo); 256 000 usa $2^9$; 4 000 é $500\\cdot8$ (raciocina como PA)."
+    },
+    {
+      "id": "q6",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c1",
+        "c4",
+        "c8"
+      ],
+      "enunciado": "Duas empresas oferecem a um recém-formado o mesmo salário inicial de R$ 3.000,00. Na empresa A, o salário aumenta R$ 150,00 a cada mês. Na empresa B, aumenta 4% a cada mês sobre o salário do mês anterior.\n\n(a) Escreva o termo geral do salário do n-ésimo mês em cada empresa e diga qual tipo de progressão cada um forma.\n(b) Calcule o salário do 6º mês em A e em B. Use $1{,}04^5 \\approx 1{,}2167$.\n(c) Sabendo que $1{,}04^{11}\\approx1{,}5395$ e $1{,}04^{12}\\approx1{,}6010$, determine o primeiro mês em que o salário de B supera o de A.",
+      "alternativas": null,
+      "gabarito": "(a) A: PA, $A_n=3000+150(n-1)$. B: PG de razão 1,04, $B_n=3000\\cdot1{,}04^{\\,n-1}$. (b) $A_6=3000+5\\cdot150=\\text{R\\$ }3.750{,}00$; $B_6\\approx3000\\cdot1{,}2167\\approx\\text{R\\$ }3.650{,}00$. (c) 13º mês.",
+      "resolucao": "(a) O aumento fixo de R$ 150 forma uma PA de razão 150: $A_n=3000+150(n-1)$. O aumento de 4% multiplica o salário por 1,04 a cada mês, o que forma uma PG de razão 1,04: $B_n=3000\\cdot1{,}04^{n-1}$.\n(b) $A_6=3000+5\\cdot150=3750$. $B_6=3000\\cdot1{,}04^5\\approx3000\\cdot1{,}2167\\approx3650$. No 6º mês A ainda paga mais.\n(c) No 12º mês: $A_{12}=3000+11\\cdot150=4650$ e $B_{12}\\approx3000\\cdot1{,}5395=4618{,}50$, então B ainda é menor. No 13º mês: $A_{13}=3000+12\\cdot150=4800$ e $B_{13}\\approx3000\\cdot1{,}6010=4803$, então B já supera A. Para garantir que B não passou A antes, note que $B_n-A_n$ é (exponencial menos reta), logo convexa. Ela vale 0 em $n=1$ e é negativa em $n=2$ (3.120 contra 3.150), portanto só pode trocar de sinal uma vez. A troca ocorre entre o 12º e o 13º mês."
+    },
+    {
+      "id": "q7",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c1",
+        "c3",
+        "c4",
+        "c9"
+      ],
+      "enunciado": "Seja $(a_n)$ uma progressão geométrica com $a_1=2$ e razão $q=4$. Defina $b_n=\\log_2 a_n$.\n\n(a) Mostre que $(b_n)$ é uma progressão aritmética e determine seu primeiro termo e sua razão.\n(b) Calcule $b_1+b_2+\\cdots+b_{10}$.",
+      "alternativas": null,
+      "gabarito": "(a) $b_n=2n-1$: PA com $b_1=1$ e razão 2. (b) 100.",
+      "resolucao": "(a) $a_n=2\\cdot4^{n-1}=2\\cdot2^{2(n-1)}=2^{2n-1}$. Então $b_n=\\log_2 2^{2n-1}=2n-1$. Como $b_{n+1}-b_n=2$ é constante, $(b_n)$ é PA com $b_1=1$ e $r=2$. (Em geral, $\\log a_{n+1}-\\log a_n=\\log\\frac{a_{n+1}}{a_n}=\\log q$ é constante, e isso vale para qualquer PG de termos positivos.)\n(b) $b_{10}=19$ e $S_{10}=\\frac{10(1+19)}{2}=100$."
+    },
+    {
+      "id": "q8",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "r4",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c2",
+        "c5",
+        "c9"
+      ],
+      "enunciado": "Três números, em progressão aritmética crescente, têm soma 15. Somando-se 1, 1 e 2, respectivamente, ao primeiro, ao segundo e ao terceiro desses números, obtêm-se três números em progressão geométrica. O maior dos três números originais é:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "5"
+        },
+        {
+          "letra": "B",
+          "texto": "6"
+        },
+        {
+          "letra": "C",
+          "texto": "7"
+        },
+        {
+          "letra": "D",
+          "texto": "8"
+        },
+        {
+          "letra": "E",
+          "texto": "9"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "Escreva a PA como $(5-r,\\,5,\\,5+r)$: a soma $3x=15$ dá $x=5$. Após as somas, ficam $(6-r,\\,6,\\,7+r)$, que é PG: $6^2=(6-r)(7+r)\\Rightarrow36=42-r-r^2\\Rightarrow r^2+r-6=0$, logo $r=2$ ou $r=-3$. Como a PA é crescente, $r=2$: PA $(3,5,7)$ e PG $(4,6,9)$, de razão $3/2$. O maior número original é 7. Armadilhas: 8 vem de $r=-3$ (PA $(8,5,2)$, que é decrescente); 9 é o maior termo da PG, não da PA original."
+    },
+    {
+      "id": "q9",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "r3",
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c5",
+        "c7"
+      ],
+      "enunciado": "Em um quadrado de lado 4 cm, unem-se os pontos médios de lados consecutivos, obtendo-se um segundo quadrado. O processo é repetido indefinidamente em cada novo quadrado. A soma dos perímetros de todos os quadrados assim obtidos, incluindo o primeiro, é, em cm:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "32"
+        },
+        {
+          "letra": "B",
+          "texto": "$16\\sqrt{2}$"
+        },
+        {
+          "letra": "C",
+          "texto": "$32+16\\sqrt{2}$"
+        },
+        {
+          "letra": "D",
+          "texto": "64"
+        },
+        {
+          "letra": "E",
+          "texto": "$32-16\\sqrt{2}$"
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "Se o quadrado externo tem lado $\\ell$, o quadrado formado pelos pontos médios tem lado igual à hipotenusa de um triângulo retângulo de catetos $\\ell/2$, ou seja, $\\ell\\sqrt2/2$. Logo os perímetros formam uma PG com $a_1=16$ e $q=\\frac{\\sqrt2}{2}<1$. Soma infinita: $S=\\frac{16}{1-\\frac{\\sqrt2}{2}}=\\frac{32}{2-\\sqrt2}=\\frac{32(2+\\sqrt2)}{2}=32+16\\sqrt2$. Armadilhas: 32 usa $q=\\frac12$, que é a razão das áreas e não dos perímetros; $32-16\\sqrt2$ resulta de multiplicar pelo conjugado errado."
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c1",
+        "c3",
+        "c4",
+        "c6",
+        "c9"
+      ],
+      "enunciado": "Uma progressão aritmética crescente $(a_n)$ e uma progressão geométrica $(b_n)$ têm ambas o primeiro termo igual a 1. Sabe-se que os segundos termos coincidem ($a_2=b_2$) e que o quinto termo da PA coincide com o terceiro termo da PG ($a_5=b_3$).\n\n(a) Determine a razão $r$ da PA, a razão $q$ da PG e os termos gerais de cada uma.\n(b) Calcule a soma dos 10 primeiros termos de cada progressão.\n(c) Determine o menor número $n$ de termos para o qual a soma dos $n$ primeiros termos da PG ultrapassa 1000.",
+      "alternativas": null,
+      "gabarito": "(a) $r=2$, $q=3$, $a_n=2n-1$, $b_n=3^{n-1}$. (b) PA: 100; PG: 29 524. (c) $n=7$.",
+      "resolucao": "(a) $a_2=1+r$ e $b_2=q$, então $q=1+r$. Além disso $a_5=1+4r$ e $b_3=q^2=(1+r)^2$. Igualando: $1+4r=1+2r+r^2\\Rightarrow r^2-2r=0\\Rightarrow r=0$ ou $r=2$. Como a PA é crescente, $r=2$ e $q=3$. Termos gerais: $a_n=1+2(n-1)=2n-1$ e $b_n=3^{n-1}$.\n(b) PA: $S_{10}=\\frac{10(1+19)}{2}=100$. PG: $S_{10}=\\frac{3^{10}-1}{3-1}=\\frac{59049-1}{2}=29\\,524$.\n(c) $S_n=\\frac{3^n-1}{2}>1000\\Rightarrow3^n>2001$. Como $3^6=729$ e $3^7=2187$, o menor $n$ é 7 (conferência: $S_6=364$ e $S_7=1093$)."
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Elite Campinas: resolução da Q26 da 1ª fase da Unicamp 2011 (mosaico)",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=148925&vestibular=unicamp&ano=2011&prova_vestibular_id=10848"
+    },
+    {
+      "titulo": "Elite Campinas: resolução da Q67 da 1ª fase da Unicamp 2019 (pentágono e PG)",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=7704521&vestibular=unicamp&ano=2019&prova_vestibular_id=368003"
+    },
+    {
+      "titulo": "Blog do Vestibular: questão comentada sobre PA, Unicamp 2015",
+      "url": "https://www.blogdovestibular.com/questoes/questao-comentada-progressao-aritmetica-unicamp-2015.html"
+    },
+    {
+      "titulo": "Projeto Agatha: questões da Fuvest sobre progressões",
+      "url": "https://projetoagathaedu.com.br/questoes-fuvest/matematica/progressoes.php"
+    },
+    {
+      "titulo": "Blog do Enem: Progressão Aritmética, aula de revisão (enunciado do mosaico)",
+      "url": "https://blogdoenem.com.br/progressao-aritmetica-aula-de-revisao-para-matematica-enem/"
+    }
+  ]
+}

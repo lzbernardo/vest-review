@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Citologia e bioenergética",
+    "disciplina": "Biologia",
+    "subtopicos": [
+      "Células procarionte e eucarionte; animal e vegetal",
+      "Membrana plasmática e transporte",
+      "Organelas e origem endossimbiótica",
+      "Enzimas e ATP",
+      "Respiração celular aeróbia",
+      "Fermentação",
+      "Fotossíntese: fase clara e ciclo de Calvin",
+      "Balanço entre fotossíntese e respiração"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "A célula é uma máquina que converte energia: a fotossíntese capta luz e armazena em glicose; a respiração (ou a fermentação) extrai essa energia na forma de ATP, tudo mediado por enzimas e compartimentado em organelas e membranas.",
+    "pontos_chave": [
+      "Procariontes não têm núcleo nem organelas membranosas; eucariontes têm. Mitocôndrias e cloroplastos têm dupla membrana, DNA circular próprio e ribossomos do tipo bacteriano (base da teoria endossimbiótica).",
+      "Transporte passivo (difusão simples, difusão facilitada, osmose) não gasta ATP e ocorre a favor do gradiente; transporte ativo gasta ATP e ocorre contra o gradiente (ex.: bomba de sódio e potássio).",
+      "Enzimas são catalisadores biológicos, em geral proteínas, específicos para o substrato; diminuem a energia de ativação, não alteram o equilíbrio e sofrem desnaturação com temperatura ou pH extremos.",
+      "Respiração aeróbia: glicólise (citosol) → ciclo de Krebs (matriz mitocondrial) → cadeia respiratória e fosforilação oxidativa (cristas mitocondriais). O O2 é o aceptor final de elétrons e forma H2O.",
+      "Fermentação: só glicólise + regeneração do NAD+; saldo de 2 ATP por glicose, contra cerca de 30 a 32 na respiração aeróbia.",
+      "Fotossíntese: fase clara (tilacoides) produz ATP, NADPH e O2 a partir da fotólise da água; fase escura ou ciclo de Calvin (estroma) fixa CO2 e usa ATP e NADPH para produzir açúcares.",
+      "O O2 liberado na fotossíntese vem da água, não do CO2. O carbono do CO2 vai parar na glicose.",
+      "Fotossíntese líquida = fotossíntese bruta − respiração. No ponto de compensação luminosa, os dois processos se igualam e o saldo de trocas gasosas é zero."
+    ],
+    "formulas": [
+      {
+        "nome": "Respiração aeróbia (resumo)",
+        "expressao": "$C_6H_{12}O_6 + 6\\,O_2 \\rightarrow 6\\,CO_2 + 6\\,H_2O + \\text{energia (cerca de 30 a 32 ATP)}$",
+        "quando_usar": "Para balanço de matéria e de energia; comparar rendimento com a fermentação."
+      },
+      {
+        "nome": "Fotossíntese (resumo)",
+        "expressao": "$6\\,CO_2 + 12\\,H_2O \\xrightarrow{\\text{luz}} C_6H_{12}O_6 + 6\\,O_2 + 6\\,H_2O$",
+        "quando_usar": "Em questões sobre a origem do O2 (a água é o doador de elétrons) e marcação isotópica."
+      },
+      {
+        "nome": "Fermentação alcoólica",
+        "expressao": "$C_6H_{12}O_6 \\rightarrow 2\\,C_2H_5OH + 2\\,CO_2 + 2\\,ATP$",
+        "quando_usar": "Leveduras, pães, bebidas e biocombustível."
+      },
+      {
+        "nome": "Fermentação lática",
+        "expressao": "$C_6H_{12}O_6 \\rightarrow 2\\,C_3H_6O_3 + 2\\,ATP$",
+        "quando_usar": "Iogurte, músculo em esforço intenso sem oxigênio suficiente."
+      },
+      {
+        "nome": "Fotossíntese líquida",
+        "expressao": "$P_{\\text{líquida}} = P_{\\text{bruta}} - R$",
+        "quando_usar": "Interpretar gráficos de CO2 ou O2 em função da luz, do horário ou da estação."
+      }
+    ],
+    "erros_comuns": [
+      "Dizer que a fotossíntese ocorre só em plantas: algas e cianobactérias também fazem, e plantas respiram o tempo todo, inclusive de dia.",
+      "Achar que o O2 da fotossíntese vem do CO2.",
+      "Confundir fase clara (precisa de luz, ocorre nos tilacoides) com fase escura (não usa luz diretamente, mas depende de ATP e NADPH da fase clara; ocorre no estroma).",
+      "Esquecer que a glicólise ocorre no citosol e independe de O2, enquanto Krebs e cadeia respiratória ocorrem na mitocôndria.",
+      "Trocar hipotônico e hipertônico: o meio hipotônico tem menos soluto que a célula, então a água entra.",
+      "Dizer que enzima 'morre' com o calor: ela desnatura (perde a conformação do sítio ativo).",
+      "Ignorar o contexto da questão (planta CAM, anaerobiose, cadeia respiratória com arsênio): a banca costuma pedir raciocínio aplicado, não só a definição."
+    ],
+    "como_a_unicamp_cobra": "Nas questões indexadas, a Comvest raramente pede definição solta. Ela parte de um contexto (planta CAM, floresta úmida e seca, antibiótico que age no ribossomo, micro-organismo que usa arsênio na respiração) e exige aplicar o conceito: quem doa e quem recebe elétrons na fase clara (2023), quando a planta respira e quando fotossintetiza (2018), balanço entre fotossíntese e respiração em duas florestas (2ª fase 2018). Há também questões interdisciplinares (Biologia com Química ou com Inglês). Na 2ª fase, espere justificativas curtas em itens (a) e (b). Uma análise do Estratégia aponta citologia entre os temas mais recorrentes de Biologia na Unicamp, logo depois de ecologia."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Tipos de célula: procarionte, eucarionte, animal e vegetal",
+      "explicacao": "Procariontes (bactérias e arqueas) não têm núcleo delimitado por carioteca nem organelas membranosas; o material genético fica no nucleoide e os ribossomos são do tipo 70S. Eucariontes têm núcleo e organelas. Células vegetais típicas têm parede celular de celulose, vacúolo central grande e cloroplastos; células animais têm centríolos e lisossomos bem desenvolvidos e não têm parede.",
+      "exemplo": "Uma célula do mesofilo foliar tem cloroplastos, parede celular e vacúolo central; uma hemácia humana madura nem núcleo tem.",
+      "dica_de_prova": "Questões do tipo 'estruturas presentes em vegetais e ausentes em animais' pedem parede celular, plastos e vacúolo central; cuidado com centríolos, que as angiospermas não têm.",
+      "imagens": ["i1", "i2"]
+    },
+    {
+      "id": "c2",
+      "nome": "Membrana plasmática e transporte",
+      "explicacao": "Modelo do mosaico fluido: bicamada de fosfolipídios com proteínas e colesterol. Difusão simples (a favor do gradiente, moléculas pequenas e apolares), difusão facilitada (por proteínas carreadoras ou canais, sem gasto de ATP), osmose (difusão de água pela membrana, do meio hipotônico para o hipertônico) e transporte ativo (contra o gradiente, com gasto de ATP, como a bomba de sódio e potássio). Endocitose e exocitose movimentam partículas maiores em vesículas.",
+      "exemplo": "Hemácia em água destilada: o meio é hipotônico, a água entra por osmose e a célula pode romper (hemólise). Em solução hipertônica ela murcha (crenação).",
+      "dica_de_prova": "Em gráficos de concentração, a direção do transporte é o que diferencia passivo de ativo; se vai contra o gradiente, há gasto de energia.",
+      "imagens": ["i4"]
+    },
+    {
+      "id": "c3",
+      "nome": "Organelas e origem endossimbiótica",
+      "explicacao": "Retículo endoplasmático rugoso (síntese de proteínas para exportação ou membrana) e liso (lipídios, detoxificação); complexo golgiense (modificação, empacotamento e secreção); lisossomos (digestão intracelular); ribossomos (tradução); mitocôndrias (respiração aeróbia); cloroplastos (fotossíntese). Mitocôndrias e cloroplastos têm dupla membrana, DNA circular e ribossomos parecidos com os bacterianos, e se dividem por conta própria, o que sustenta a teoria endossimbiótica.",
+      "exemplo": "Células de tecidos com alta demanda de energia, como o músculo cardíaco, têm muitas mitocôndrias. Tecidos de crescimento intenso em plantas (meristemas) também têm bastante atividade respiratória.",
+      "dica_de_prova": "Dupla membrana + DNA próprio é a pista clássica para identificar mitocôndria ou plasto numa questão-descrição.",
+      "imagens": ["i1"]
+    },
+    {
+      "id": "c4",
+      "nome": "Enzimas e ATP",
+      "explicacao": "Enzimas reduzem a energia de ativação ligando-se ao substrato no sítio ativo (modelo chave-fechadura ou ajuste induzido) e saem inalteradas da reação. Temperatura e pH ótimos maximizam a velocidade; fora deles a enzima desnatura. Inibidores competitivos disputam o sítio ativo com o substrato. O ATP é a moeda energética: a hidrólise do fosfato terminal libera energia usada em trabalho celular.",
+      "exemplo": "Amilase salivar tem pH ótimo próximo do neutro e perde atividade no estômago ácido. Pepsina faz o contrário.",
+      "dica_de_prova": "Em gráfico de velocidade × temperatura, a queda brusca após o ótimo é desnaturação, não 'consumo' da enzima.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Respiração celular aeróbia",
+      "explicacao": "Glicólise (citosol): glicose → 2 piruvatos, saldo de 2 ATP e 2 NADH. Piruvato entra na mitocôndria, vira acetil-CoA e alimenta o ciclo de Krebs (matriz), que libera CO2 e reduz NAD+ e FAD. Na cadeia respiratória (membrana interna, cristas), os elétrons de NADH e FADH2 passam por complexos proteicos e chegam ao O2, formando H2O; o gradiente de prótons move a ATP sintase (fosforilação oxidativa). Rendimento estimado atual: cerca de 30 a 32 ATP por glicose (livros mais antigos citam 36 a 38).",
+      "exemplo": "Na intoxicação por cianeto, a cadeia respiratória é bloqueada, as células deixam de produzir ATP em quantidade suficiente mesmo com O2 disponível.",
+      "dica_de_prova": "Se a questão troca o aceptor final de elétrons (arsênio, nitrato, sulfato no lugar de O2), é respiração anaeróbia, que ainda tem cadeia transportadora, e não fermentação.",
+      "imagens": []
+    },
+    {
+      "id": "c6",
+      "nome": "Fermentação",
+      "explicacao": "Sem O2 (ou sem cadeia respiratória), a célula faz só a glicólise e regenera NAD+ reduzindo o piruvato ou derivados. Fermentação alcoólica (leveduras): etanol + CO2. Fermentação lática (bactérias lácticas, músculo): ácido lático. Saldo: 2 ATP por glicose, muito menos que a respiração aeróbia.",
+      "exemplo": "Levedura em anaerobiose consome bem mais glicose para obter a mesma quantidade de ATP (efeito Pasteur). O CO2 liberado faz a massa de pão crescer.",
+      "dica_de_prova": "Fermentação não tem cadeia transportadora de elétrons nem aceptor final inorgânico; o aceptor final é um composto orgânico.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Fotossíntese: fase clara",
+      "explicacao": "Ocorre nos tilacoides. A clorofila absorve luz no fotossistema II, a água sofre fotólise (doa elétrons e libera O2 e H+), os elétrons passam por uma cadeia transportadora até o fotossistema I e chegam ao NADP+, formando NADPH. O bombeamento de H+ para o lúmen do tilacoide gera gradiente que move a ATP sintase (fotofosforilação). Produtos: ATP, NADPH e O2.",
+      "exemplo": "Doador primário de elétrons: água. Aceptor final: NADP+ (vira NADPH).",
+      "dica_de_prova": "Questão de 2023 da 1ª fase pediu exatamente quem doa os primeiros elétrons e quem recebe os últimos. Gravar: doador = H2O, aceptor final = NADP+.",
+      "imagens": ["i3"]
+    },
+    {
+      "id": "c8",
+      "nome": "Fotossíntese: ciclo de Calvin e fatores limitantes",
+      "explicacao": "No estroma, a enzima rubisco fixa CO2 numa molécula de cinco carbonos (RuBP). Os compostos formados são reduzidos com ATP e NADPH da fase clara, produzindo gliceraldeído-3-fosfato, que origina glicose, amido e outras moléculas, e regenera RuBP. A taxa fotossintética depende de luz, CO2, temperatura e água. Plantas C4 e CAM têm adaptações para reduzir perdas de água e a fotorrespiração: C4 separa as etapas no espaço; CAM separa no tempo (estômatos abertos à noite, CO2 estocado como ácido málico).",
+      "exemplo": "Cactos e crassuláceas (CAM): fixam CO2 à noite e usam o CO2 estocado de dia para o ciclo de Calvin, com estômatos fechados.",
+      "dica_de_prova": "Em plantas CAM, a respiração ocorre o tempo todo e a fase clara só ocorre com luz; o que muda é o horário em que o CO2 entra.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Fotossíntese × respiração: balanço e ponto de compensação",
+      "explicacao": "Plantas fazem respiração 24 horas por dia e fotossíntese só com luz. Em baixa luz a respiração supera a fotossíntese e a planta libera CO2 líquido. No ponto de compensação luminosa os dois processos se igualam e a troca líquida de gases é nula. Acima dele há consumo líquido de CO2 e acúmulo de biomassa. Em ecossistemas, a produtividade primária líquida é a bruta menos a respiração dos produtores.",
+      "exemplo": "Gráfico de CO2 numa floresta ao longo do dia: o CO2 sobe à noite (só respiração) e cai durante o dia (fotossíntese maior que respiração).",
+      "dica_de_prova": "Leia o eixo: 'taxa líquida' já desconta a respiração. A bruta é a líquida mais a respiração medida no escuro.",
+      "imagens": []
+    },
+    {
+      "id": "c10",
+      "nome": "Ribossomos e síntese de proteínas",
+      "explicacao": "Os ribossomos traduzem o mRNA em proteína. Procariontes têm ribossomos 70S; o citosol de eucariontes tem 80S. Muitos antibióticos agem nos ribossomos bacterianos porque eles diferem dos humanos. Mitocôndrias têm ribossomos próprios do tipo bacteriano, o que explica alguns efeitos colaterais desses fármacos.",
+      "exemplo": "Antibiótico que bloqueia a tradução em bactérias impede a produção de enzimas e proteínas estruturais essenciais, e a bactéria deixa de crescer ou morre.",
+      "dica_de_prova": "Em questões de antibióticos, o raciocínio é sempre: alvo existe na bactéria e é diferente (ou ausente) na célula humana.",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2023,
+      "fase": "1ª fase",
+      "numero": "Q38",
+      "tipo": "multipla_escolha",
+      "assunto": "Fotossíntese: fase clara e cadeia transportadora de elétrons",
+      "o_que_cobra": "Pede identificar qual substância fornece os primeiros elétrons na etapa luminosa da fotossíntese e qual os recebe no final da cadeia transportadora.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=9497806&vestibular=unicamp&ano=2023&prova_vestibular_id=440025",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/atualidades-e-dicas/17-questoes-sobre-fotossintese-que-ja-cairam-nos-vestibulares-e-enem/",
+      "conceitos": ["c7"]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "1ª fase",
+      "numero": "Q90",
+      "tipo": "multipla_escolha",
+      "assunto": "Metabolismo ácido das crassuláceas (CAM): respiração e fotossíntese",
+      "o_que_cobra": "A partir do metabolismo CAM, pede em quais períodos essas plantas respiram e fotossintetizam, separando o que depende de luz do que ocorre o tempo todo.",
+      "gabarito_oficial": "C",
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_biologia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_biologia.pdf",
+      "conceitos": ["c8", "c9"]
+    },
+    {
+      "id": "x3",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "1ª fase",
+      "numero": "Q83",
+      "tipo": "multipla_escolha",
+      "assunto": "Plastos: destino do excesso de carboidrato produzido na fotossíntese",
+      "o_que_cobra": "Pergunta qual organela assume o papel dos cloroplastos numa planta muito fotossintetizante que não tem órgãos consumidores de açúcar, ou seja, onde o excesso é armazenado como amido.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_biologia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_biologia.pdf",
+      "conceitos": ["c3", "c8"]
+    },
+    {
+      "id": "x4",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "2ª fase",
+      "numero": "Q4",
+      "tipo": "dissertativa",
+      "assunto": "Fotossíntese, respiração e transpiração em florestas",
+      "o_que_cobra": "Compara duas florestas quanto à dependência de água e à produção de biomassa, usando o balanço entre fotossíntese e respiração, e pede prever o efeito de menos chuva sobre o vapor d'água e o CO2 do ar.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "conceitos": ["c8", "c9"]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "2ª fase",
+      "numero": "Q5",
+      "tipo": "dissertativa",
+      "assunto": "Ribossomos, antibiótico e síntese de proteínas",
+      "o_que_cobra": "Pede explicar por que um composto que interfere nos ribossomos atua como antibiótico, o que isso faz com a massa de proteínas das bactérias e como uma enzima que o destrói afeta a sobrevivência de células transgênicas.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "conceitos": ["c10", "c3"]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2018,
+      "fase": "2ª fase",
+      "numero": "Q3",
+      "tipo": "dissertativa",
+      "assunto": "Metabolismo de carboidratos e características celulares do câncer",
+      "o_que_cobra": "Em um item, pede por que excesso de carboidratos leva ao acúmulo de gordura; em outro, o que caracteriza o câncer do ponto de vista celular. É a questão mais periférica ao tema desta lista.",
+      "gabarito_oficial": null,
+      "link_questao": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "link_gabarito": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf",
+      "conceitos": ["c5"]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2017,
+      "fase": "1ª fase",
+      "numero": "Q47",
+      "tipo": "multipla_escolha",
+      "assunto": "Organelas: identificação da mitocôndria por descrição",
+      "o_que_cobra": "Descreve uma organela com dupla membrana, DNA próprio e grande abundância em meristemas vegetais, e pede identificá-la.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=7266429&vestibular=unicamp&ano=2017&prova_vestibular_id=357863",
+      "link_gabarito": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=7266429&vestibular=unicamp&ano=2017&prova_vestibular_id=357863",
+      "conceitos": ["c3"]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2015,
+      "fase": "1ª fase",
+      "numero": "Q43",
+      "tipo": "multipla_escolha",
+      "assunto": "Estruturas de células vegetais",
+      "o_que_cobra": "Pede escolher a alternativa que lista apenas estruturas presentes em vegetais e ausentes em animais.",
+      "gabarito_oficial": "B",
+      "link_questao": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=199567&vestibular=unicamp&ano=2015&prova_vestibular_id=11601",
+      "link_gabarito": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=199567&vestibular=unicamp&ano=2015&prova_vestibular_id=11601",
+      "conceitos": ["c1"]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x8",
+      "dificuldade": "facil",
+      "conceitos": ["c1"],
+      "enunciado": "Considere as estruturas celulares: I. parede celular de celulose; II. centríolos; III. vacúolo central desenvolvido; IV. cloroplastos; V. lisossomos. Quais delas ocorrem em células de uma folha de angiosperma e normalmente NÃO ocorrem em células animais?",
+      "alternativas": [
+        { "letra": "A", "texto": "I e II, apenas." },
+        { "letra": "B", "texto": "I, III e IV, apenas." },
+        { "letra": "C", "texto": "II e V, apenas." },
+        { "letra": "D", "texto": "I, IV e V, apenas." }
+      ],
+      "gabarito": "B",
+      "resolucao": "Parede celular, vacúolo central e cloroplastos são típicos de células vegetais. Centríolos (II) estão presentes em células animais e ausentes em angiospermas: a alternativa A erra por incluí-los. Lisossomos (V) são organelas bem características de células animais, o que derruba a D.",
+      "imagens": ["i1", "i2"]
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": ["c2"],
+      "enunciado": "Uma hemácia humana é colocada em água destilada. O que se espera que aconteça, e por quê?",
+      "alternativas": [
+        { "letra": "A", "texto": "Ela murcha, porque o meio é hipertônico e a água sai da célula." },
+        { "letra": "B", "texto": "Ela incha e pode se romper, porque o meio é hipotônico e a água entra por osmose." },
+        { "letra": "C", "texto": "Ela mantém o volume, porque o meio é isotônico em relação ao citoplasma." },
+        { "letra": "D", "texto": "Ela murcha, porque os sais saem por transporte ativo, com gasto de ATP." }
+      ],
+      "gabarito": "B",
+      "resolucao": "Água destilada não tem solutos, então é hipotônica em relação ao interior da hemácia. A água atravessa a membrana por osmose, do meio menos concentrado para o mais concentrado, a célula incha e pode sofrer hemólise. A alternativa A descreve a situação inversa (solução hipertônica).",
+      "imagens": ["i4"]
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x7",
+      "dificuldade": "media",
+      "conceitos": ["c3"],
+      "enunciado": "A teoria endossimbiótica propõe que mitocôndrias e cloroplastos descendem de bactérias que passaram a viver no interior de células ancestrais. Qual característica dessas organelas é um argumento a favor dessa teoria?",
+      "alternativas": [
+        { "letra": "A", "texto": "Possuem DNA circular e ribossomos semelhantes aos de bactérias e se multiplicam por divisão própria." },
+        { "letra": "B", "texto": "São delimitadas por uma única membrana, derivada do retículo endoplasmático." },
+        { "letra": "C", "texto": "Ocorrem exclusivamente em células eucarióticas animais." },
+        { "letra": "D", "texto": "Todas as suas proteínas são sintetizadas no retículo endoplasmático rugoso." }
+      ],
+      "gabarito": "A",
+      "resolucao": "DNA circular, ribossomos do tipo bacteriano e divisão independente da célula são evidências clássicas de origem bacteriana. B e D contradizem o que se sabe (dupla membrana; ribossomos e DNA próprios). C é falsa: cloroplastos estão em células vegetais e algas, e mitocôndrias em quase todos os eucariontes.",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c4"],
+      "enunciado": "A velocidade de uma reação catalisada por uma enzima humana aumenta com a temperatura até cerca de 37 °C e cai bruscamente quando a temperatura passa de 55 °C. Qual é a melhor explicação para a queda?",
+      "alternativas": [
+        { "letra": "A", "texto": "A energia de ativação da reação aumenta com a temperatura." },
+        { "letra": "B", "texto": "A enzima é desnaturada, o sítio ativo perde a conformação e ela deixa de reconhecer o substrato." },
+        { "letra": "C", "texto": "O substrato é totalmente consumido antes da temperatura chegar a 55 °C." },
+        { "letra": "D", "texto": "A enzima é gasta durante a reação e precisa ser reposta." }
+      ],
+      "gabarito": "B",
+      "resolucao": "Enzimas são proteínas e, em temperaturas elevadas, perdem a estrutura tridimensional (desnaturação), inclusive a do sítio ativo. A enzima não é consumida na reação (D) e a presença dela reduz, não aumenta, a energia de ativação (A). C não explicaria uma queda brusca dependente da temperatura.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c5"],
+      "enunciado": "Na respiração aeróbia de uma célula eucariótica, onde ocorre a maior parte da síntese de ATP e qual é o aceptor final dos elétrons?",
+      "alternativas": [
+        { "letra": "A", "texto": "Membrana interna da mitocôndria (cristas); oxigênio, que forma água." },
+        { "letra": "B", "texto": "Matriz mitocondrial; gás carbônico." },
+        { "letra": "C", "texto": "Citosol; piruvato." },
+        { "letra": "D", "texto": "Membrana externa da mitocôndria; NAD+." }
+      ],
+      "gabarito": "A",
+      "resolucao": "A maior parte do ATP vem da fosforilação oxidativa, na membrana interna (cristas), onde a cadeia respiratória termina no O2, formando H2O. A glicólise (citosol) rende só 2 ATP; o ciclo de Krebs (matriz) gera poucos ATP diretos, mas muitos NADH e FADH2. O piruvato é aceptor final na fermentação lática, não na respiração.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": ["c5", "c6"],
+      "enunciado": "Uma cultura de leveduras (Saccharomyces cerevisiae) cresce em meio com glicose, inicialmente com oxigênio e depois sem oxigênio. (a) Que via metabólica predomina em cada condição e quais são os produtos finais? (b) O consumo de glicose da cultura aumenta, diminui ou se mantém quando o oxigênio acaba? Justifique usando o rendimento energético.",
+      "alternativas": null,
+      "gabarito": "(a) Com O2: respiração aeróbia, produtos CO2 e H2O. Sem O2: fermentação alcoólica, produtos etanol e CO2. (b) O consumo aumenta, porque a fermentação rende só 2 ATP por glicose, contra cerca de 30 a 32 na respiração. Para obter a mesma quantidade de ATP, as leveduras precisam consumir muito mais glicose.",
+      "resolucao": "A razão aproximada é 30 / 2 = 15: para sustentar a mesma demanda de ATP sem O2, a cultura precisaria consumir cerca de 15 vezes mais glicose. O ponto central é comparar o ATP por glicose nas duas vias. Esse aumento de consumo ao suprimir o oxigênio é conhecido como efeito Pasteur.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x1",
+      "dificuldade": "media",
+      "conceitos": ["c7"],
+      "enunciado": "Duas culturas de algas verdes são iluminadas. A cultura 1 recebe água marcada com oxigênio pesado (H2 18O) e CO2 comum. A cultura 2 recebe água comum e CO2 marcado com oxigênio pesado (C18O2). Em qual cultura o gás oxigênio liberado conterá o oxigênio pesado?",
+      "alternativas": [
+        { "letra": "A", "texto": "Apenas na cultura 1." },
+        { "letra": "B", "texto": "Apenas na cultura 2." },
+        { "letra": "C", "texto": "Nas duas, em quantidades iguais." },
+        { "letra": "D", "texto": "Em nenhuma, porque o O2 liberado vem da glicose." }
+      ],
+      "gabarito": "A",
+      "resolucao": "O O2 da fotossíntese vem da fotólise da água na fase clara. Por isso o marcador aparece no O2 apenas quando a água é marcada. O oxigênio do CO2 vai parar na glicose e na água formada no ciclo de Calvin. As alternativas B e D refletem o erro comum de achar que o O2 vem do CO2 ou da glicose.",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x2",
+      "dificuldade": "dificil",
+      "conceitos": ["c8", "c9"],
+      "enunciado": "Plantas CAM abrem os estômatos à noite e fixam CO2 em ácido málico, armazenado no vacúolo. Durante o dia, de estômatos fechados, o ácido é descarboxilado e o CO2 liberado entra no ciclo de Calvin. Qual afirmação descreve corretamente esse tipo de planta?",
+      "alternativas": [
+        { "letra": "A", "texto": "Faz fotossíntese completa à noite, porque é quando absorve CO2." },
+        { "letra": "B", "texto": "Só respira à noite, porque de dia os estômatos estão fechados." },
+        { "letra": "C", "texto": "Absorve CO2 à noite, mas a fase clara só ocorre com luz, fornecendo ATP e NADPH para o ciclo de Calvin durante o dia." },
+        { "letra": "D", "texto": "Dispensa a fase clara, pois o ácido málico fornece a energia necessária ao ciclo de Calvin." }
+      ],
+      "gabarito": "C",
+      "resolucao": "A noite entra o CO2 e ele é estocado, mas sem luz não há ATP nem NADPH, então o ciclo de Calvin não pode ocorrer (A). A respiração acontece o tempo todo, independentemente dos estômatos (B). O ácido málico só fornece carbono, não ATP nem poder redutor (D). Durante o dia a fase clara fornece ATP e NADPH, e o CO2 estocado alimenta o ciclo de Calvin.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x4",
+      "dificuldade": "dificil",
+      "conceitos": ["c9"],
+      "enunciado": "Numa câmara fechada, mediu-se a troca líquida de CO2 de uma planta em função da luz. No escuro, a planta libera 2 µmol de CO2 por m² por segundo. Com 20 µmol de fótons por m² por segundo, a troca líquida é zero. Com 100 µmol de fótons por m² por segundo, a planta absorve 6 µmol de CO2 por m² por segundo (valor líquido). (a) O que a liberação de CO2 no escuro representa? (b) O que acontece com a fotossíntese e a respiração quando a troca líquida é zero? (c) Qual é a taxa de fotossíntese bruta a 100 µmol de fótons?",
+      "alternativas": null,
+      "gabarito": "(a) Representa a taxa de respiração (2 µmol de CO2 por m² por s), única atividade que ocorre sem luz. (b) Estão em equilíbrio: o CO2 produzido na respiração é todo consumido na fotossíntese (ponto de compensação luminosa). (c) Fotossíntese bruta = líquida + respiração = 6 + 2 = 8 µmol de CO2 por m² por s.",
+      "resolucao": "No escuro só há respiração, então 2 é a taxa de respiração. Supondo respiração constante, a taxa líquida de absorção de CO2 é a bruta menos a respiração: bruta = 6 + 2 = 8. O erro típico é responder 6 (confundir líquida com bruta) ou 4 (subtrair em vez de somar).",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x5",
+      "dificuldade": "dificil",
+      "conceitos": ["c10", "c3"],
+      "enunciado": "Um antibiótico se liga ao ribossomo bacteriano e bloqueia a tradução. (a) Que etapa da expressão gênica é interrompida e o que deixa de ser produzido? (b) Por que o fármaco, em doses terapêuticas, afeta bactérias e pouco afeta as células humanas? (c) Mesmo assim, ele pode causar efeitos colaterais em células humanas. Que organela explica isso e por quê?",
+      "alternativas": null,
+      "gabarito": "(a) A tradução (síntese de proteínas a partir do mRNA); deixam de ser produzidas proteínas, incluindo enzimas essenciais. (b) Os ribossomos bacterianos (70S) são estruturalmente diferentes dos ribossomos do citosol eucariótico (80S), então o fármaco se liga preferencialmente aos bacterianos. (c) As mitocôndrias, que têm ribossomos do tipo bacteriano (origem endossimbiótica); sua síntese de proteínas pode ser afetada, comprometendo a produção de ATP.",
+      "resolucao": "A resposta conecta três ideias: tradução como alvo, diferença entre ribossomos procarióticos e eucarióticos como base da seletividade, e origem endossimbiótica das mitocôndrias como explicação para efeitos colaterais.",
+      "imagens": ["i1"]
+    }
+  ],
+  "imagens": [
+    {
+      "id": "i1",
+      "tipo": "esquema",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Animal_cell_structure_en.svg",
+      "alt": "Esquema de uma célula animal com núcleo, mitocôndrias, retículo endoplasmático, complexo golgiense, lisossomos e ribossomos identificados.",
+      "legenda": "Use para localizar as organelas e lembrar o que uma célula animal tem e o que falta em relação à vegetal (parede, plastos, vacúolo central).",
+      "credito": "Mariana Ruiz Villarreal (LadyofHats), Wikimedia Commons",
+      "licenca": "domínio público",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Animal_cell_structure_en.svg",
+      "verificada": false
+    },
+    {
+      "id": "i2",
+      "tipo": "esquema",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plant_cell_structure_svg.svg",
+      "alt": "Esquema de uma célula vegetal com parede celular, cloroplastos, vacúolo central e demais organelas identificados.",
+      "legenda": "Compare com a célula animal: parede celular, cloroplastos e vacúolo central são os três itens mais cobrados.",
+      "credito": "Mariana Ruiz Villarreal (LadyofHats), Wikimedia Commons",
+      "licenca": "domínio público",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Plant_cell_structure_svg.svg",
+      "verificada": false
+    },
+    {
+      "id": "i3",
+      "tipo": "diagrama",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thylakoid_membrane_3.svg",
+      "alt": "Diagrama da membrana do tilacoide mostrando fotossistemas, cadeia transportadora de elétrons e ATP sintase.",
+      "legenda": "Observe o caminho dos elétrons (água → fotossistema II → cadeia → fotossistema I → NADP+) e o gradiente de H+ que move a ATP sintase.",
+      "credito": "Somepics, Wikimedia Commons",
+      "licenca": "CC BY-SA 4.0",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Thylakoid_membrane_3.svg",
+      "verificada": false
+    },
+    {
+      "id": "i4",
+      "tipo": "esquema",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cell_membrane_detailed_diagram_en.svg",
+      "alt": "Diagrama detalhado da membrana plasmática com bicamada de fosfolipídios, proteínas integrais e periféricas, colesterol e glicocálice.",
+      "legenda": "Identifique a bicamada, as proteínas que formam canais e carreadores, e o colesterol; é a base para tratar difusão facilitada e transporte ativo.",
+      "credito": "Mariana Ruiz Villarreal (LadyofHats), Wikimedia Commons",
+      "licenca": "domínio público",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg",
+      "verificada": false
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Comvest/Unicamp 2018 – 1ª fase, Biologia, resolução comentada (PDF)",
+      "url": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F1_biologia.pdf"
+    },
+    {
+      "titulo": "Comvest/Unicamp 2018 – 2ª fase, Biologia, resolução comentada (PDF)",
+      "url": "https://www.comvest.unicamp.br/vest_anteriores/2018/download/comentadas/F2_biologia.pdf"
+    },
+    {
+      "titulo": "Elite Campinas – Unicamp 2023, 1ª fase, questão 38",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=9497806&vestibular=unicamp&ano=2023&prova_vestibular_id=440025"
+    },
+    {
+      "titulo": "Elite Campinas – Unicamp 2017, 1ª fase, questão 47",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=7266429&vestibular=unicamp&ano=2017&prova_vestibular_id=357863"
+    },
+    {
+      "titulo": "Elite Campinas – Unicamp 2015, 1ª fase, questão 43",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?id_questao_lista=199567&vestibular=unicamp&ano=2015&prova_vestibular_id=11601"
+    },
+    {
+      "titulo": "Estratégia Vestibulares – 17 questões sobre fotossíntese que já caíram nos vestibulares e Enem",
+      "url": "https://vestibulares.estrategia.com/portal/atualidades-e-dicas/17-questoes-sobre-fotossintese-que-ja-cairam-nos-vestibulares-e-enem/"
+    },
+    {
+      "titulo": "Estratégia Vestibulares – Unicamp: o que estudar para a prova de Biologia",
+      "url": "https://vestibulares.estrategia.com/portal/enem-e-vestibulares/unicamp-o-que-estudar-para-a-prova-de-biologia-do-vestibular/"
+    },
+    {
+      "titulo": "Wikimedia Commons – Animal cell structure en.svg",
+      "url": "https://commons.wikimedia.org/wiki/File:Animal_cell_structure_en.svg"
+    },
+    {
+      "titulo": "Wikimedia Commons – Plant cell structure svg.svg",
+      "url": "https://commons.wikimedia.org/wiki/File:Plant_cell_structure_svg.svg"
+    },
+    {
+      "titulo": "Wikimedia Commons – Thylakoid membrane 3.svg",
+      "url": "https://commons.wikimedia.org/wiki/File:Thylakoid_membrane_3.svg"
+    },
+    {
+      "titulo": "Wikimedia Commons – Cell membrane detailed diagram en.svg",
+      "url": "https://commons.wikimedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg"
+    }
+  ]
+}
