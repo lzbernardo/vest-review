@@ -1,0 +1,556 @@
+{
+  "schema_version": "1.1",
+  "gerado_em": "2026-10-12",
+  "tema": {
+    "titulo": "Química Orgânica: funções, isomeria, reações e polímeros",
+    "disciplina": "Química",
+    "subtopicos": [
+      "Funções orgânicas e hibridização",
+      "Isomeria plana e espacial",
+      "Reações orgânicas (adição, substituição, oxidação, esterificação/hidrólise)",
+      "Polímeros (poliéster PET)",
+      "Propriedades físicas e acidez"
+    ]
+  },
+  "resumo_pratico": {
+    "em_uma_frase": "Em orgânica o que mais rende é reconhecer o grupo funcional e prever o que ele faz: quem é o éster, quem oxida, quem tem carbono quiral e quem faz ligação de hidrogênio.",
+    "pontos_chave": [
+      "Grupo funcional manda: identifique -OH, C=O, -COO-, -NH2 antes de qualquer outra coisa; a função define reatividade, nome e propriedades físicas.",
+      "Isomeria: confira primeiro se a fórmula molecular é igual. Depois classifique em plana (cadeia, posição, função, compensação) ou espacial (cis-trans, óptica).",
+      "Isomeria óptica exige carbono quiral (4 grupos diferentes). Com n centros quirais distintos há até $2^n$ estereoisômeros; compostos meso reduzem esse número.",
+      "Reações recorrentes: adição em alcenos/alcinos (regra de Markovnikov), substituição em alcanos e aromáticos, eliminação de haletos/álcoois, oxidação de álcoois, esterificação e hidrólise.",
+      "Oxidação de álcoois: primário gera aldeído e depois ácido carboxílico; secundário gera cetona; terciário não oxida em condições brandas.",
+      "Esterificação e hidrólise ácida são equilíbrios (Le Chatelier); hidrólise básica (saponificação) é irreversível porque forma carboxilato.",
+      "Poliésteres (como o PET) têm ligações éster na cadeia; hidrólise e transesterificação (com metanol) são as rotas clássicas de reciclagem química.",
+      "Ponto de ebulição: ligação de hidrogênio > dipolo-dipolo > dispersão de London, comparando massas parecidas. Ácidos carboxílicos formam dímeros e ferem a intuição."
+    ],
+    "formulas": [
+      {
+        "nome": "Número máximo de estereoisômeros ópticos",
+        "expressao": "$N = 2^n$",
+        "quando_usar": "n é o número de carbonos quirais diferentes entre si. Se houver centros equivalentes (possível forma meso), o total cai."
+      },
+      {
+        "nome": "Grau de insaturação (deficiência de hidrogênio)",
+        "expressao": "$\\text{GI} = \\dfrac{2C + 2 + N - H - X}{2}$",
+        "quando_usar": "Conta anéis e ligações pi a partir da fórmula molecular, útil para propor estruturas e checar isômeros."
+      },
+      {
+        "nome": "Esterificação de Fischer (equilíbrio)",
+        "expressao": "$\\text{R-COOH} + \\text{R'-OH} \\rightleftharpoons \\text{R-COO-R'} + \\text{H}_2\\text{O}$",
+        "quando_usar": "Para prever éster formado e deslocar equilíbrio (excesso de reagente ou remoção de água)."
+      }
+    ],
+    "erros_comuns": [
+      "Nomear o éster invertido: o nome do ácido vem primeiro (propanoato) e o do álcool depois (de metila).",
+      "Dizer que álcool terciário oxida facilmente; ele não tem hidrogênio no carbono carbinólico.",
+      "Contar carbono quiral em carbono com grupos repetidos (CH3 duas vezes, por exemplo) ou esquecer a forma meso.",
+      "Confundir isomeria de função (aldeído e cetona, álcool e éter) com isomeria de posição.",
+      "Achar que hidrólise básica de éster é equilíbrio; é irreversível (saponificação).",
+      "Esquecer que o oxigênio do éter e da cetona não faz ligação de hidrogênio entre moléculas iguais, ao comparar pontos de ebulição."
+    ],
+    "como_a_unicamp_cobra": "Nas questões indexadas, a Unicamp raramente pede só nomenclatura: contextualiza em temas atuais (erros de uma IA ao distinguir alcano de alceno e benzeno de ciclo-hexano na 2ª fase de 2024; estrutura de gorduras saturadas e insaturadas na 2ª fase de 2026) e pede justificativa curta. Em análise de professor do Estratégia, reações orgânicas e propriedades físicas de compostos orgânicos aparecem entre os temas mais cobrados em Química. Nas questões de Enem indexadas, o PET (hidrólise e transesterificação) é recorrente."
+  },
+  "conceitos": [
+    {
+      "id": "c1",
+      "nome": "Funções orgânicas e grupos funcionais",
+      "explicacao": "Hidrocarbonetos, álcool (-OH em carbono saturado), fenol (-OH em anel aromático), aldeído (-CHO), cetona (C=O interno), ácido carboxílico (-COOH), éster (-COO-), éter (-O-), amina e amida. O grupo funcional determina nome, reatividade e propriedades físicas.",
+      "exemplo": "CH3COOCH2CH3 é éster (etanoato de etila); CH3CH2OCH2CH3 é éter; os dois têm oxigênio, mas só o éster tem C=O ligado a O.",
+      "dica_de_prova": "Circule C=O primeiro: se o carbono da carbonila liga a H é aldeído, a OH é ácido, a O-R é éster, a dois carbonos é cetona.",
+      "imagens": []
+    },
+    {
+      "id": "c2",
+      "nome": "Hibridização, cadeias e hidrocarbonetos",
+      "explicacao": "Carbono com 4 ligações simples é sp3, com dupla é sp2, com tripla é sp. Alcano (só simples), alceno (uma dupla), alcino (uma tripla). Benzeno é um anel de 6 carbonos sp2 com ressonância; ciclo-hexano é saturado.",
+      "exemplo": "Benzeno C6H6 (aromático, planar) e ciclo-hexano C6H12 (saturado) diferem em hidrogenação e reatividade.",
+      "dica_de_prova": "A 2ª fase de 2024 explorou justamente a diferença alcano/alceno e benzeno/ciclo-hexano: cite ligações simples, dupla e ressonância.",
+      "imagens": []
+    },
+    {
+      "id": "c3",
+      "nome": "Isomeria plana",
+      "explicacao": "Mesma fórmula molecular, estruturas diferentes. Cadeia: esqueleto diferente. Posição: grupo ou insaturação em carbono diferente. Função: grupos funcionais diferentes. Compensação (metameria): heteroátomo em posição diferente na cadeia.",
+      "exemplo": "C3H6O: propanal (aldeído) e propanona (cetona) são isômeros de função; etanol e metoxietano não, pois têm fórmulas diferentes (confira C2H6O versus C3H8O).",
+      "dica_de_prova": "Passo 1 sempre: compare as fórmulas moleculares. Se diferem, acabou, não há isomeria.",
+      "imagens": []
+    },
+    {
+      "id": "c4",
+      "nome": "Isomeria geométrica (cis-trans)",
+      "explicacao": "Ocorre quando a rotação é impedida (dupla ligação ou anel) e cada carbono da dupla tem dois grupos diferentes. Cis: grupos iguais do mesmo lado; trans: lados opostos. Propriedades físicas costumam diferir.",
+      "exemplo": "But-2-eno tem cis e trans; but-1-eno não tem, porque um dos carbonos da dupla tem dois H.",
+      "dica_de_prova": "Teste rápido: nos dois carbonos da dupla, os substituintes são diferentes entre si? Se sim em ambos, há cis-trans.",
+      "imagens": []
+    },
+    {
+      "id": "c5",
+      "nome": "Isomeria óptica e carbono quiral",
+      "explicacao": "Carbono quiral: sp3 ligado a quatro grupos diferentes. Enantiômeros são imagens especulares não sobreponíveis e desviam a luz polarizada em sentidos opostos com igual intensidade. Mistura racêmica (50/50) não desvia. Composto meso tem centros quirais, mas plano de simetria interno e é inativo.",
+      "exemplo": "Butan-2-ol tem um carbono quiral, logo dois enantiômeros. 2-bromo-3-clorobutano tem dois centros diferentes, logo $2^2 = 4$ estereoisômeros.",
+      "dica_de_prova": "Enantiômeros têm propriedades físicas iguais (PF, PE, densidade), mas interagem diferente com moléculas quirais, como enzimas e receptores.",
+      "imagens": [
+        "i1"
+      ]
+    },
+    {
+      "id": "c6",
+      "nome": "Reações de adição, substituição e eliminação",
+      "explicacao": "Adição: ligações pi se rompem e entram átomos (hidrogenação, halogenação, hidratação, HX). Regra de Markovnikov: o H do HX vai para o carbono da dupla mais hidrogenado. Substituição: um átomo ou grupo é trocado (halogenação de alcano, nitração de benzeno, haleto + OH-). Eliminação: sai molécula pequena e forma-se insaturação.",
+      "exemplo": "Propeno + HBr gera principalmente 2-bromopropano (adição, Markovnikov).",
+      "dica_de_prova": "Olhe para o balanço: reagente insaturado virando saturado é adição; troca átomo por átomo é substituição; sai H2O ou HX é eliminação.",
+      "imagens": []
+    },
+    {
+      "id": "c7",
+      "nome": "Oxidação de álcoois",
+      "explicacao": "Álcool primário oxida a aldeído e, com excesso de oxidante, a ácido carboxílico. Álcool secundário oxida a cetona. Álcool terciário não oxida em condições comuns. Oxidantes típicos: KMnO4 ou K2Cr2O7 em meio ácido. A fermentação do vinho a vinagre é oxidação do etanol a ácido acético.",
+      "exemplo": "Butan-2-ol oxidado forma butanona.",
+      "dica_de_prova": "Conte hidrogênios no carbono que carrega o -OH: dois ou três, vira aldeído/ácido; um, vira cetona; nenhum, não oxida.",
+      "imagens": []
+    },
+    {
+      "id": "c8",
+      "nome": "Esterificação, hidrólise, transesterificação e saponificação",
+      "explicacao": "Esterificação: ácido carboxílico + álcool gera éster + água, em equilíbrio com catálise ácida. Hidrólise ácida é a reação inversa. Transesterificação: éster + outro álcool gera novo éster (biodiesel; reciclagem do PET com metanol). Saponificação: éster + base forte gera sal de ácido carboxílico + álcool, irreversível.",
+      "exemplo": "Ácido propanoico + metanol forma propanoato de metila + água.",
+      "dica_de_prova": "Nome do éster: parte do ácido (-oato) + 'de' + parte do álcool (-ila). Para deslocar o equilíbrio para éster, use excesso de reagente ou retire água.",
+      "imagens": []
+    },
+    {
+      "id": "c9",
+      "nome": "Polímeros e propriedades físicas",
+      "explicacao": "Polímeros de adição (polietileno, PVC) vêm de monômeros insaturados; de condensação (poliéster PET, nylon) liberam molécula pequena. Poliéster tem ligações éster na cadeia e é sensível à hidrólise. Ponto de ebulição cresce com forças intermoleculares: London, dipolo-dipolo, ligação de hidrogênio; ácidos carboxílicos formam dímeros e têm PE alto.",
+      "exemplo": "PET: ácido tereftálico + etilenoglicol (etano-1,2-diol). Etanol (PE cerca de 78 °C) ferve acima do etanal (cerca de 20 °C) por causa da ligação de hidrogênio.",
+      "dica_de_prova": "Para comparar PE, primeiro compare as forças; só use massa molar para desempatar moléculas com forças do mesmo tipo.",
+      "imagens": []
+    }
+  ],
+  "questoes_indexadas": [
+    {
+      "id": "x1",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2026,
+      "fase": "2ª fase",
+      "numero": "Q10 (item A)",
+      "tipo": "dissertativa",
+      "assunto": "Triglicerídeos: gordura saturada e insaturada",
+      "o_que_cobra": "Relacionar a estrutura de um triglicerídeo, com suas três cadeias hidrocarbônicas, à diferença entre gordura saturada e insaturada.",
+      "gabarito_oficial": null,
+      "link_questao": "https://vestibulares.estrategia.com/portal/wp-content/uploads/2025/11/2026F2redporingcn.pdf",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/noticias/gabarito-unicamp-2026-confira-a-correcao-da-2a-fase-do-vestibular/",
+      "conceitos": [
+        "c1",
+        "c2",
+        "c8"
+      ]
+    },
+    {
+      "id": "x2",
+      "instituicao": "Comvest/Unicamp",
+      "ano": 2024,
+      "fase": "2ª fase",
+      "numero": "Q7 (item B)",
+      "tipo": "dissertativa",
+      "assunto": "Alcano x alceno e benzeno x ciclo-hexano",
+      "o_que_cobra": "A partir de um texto sobre erros de uma inteligência artificial, diferenciar alcano de alceno e benzeno de ciclo-hexano pela estrutura das ligações.",
+      "gabarito_oficial": null,
+      "link_questao": "https://vestibulares.estrategia.com/portal/noticias/vestibular-unicamp-2024-cadernos-de-prova-da-2a-fase-estao-disponiveis/",
+      "link_gabarito": "https://vestibulares.estrategia.com/portal/noticias/gabarito-unicamp-2024-vestibular/",
+      "conceitos": [
+        "c2"
+      ]
+    },
+    {
+      "id": "x5",
+      "instituicao": "Enem",
+      "ano": 2024,
+      "fase": "PPL, Dia 2",
+      "numero": "Q95 (caderno azul)",
+      "tipo": "multipla_escolha",
+      "assunto": "Reciclagem química do PET",
+      "o_que_cobra": "Dado o esquema em que o polímero PET reage com água e libera ácido e álcool, dar nome ao tipo de reação.",
+      "gabarito_oficial": null,
+      "link_questao": "https://plataformaassaad.com.br/questao-95-caderno-azul-do-enem-2024-ppl-dia-2/",
+      "link_gabarito": null,
+      "conceitos": [
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "id": "x6",
+      "instituicao": "Enem",
+      "ano": 2019,
+      "fase": "Dia 2",
+      "numero": "Q124 (caderno azul)",
+      "tipo": "multipla_escolha",
+      "assunto": "Transesterificação do PET",
+      "o_que_cobra": "Deduzir o reagente da reação de transesterificação do PET a partir do éster formado.",
+      "gabarito_oficial": null,
+      "link_questao": "https://plataformaassaad.com.br/?p=13453",
+      "link_gabarito": null,
+      "conceitos": [
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "id": "x7",
+      "instituicao": "Enem",
+      "ano": 2013,
+      "fase": "Regular",
+      "numero": "Q54 (caderno azul)",
+      "tipo": "multipla_escolha",
+      "assunto": "Hidrólise do PET e obtenção de etilenoglicol",
+      "o_que_cobra": "Indicar o processo químico que rompe as ligações éster do PET e libera etilenoglicol.",
+      "gabarito_oficial": null,
+      "link_questao": "https://plataformaassaad.com.br/questao-54-caderno-azul-do-enem-2013/",
+      "link_gabarito": null,
+      "conceitos": [
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "id": "x8",
+      "instituicao": "Enem",
+      "ano": 2018,
+      "fase": "PPL",
+      "numero": "Q106 (caderno azul)",
+      "tipo": "multipla_escolha",
+      "assunto": "Tipo de isomeria a partir de estruturas",
+      "o_que_cobra": "Analisar fórmulas estruturais e reconhecer o tipo de isomeria presente, com base em carbono quiral.",
+      "gabarito_oficial": "A",
+      "link_questao": "https://plataformaassaad.com.br/?p=23267",
+      "link_gabarito": "https://plataformaassaad.com.br/?p=23267",
+      "conceitos": [
+        "c5"
+      ]
+    }
+  ],
+  "questoes_reforco": [
+    {
+      "id": "q1",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c1"
+      ],
+      "enunciado": "O composto de fórmula CH3CH2COOCH3 é responsável por aroma frutado em alguns alimentos. A função orgânica predominante nessa molécula é",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "ácido carboxílico."
+        },
+        {
+          "letra": "B",
+          "texto": "éster."
+        },
+        {
+          "letra": "C",
+          "texto": "éter."
+        },
+        {
+          "letra": "D",
+          "texto": "cetona."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "O grupo -COO- (carbonila ligada a oxigênio que se liga a outro carbono) caracteriza éster. Seria ácido carboxílico se o oxigênio ligasse a H (-COOH), e éter se não houvesse C=O (R-O-R').",
+      "imagens": []
+    },
+    {
+      "id": "q2",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c3"
+      ],
+      "enunciado": "Assinale o par de compostos que são isômeros de função.",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "butan-1-ol e butan-2-ol"
+        },
+        {
+          "letra": "B",
+          "texto": "etanol e metoximetano"
+        },
+        {
+          "letra": "C",
+          "texto": "pentano e 2-metilbutano"
+        },
+        {
+          "letra": "D",
+          "texto": "metoxietano e etoxietano"
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Etanol (álcool) e metoximetano (éter) têm a mesma fórmula, C2H6O, mas funções diferentes. A é isomeria de posição, C é de cadeia, e em D as fórmulas diferem (C3H8O e C4H10O), logo nem são isômeros.",
+      "imagens": []
+    },
+    {
+      "id": "q3",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "facil",
+      "conceitos": [
+        "c4"
+      ],
+      "enunciado": "Entre os hidrocarbonetos abaixo, apresenta isomeria geométrica (cis-trans) o",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "but-1-eno."
+        },
+        {
+          "letra": "B",
+          "texto": "but-2-eno."
+        },
+        {
+          "letra": "C",
+          "texto": "2-metilprop-1-eno."
+        },
+        {
+          "letra": "D",
+          "texto": "propeno."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "No but-2-eno, CH3-CH=CH-CH3, cada carbono da dupla tem H e CH3, grupos diferentes, então existem cis e trans. Nos demais, um carbono da dupla tem dois substituintes iguais (dois H ou dois CH3).",
+      "imagens": []
+    },
+    {
+      "id": "q4",
+      "tipo": "multipla_escolha",
+      "origem": "adaptada",
+      "inspirada_em": "x8",
+      "dificuldade": "media",
+      "conceitos": [
+        "c5"
+      ],
+      "enunciado": "O 2-bromo-3-clorobutano, CH3-CHBr-CHCl-CH3, possui carbonos quirais. O número total de estereoisômeros ópticos desse composto é",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "2."
+        },
+        {
+          "letra": "B",
+          "texto": "3."
+        },
+        {
+          "letra": "C",
+          "texto": "4."
+        },
+        {
+          "letra": "D",
+          "texto": "6."
+        }
+      ],
+      "gabarito": "C",
+      "resolucao": "C2 (H, Br, CH3, CHCl-CH3) e C3 (H, Cl, CH3, CHBr-CH3) são quirais e diferentes entre si; como os substituintes halogênio são diferentes, não há plano de simetria e não existe forma meso. Logo $2^2 = 4$ estereoisômeros (dois pares de enantiômeros). O valor 3 é o erro de quem aplica a regra do meso, válida para o 2,3-dibromobutano, onde os dois centros são equivalentes.",
+      "imagens": []
+    },
+    {
+      "id": "q5",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c6"
+      ],
+      "enunciado": "O propeno reage com HBr, formando majoritariamente um único produto. O tipo de reação e o produto principal são, respectivamente:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "adição; 1-bromopropano."
+        },
+        {
+          "letra": "B",
+          "texto": "adição; 2-bromopropano."
+        },
+        {
+          "letra": "C",
+          "texto": "substituição; 2-bromopropano."
+        },
+        {
+          "letra": "D",
+          "texto": "eliminação; 1-bromopropano."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "A ligação pi do propeno se rompe e HBr se adiciona: é adição. Pela regra de Markovnikov, o H vai para o carbono da dupla mais hidrogenado (CH2) e o Br para o mais substituído (CH), dando CH3-CHBr-CH3, 2-bromopropano.",
+      "imagens": []
+    },
+    {
+      "id": "q6",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c7"
+      ],
+      "enunciado": "Butan-2-ol é tratado com solução de dicromato de potássio acidificada, sob aquecimento. O produto orgânico principal é",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "butanal."
+        },
+        {
+          "letra": "B",
+          "texto": "butanona."
+        },
+        {
+          "letra": "C",
+          "texto": "ácido butanoico."
+        },
+        {
+          "letra": "D",
+          "texto": "nenhum, pois o álcool é terciário e não reage."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Butan-2-ol é álcool secundário (o carbono carbinólico tem um H). Sua oxidação gera cetona, butanona, que não oxida adiante nessas condições. Butanal e ácido butanoico viriam do butan-1-ol (primário); a alternativa D erra a classificação do álcool.",
+      "imagens": []
+    },
+    {
+      "id": "q7",
+      "tipo": "multipla_escolha",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "media",
+      "conceitos": [
+        "c8"
+      ],
+      "enunciado": "Ácido propanoico reage com metanol, em meio de ácido sulfúrico e sob aquecimento. O éster formado e o subproduto são, respectivamente:",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "metanoato de propila; água."
+        },
+        {
+          "letra": "B",
+          "texto": "propanoato de metila; água."
+        },
+        {
+          "letra": "C",
+          "texto": "etanoato de etila; água."
+        },
+        {
+          "letra": "D",
+          "texto": "propanoato de metila; gás hidrogênio."
+        }
+      ],
+      "gabarito": "B",
+      "resolucao": "Esterificação: R-COOH + R'-OH forma R-COO-R' + H2O. O ácido propanoico dá o prefixo propanoato e o metanol dá o grupo metila: propanoato de metila. A opção A inverte as partes do nome; D erra o subproduto, que é água.",
+      "imagens": []
+    },
+    {
+      "id": "q8",
+      "tipo": "dissertativa",
+      "origem": "adaptada",
+      "inspirada_em": "x5",
+      "dificuldade": "media",
+      "conceitos": [
+        "c8",
+        "c9"
+      ],
+      "enunciado": "O PET é um polímero formado por ácido tereftálico e etano-1,2-diol (etilenoglicol). (a) Qual função orgânica une as unidades repetidas do PET? (b) Escreva o nome da reação do PET com água e os dois tipos de compostos formados. (c) Na reciclagem química com metanol, que tipo de reação ocorre e qual éster pequeno se forma?",
+      "alternativas": null,
+      "gabarito": "(a) Éster, logo o PET é um poliéster. (b) Hidrólise; formam-se ácido carboxílico (ácido tereftálico) e álcool (etilenoglicol). (c) Transesterificação; forma-se tereftalato de dimetila (éster metílico) e libera-se etilenoglicol.",
+      "resolucao": "O PET é obtido por condensação entre os grupos -COOH do ácido e -OH do diol, com perda de água, gerando ligações -COO-. A água rompe essa ligação (hidrólise) e regenera ácido e álcool. Com metanol, o grupo alcoxila do éster é trocado (transesterificação), formando o éster metílico do ácido tereftálico e liberando o diol.",
+      "imagens": []
+    },
+    {
+      "id": "q9",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c9"
+      ],
+      "enunciado": "Os compostos propano, etanal, etanol e ácido etanoico têm massas molares entre 44 e 60 g/mol. (a) Coloque-os em ordem crescente de ponto de ebulição. (b) Explique a ordem pelas forças intermoleculares predominantes em cada um.",
+      "alternativas": null,
+      "gabarito": "(a) propano < etanal < etanol < ácido etanoico. (b) Propano é apolar: só forças de London. Etanal é polar: dipolo-dipolo, sem ligação de hidrogênio entre suas próprias moléculas. Etanol faz ligação de hidrogênio (O-H). Ácido etanoico faz ligações de hidrogênio mais fortes e forma dímeros, com o maior ponto de ebulição.",
+      "resolucao": "Valores aproximados: propano cerca de -42 °C; etanal cerca de 20 °C; etanol cerca de 78 °C; ácido etanoico cerca de 118 °C. Como as massas são parecidas, o que decide é o tipo de interação: London < dipolo-dipolo < ligação de hidrogênio, e dímeros do ácido (duas ligações de hidrogênio por par) elevam ainda mais o ponto de ebulição.",
+      "imagens": []
+    },
+    {
+      "id": "q10",
+      "tipo": "dissertativa",
+      "origem": "original",
+      "inspirada_em": null,
+      "dificuldade": "dificil",
+      "conceitos": [
+        "c8"
+      ],
+      "enunciado": "Um éster X, de fórmula molecular C4H8O2, foi aquecido com solução aquosa de NaOH e produziu etanoato de sódio e etanol. (a) Identifique X e dê seu nome. (b) Escreva a equação da reação. (c) Dê o nome desse processo e explique por que, ao contrário da hidrólise ácida, ele é praticamente irreversível.",
+      "alternativas": null,
+      "gabarito": "(a) CH3COOCH2CH3, etanoato de etila. (b) CH3COOCH2CH3 + NaOH -> CH3COONa + CH3CH2OH. (c) Saponificação (hidrólise básica). É irreversível porque o ácido é convertido em carboxilato, que é desprotonado e não ataca o álcool de volta para reformar o éster.",
+      "resolucao": "Os produtos mostram que o grupo acila vem do ácido etanoico e o grupo alquila do etanol, logo X = etanoato de etila (C4H8O2, confere). Na hidrólise ácida há equilíbrio com o ácido carboxílico formado; na básica, a base consome o ácido gerando sal, o que desloca o processo até o fim.",
+      "imagens": []
+    }
+  ],
+  "imagens": [
+    {
+      "id": "i1",
+      "tipo": "esquema",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3D_representation_of_the_two_enantiomers_of_2-butanol.svg",
+      "alt": "Representação tridimensional dos dois enantiômeros do butan-2-ol, imagens especulares não sobreponíveis.",
+      "legenda": "Os dois enantiômeros do butan-2-ol: observe que o carbono quiral tem quatro grupos diferentes e que as duas moléculas são imagens no espelho que não se sobrepõem.",
+      "credito": "Wikimedia Commons (autor não confirmado)",
+      "licenca": "desconhecida",
+      "fonte_url": "https://commons.wikimedia.org/wiki/File:3D_representation_of_the_two_enantiomers_of_2-butanol.svg",
+      "verificada": false
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Estratégia Vestibulares: Gabarito Unicamp 2026, correção da 2ª fase",
+      "url": "https://vestibulares.estrategia.com/portal/noticias/gabarito-unicamp-2026-confira-a-correcao-da-2a-fase-do-vestibular/"
+    },
+    {
+      "titulo": "Estratégia Vestibulares: Gabarito Unicamp 2024, correção da 2ª fase",
+      "url": "https://vestibulares.estrategia.com/portal/noticias/gabarito-unicamp-2024-vestibular/"
+    },
+    {
+      "titulo": "Estratégia Vestibulares: Unicamp, o que estudar para a prova de Química",
+      "url": "https://vestibulares.estrategia.com/portal/enem-e-vestibulares/unicamp-o-que-estudar-para-a-prova-de-quimica-do-vestibular/"
+    },
+    {
+      "titulo": "Projeto Agatha: Reações Orgânicas, questões de vestibulares",
+      "url": "https://projetoagathaedu.com.br/questoes-vestibular/quimica/quimica-organica/reacoes-organicas.php"
+    },
+    {
+      "titulo": "Plataforma Assaad: Enem 2024 PPL, questão 95",
+      "url": "https://plataformaassaad.com.br/questao-95-caderno-azul-do-enem-2024-ppl-dia-2/"
+    },
+    {
+      "titulo": "Plataforma Assaad: Enem 2019, questão 124",
+      "url": "https://plataformaassaad.com.br/?p=13453"
+    },
+    {
+      "titulo": "Plataforma Assaad: Enem 2013, questão 54",
+      "url": "https://plataformaassaad.com.br/questao-54-caderno-azul-do-enem-2013/"
+    },
+    {
+      "titulo": "Plataforma Assaad: Enem PPL 2018, questão 106",
+      "url": "https://plataformaassaad.com.br/?p=23267"
+    },
+    {
+      "titulo": "LibreTexts: Enantiomers and the Tetrahedral Carbon",
+      "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/05:_Stereochemistry_at_Tetrahedral_Centers/5.01:_Enantiomers_and_the_Tetrahedral_Carbon"
+    }
+  ]
+}
