@@ -156,6 +156,7 @@ button.chip:active { transform: scale(0.96); }
 
 .bar {
   position: sticky; top: 0; z-index: 20;
+  display: flow-root; /* keeps the tabs' bottom margin inside the bar, so the fade falls below them */
   background: var(--material);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   backdrop-filter: blur(24px) saturate(180%);
@@ -340,7 +341,6 @@ button.chip:active { transform: scale(0.96); }
   .card { padding: 1.15rem 1.1rem; }
   .sheet { left: 0; right: 0; top: auto; bottom: 0; width: auto; max-height: 86vh; border-radius: 1.4rem 1.4rem 0 0; padding-bottom: calc(1.6rem + env(safe-area-inset-bottom)); transform: translateY(102%); }
   .sheet.on { transform: none; }
-  .formulas { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -503,4 +503,63 @@ button.chip:active { transform: scale(0.96); }
   .subjects { grid-template-columns: repeat(2, 1fr); }
   .tiles-3 { grid-template-columns: repeat(2, 1fr); }
   .tiles-3 .tile:first-child { grid-column: 1 / -1; }
+}
+
+/* ---------- Formula sheet: three narrow columns; wide formulas span 2 or 3 (see fitFormulas) ---------- */
+.formulas { grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); grid-auto-flow: dense; }
+.formulas .card { display: flex; flex-direction: column; min-width: 0; padding: 1.15rem 1.2rem; }
+.f-expr { overflow: visible; line-height: 2.1; margin: 0.6rem 0 0.7rem; }
+.f-when { margin-top: auto; }
+
+/* ---------- Guide: creating new reviews ---------- */
+a.btn:hover { text-decoration: none; }
+.guide .meta { max-width: 38rem; font-size: 1rem; color: var(--text-2); line-height: 1.5; }
+.skill { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; }
+.skill .resume-text { flex: 1 1 14rem; }
+.guide code { padding: 0.08rem 0.35rem; border-radius: 0.35rem; background: var(--fill); overflow-wrap: anywhere; }
+
+/* ---------- Concepts: focus ("play") mode, one concept per screen ---------- */
+.play-row { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin: 0.75rem 0 1rem; }
+.play-row span { font-size: 0.8125rem; color: var(--text-2); }
+body.focus-on { overflow: hidden; }
+.focus {
+  position: fixed; inset: 0; z-index: 35; display: flex; flex-direction: column;
+  background: var(--bg);
+  opacity: 0; pointer-events: none; visibility: hidden; transform: scale(1.02);
+  transition: transform 340ms var(--ease), opacity 220ms ease, visibility 0s 340ms;
+}
+.focus.on { opacity: 1; pointer-events: auto; visibility: visible; transform: none; transition-delay: 0s; }
+.focus:focus { outline: none; }
+.focus-head { display: flex; align-items: center; gap: 0.75rem; padding: calc(0.75rem + env(safe-area-inset-top)) 1.25rem 0.75rem; }
+.focus-title { flex: 1; min-width: 0; }
+.focus-title strong { display: block; font-size: 0.9375rem; font-weight: 650; line-height: 1.25; }
+.focus-title span { display: block; font-size: 0.8125rem; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.focus-head .sheet-close { position: static; flex: none; width: 2.25rem; height: 2.25rem; }
+.focus > .track { flex: none; margin: 0 1.25rem; }
+.focus > .track i { background: var(--tint); }
+.focus-track {
+  flex: 1; min-height: 0; display: flex; overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory; overscroll-behavior: contain; scrollbar-width: none;
+}
+.focus-track::-webkit-scrollbar { display: none; }
+.focus-slide {
+  flex: 0 0 100%; min-width: 0; display: flex; overflow-y: auto; overscroll-behavior-y: contain;
+  scroll-snap-align: center; scroll-snap-stop: always; padding: 1.5rem 1.25rem;
+}
+.focus-slide:focus { outline: none; }
+.focus-slide .concept { width: 100%; max-width: 44rem; margin: auto; padding: 2rem 2.1rem; font-size: 1.0625rem; }
+.focus-slide .concept h3 { font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-top: 0.2rem; }
+.focus-slide .concept > .rich { margin-top: 0.85rem; }
+.focus-slide .note { font-size: 1rem; }
+.focus-foot { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 0.75rem 1.25rem calc(0.9rem + env(safe-area-inset-bottom)); }
+.focus-foot .btn { min-width: 8.5rem; }
+.focus-foot .btn:disabled { opacity: 0.35; cursor: default; transform: none; }
+.focus-foot .chev { width: 0.4rem; height: 0.7rem; color: inherit; }
+.focus-foot .prev .chev { transform: scaleX(-1); }
+@media (max-width: 56rem) {
+  .focus-head, .focus-foot { padding-left: 1rem; padding-right: 1rem; }
+  .focus > .track { margin: 0 1rem; }
+  .focus-slide { padding: 1rem; }
+  .focus-slide .concept { padding: 1.35rem 1.2rem; }
+  .focus-foot .btn { flex: 1; min-width: 0; }
 }
